@@ -6,7 +6,7 @@
 # [发行版管理](./wsl-config.md)
 # [适用于 Linux for Enterprise 的 Windows 子系统](./enterprise.md)
 # [互操作性](./interop.md)
-# [生成自定义的发行版](./build-custom-distro.md)
+# [生成自定义发行版](./build-custom-distro.md)
 # [常见问题](./faq.md)
 # [疑难解答](./troubleshooting.md)
 # [发行说明](./release-notes.md)
