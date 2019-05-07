@@ -7,14 +7,27 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 3eee7ff6d1f8302e98cde84fccabf5d9113c83f2
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
+ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063625"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64988265"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统的发行说明
+
+## <a name="build-18890"></a>生成 18890
+有关常规 Windows 上生成 18890 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)。
+
+### <a name="wsl"></a>WSL
+* 非阻塞套接字泄漏 [GH 2913]
+* 终端的 EOF 输入可以阻止后续读取 [GH 3421]
+* 更新 resolv.conf 标头来指代 wsl.conf [所述 GH 3928]
+* 死锁中 epoll 删除代码 [GH 3922]
+* 处理参数-导入和 – 导出 [GH 3932] 中的空格
+* 扩展 mmap 处理的文件无法正常工作 [GH 3939]
+* 修复问题的 ARM64 \\wsl$ 访问不能正常工作
+* 添加 wsl.exe 更好的默认图标
 
 ## <a name="build-18342"></a>生成 18342
 有关常规 Windows 上生成 18342 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)。
@@ -276,7 +289,7 @@ wslconfig.exe /terminate <DistributionName>
     * 请参阅[博客](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)有关详细信息。
 * 添加 wslconfig/终止停止正在运行的分发版。
 
-## <a name="build-17692"></a>生成 17692
+## <a name="build-17692"></a>版本 17692
 有关常规 Windows 上生成 17692 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)。
 
 ### <a name="wsl"></a>WSL
@@ -285,7 +298,7 @@ wslconfig.exe /terminate <DistributionName>
 * ARM64：模拟缓存维护操作。 解决[dotnet 问题](https://github.com/dotnet/core/issues/1561)。
 * DrvFs： 只能恢复原义私有范围相对应的字符为转义字符。
 
-## <a name="build-17686"></a>生成 17686
+## <a name="build-17686"></a>版本 17686
 有关常规 Windows 上生成 17686 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)。
 
 ### <a name="wsl"></a>WSL
@@ -349,8 +362,7 @@ wslconfig.exe /terminate <DistributionName>
 * 添加对 futex pi 注意操作的支持。 [GH 1006]
     * 请注意，优先级目前不受支持的 WSL 功能以便存在一些限制，但应解除对标准使用情况。
 * WSL 进程的 Windows 防火墙支持。 [GH 1852]
-    * 例如，若要允许 WSL python 处理任何端口上侦听，请使用提升的 Windows cmd:
-```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * 例如，若要允许 WSL python 处理任何端口上侦听，请使用提升的 Windows cmd: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
     * 有关如何添加防火墙规则的其他详细信息，请参阅[链接](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * 使用 wsl.exe 时遵从用户的默认外壳。 [GH 2372]
 * 报告为以太网的所有网络接口。 [GH 2996]
@@ -375,7 +387,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="ltp-results"></a>LTP 结果：
 测试正在进行中。
 
-## <a name="build-17110"></a>生成 17110
+## <a name="build-17110"></a>版本 17110
 有关常规 Windows 上生成 17110 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)。
 
 ### <a name="wsl"></a>WSL
@@ -467,7 +479,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="ltp-results"></a>LTP 结果：
 测试正在进行中。
 
-## <a name="build-17083"></a>生成 17083
+## <a name="build-17083"></a>版本 17083
 有关常规 Windows 上生成 17083 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)。
 
 ### <a name="wsl"></a>WSL
@@ -761,7 +773,7 @@ wslconfig.exe /terminate <DistributionName>
 故障总数：229<br/>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
 
-## <a name="build-16257"></a>生成 16257
+## <a name="build-16257"></a>版本 16257
 
 有关常规 Windows 上生成 16257 信息请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)。<br/>
 
@@ -793,7 +805,7 @@ wslconfig.exe /terminate <DistributionName>
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>已知问题
-#### [<a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>GitHub 问题 2392年:Windows 无法识别的 WSL 文件夹...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 问题 2392年:Windows 无法识别的 WSL 文件夹...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 在生成 16257，WSL 有问题，枚举通过 Windows 文件/文件夹时`/mnt/c/...`。
 此问题已修复，并且应在释放预览体验成员版本官员在 2017 年 8 月 14 日开始的一周内。
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063295"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>适用于 Linux 的故障排除 Windows 子系统
@@ -114,11 +114,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情况下关闭防火墙允许访问。  只需时安装防火墙的某些情况下看起来以阻止访问。
 
 ### <a name="permission-denied-error-when-using-ping"></a>使用 ping 时权限被拒绝错误
-#### [<a name="anniversary-update"></a>周年更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[周年更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 在 Windows 中的管理员权限才可在 WSL 中运行 ping。  若要运行 ping，以管理员身份，Windows 上运行 Ubuntu 上的 Bash 或 CMD/PowerShell 提示符下使用管理员特权运行 bash.exe。
 
-#### [<a name="build-14926"></a>生成 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[生成 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   不再需要管理员特权。
 
 ### <a name="bash-is-hung"></a>挂起 bash
