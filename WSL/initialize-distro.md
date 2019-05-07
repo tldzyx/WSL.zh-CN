@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 7f1ce521b248c873fa7f81c6363eb506c0363fed
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063605"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59902044"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>初始化新安装的发行版
 一旦下载并安装你的发行，您将需要完成初始化新的发行版：

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063595"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>用户帐户和适用于 Linux 的 Windows 子系统权限
@@ -132,12 +132,12 @@ Usage:
 
 更高版本的 Windows 权限是独立的 Linux 实例中的权限：Linux"Root 权限"只影响在 Linux 环境和文件系统; 中的用户的权限它们将不会影响对授予的 Windows 特权。 因此，以根身份运行 Linux 进程 (例如通过`sudo`) 仅处理在 Linux 环境中的管理员权限的授予。
 
-**例如：**    
+**示例：**    
 具有 Windows 管理员权限的 Bash 会话可以访问`cd /mnt/c/Users/Administrator`没有管理员权限会看到"权限被拒绝"错误而 Bash 会话。
 
 在 Linux 中，键入`sudo cd /mnt/c/Users/Administrator`将授予对管理员的目录访问权限，因为 Windows 内的权限管理的 Windows。
 
 Linux 权限模型很重要时在用户具有基于当前的 Linux 用户的权限在 Linux 环境中。
 
-**例如：**  
+**示例：**  
 Sudo 组中的用户可能会运行`sudo apt update`。

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.openlocfilehash: c806552750f413fcb75f989d868a57cc939af64a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063495"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和配置适用于 Linux 的 Windows 子系统
@@ -23,7 +23,7 @@ ms.locfileid: "59063495"
 
 有许多方法来运行 Linux 的 Windows 子系统 for Linux。
 
-1. `[distro]` IE `ubuntu`
+1. `[distro]` ie `ubuntu`
 1. `wsl.exe` 或 `bash.exe`
 1. `wsl [command]` 或 `bash -c [command]`
 
@@ -43,7 +43,7 @@ ms.locfileid: "59063495"
 
 从这种方式中的命令行运行分发的缺点是，它将自动更改你的工作目录当前目录中为分发的主目录。
 
-**例如：**
+**示例：**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -66,7 +66,7 @@ PS C:\Users\sarah>
 
 若要从命令行运行 WSL 的最佳方法使用`wsl.exe`。
 
-**例如：**
+**示例：**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -83,7 +83,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 
 不只是`wsl`就地保留当前工作目录，它允许您运行单个命令沿端 Windows 命令。
 
-**例如：**
+**示例：**
 
 ```console
 PS C:\Users\sarah> Get-Date
@@ -100,7 +100,7 @@ PS C:\Users\sarah> wsl date
 Sun Mar 11 19:55:47 DST 2018
 ```
 
-**例如：**
+**示例：**
 
 ```console
 PS C:\Users\sarah> Get-VM
@@ -130,7 +130,7 @@ PS C:\Users\sarah>
 
 #### <a name="list-distributions"></a>列表分发版
 
-`wsl -l` ， `wsl --list`  
+`wsl -l` , `wsl --list`  
 列出了可用于 WSL 提供 Linux 分发版。  如果列出的分发，它已安装并且可供使用。
 
 `wsl --list --all`   
@@ -147,7 +147,7 @@ PS C:\Users\sarah>
 
 设置为默认分发`<DistributionName>`。
 
-**例如：**  
+**示例：**  
 `wsl -s Ubuntu` 将我的默认分发到 Ubuntu。  现在，当我运行`wsl npm init`它将在 Ubuntu 中运行。  如果我运行`wsl`会打开一个 Ubuntu 会话。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
@@ -213,7 +213,7 @@ Usage:
 
 设置为默认分发`<DistributionName>`。
 
-**例如：**  
+**示例：**  
 `wslconfig /setdefault Ubuntu` 将我的默认分发到 Ubuntu。  现在，当我运行`wsl npm init`它将在 Ubuntu 中运行。  如果我运行`wsl`会打开一个 Ubuntu 会话。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
@@ -268,10 +268,10 @@ WSL 支持两个部分：`automount`和`network`。
 部分中： `[automount]`
 
 
-| 键        | 值                          | default      | 说明                                                                                                                                                                                                                                                                                                                          |
+| 键        | value                          | default      | 说明                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 已启用    | 布尔值                        | true         | `true` 固定驱动器 （即的原因 `C:/` 或`D:/`) 以将其自动装入与 DrvFs 下`/mnt`。  `false` 表示不会自动装载驱动器，但您仍无法装载它们，手动或通过`fstab`。                                                                                                             |
-| mountFsTab | 布尔值                        | true         | `true` 设置`/etc/fstab`要处理在 WSL 启动。 /etc/fstab 是您可以在其中声明其他文件系统，如 SMB 共享的文件。 因此，你可以向上装载自动在开始上的 WSL 中这些文件系统。                                                                                                                |
+| enabled    | boolean                        | true         | `true` 固定驱动器 （即的原因 `C:/` 或`D:/`) 以将其自动装入与 DrvFs 下`/mnt`。  `false` 表示不会自动装载驱动器，但您仍无法装载它们，手动或通过`fstab`。                                                                                                             |
+| mountFsTab | boolean                        | true         | `true` 设置`/etc/fstab`要处理在 WSL 启动。 /etc/fstab 是您可以在其中声明其他文件系统，如 SMB 共享的文件。 因此，你可以向上装载自动在开始上的 WSL 中这些文件系统。                                                                                                                |
 | 根       | 字符串                         | `/mnt/`      | 设置固定的驱动器会将其自动装入的目录。 例如，如果您有一个目录中在 WSL`/windir/`和指定，作为根，你会希望看到固定的驱动器装载在 `/windir/c`                                                                                              |
 | 选项    | 以逗号分隔的值列表 | 空字符串 | 此值追加到默认 DrvFs 装入选项字符串。 **可以指定仅特定于 DrvFs 的选项。** 不支持二进制装入通常会将分析成一个标志的选项。 如果你想要显式指定这些选项，则必须包括你想要这样做在 /etc/fstab 中每个的驱动器。 |
 
@@ -283,10 +283,10 @@ WSL 支持两个部分：`automount`和`network`。
 
 章节标签： `[network]`
 
-| 键 | 值 | default | 说明|
+| 键 | value | default | 说明|
 |:----|:----|:----|:----|
-| generateHosts | 布尔值 | `true` | `true` 设置生成的 WSL `/etc/hosts`。 `hosts`文件包含的主机名对应的 IP 地址的静态映射。 |
-| generateResolvConf | 布尔值 | `true` | `true` 设置生成的 WSL `/etc/resolv.conf`。 `resolv.conf`包含能够将给定主机名解析为其 IP 地址的 DNS 列表。 | 
+| generateHosts | boolean | `true` | `true` 设置生成的 WSL `/etc/hosts`。 `hosts`文件包含的主机名对应的 IP 地址的静态映射。 |
+| generateResolvConf | boolean | `true` | `true` 设置生成的 WSL `/etc/resolv.conf`。 `resolv.conf`包含能够将给定主机名解析为其 IP 地址的 DNS 列表。 | 
 
 #### <a name="interop"></a>互操作
 
@@ -294,7 +294,7 @@ WSL 支持两个部分：`automount`和`network`。
 
 这些选项是可用在内部生成 17713 及更高版本。
 
-| 键 | 值 | default | 说明|
+| 键 | value | default | 说明|
 |:----|:----|:----|:----|
-| 已启用 | 布尔值 | `true` | 此键的设置将确定是否支持 WSL 启动 Windows 进程。 |
-| appendWindowsPath | 布尔值 | `true` | 此键的设置将确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 
+| enabled | boolean | `true` | 此键的设置将确定是否支持 WSL 启动 Windows 进程。 |
+| appendWindowsPath | boolean | `true` | 此键的设置将确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 

@@ -8,12 +8,13 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: a9c8d32f2b87319b45b1b757b4d71c0a4c41292c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.localizationpriority: High
+ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063505"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59529061"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 文档的 Windows 子系统
 
@@ -25,7 +26,7 @@ ms.locfileid: "59063505"
 1. 运行常见命令行的免费软件，如`grep`， `sed`， `awk`，或其他 ELF 64 二进制文件。 
 1. 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序包括：  
     * 工具： vim、 emacs、 tmux
-    * 语言：Javascript/node.js、 Ruby、 Python、 C/c + +， C# & F#、 信任、 转，等等。
+    * 语言：Javascript/node.js、 Ruby、 Python、 C /C++， C# & F#、 信任、 转，等等。
     * 服务： sshd，MySQL、 Apache，lighttpd
 1. 安装其他软件使用自己的 GNU/Linux 分发包管理器。
 1. 调用使用类似于 Unix 的命令行 shell 的 Windows 应用程序。
