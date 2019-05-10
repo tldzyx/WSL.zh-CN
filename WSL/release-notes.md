@@ -1035,7 +1035,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：737</br>
-未通过的数目 (失败，已跳过，等等。...):255
+未通过的数目 (失败，已跳过，等等...):255
 
 </br>
 
@@ -1057,7 +1057,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：737</br>
-未通过的数目 (失败，已跳过，等等。...):255 </br>
+未通过的数目 (失败，已跳过，等等...):255 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
 
 <br/>
@@ -1087,7 +1087,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：732</br>
-未通过的数目 (失败，已跳过，等等。...):255 </br>
+未通过的数目 (失败，已跳过，等等...):255 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
 
 <br/>
@@ -1109,7 +1109,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：714 </br>
-未通过的数目 (失败，已跳过，等等。...):249 </br>
+未通过的数目 (失败，已跳过，等等...):249 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
 
 <br/>
@@ -1133,7 +1133,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：709 </br>
-未通过的数目 (失败，已跳过，等等。...):255 </br>
+未通过的数目 (失败，已跳过，等等...):255 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
 
 ### <a name="syscall-summary"></a>Syscall 摘要
@@ -1165,7 +1165,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：709 </br>
-未通过的数目 (失败，已跳过，等等。...):255 </br>
+未通过的数目 (失败，已跳过，等等...):255 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
 
 <br/>
@@ -1223,7 +1223,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：690 </br>
-未通过的数目 (失败，已跳过，等等。...):274 </br>
+未通过的数目 (失败，已跳过，等等...):274 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
 
 <br/>
@@ -1258,7 +1258,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：669 </br>
-未通过的数目 (失败，已跳过，等等。...):258 </br>
+未通过的数目 (失败，已跳过，等等...):258 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
 
 <br/>
@@ -1284,7 +1284,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="ltp-results"></a>LTP 结果：
 14965 相比并无变化 </br>
 通过的测试数：664 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
@@ -1322,7 +1322,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：664 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
@@ -1341,7 +1341,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：665 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
 
 <br/>
@@ -1357,7 +1357,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：665 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
 
 <br/>
@@ -1394,7 +1394,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：665 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
 
 <br/>
@@ -1419,7 +1419,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：665 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
 
 <br/>
@@ -1441,7 +1441,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：665 </br>
-未通过的数目 (失败，已跳过，等等。...):263 </br>
+未通过的数目 (失败，已跳过，等等...):263 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
 
 ### <a name="syscall-support"></a>支持 Syscall
@@ -1477,7 +1477,7 @@ WSL 遇到某些套接字实现的问题。  检测的错误表现为崩溃并�
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：664 </br>
-未通过的数目 (失败，已跳过，等等。...):264 </br>
+未通过的数目 (失败，已跳过，等等...):264 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
 
 ### <a name="syscall-support"></a>支持 Syscall
@@ -1517,7 +1517,7 @@ WSL 遇到某些套接字实现的问题。  检测的错误表现为崩溃并�
 
 ### <a name="ltp-results"></a>LTP 结果：
 通过的测试数：651 </br>
-未通过的数目 (失败，已跳过，等等。...):258 </br>
+未通过的数目 (失败，已跳过，等等...):258 </br>
 [LTP 测试运行日志](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
 
 <br/>
@@ -1702,7 +1702,7 @@ WSL 遇到某些套接字实现的问题。  检测的错误表现为崩溃并�
 - 改进了对非英语字符支持
 - 添加当前 Windows 时区数据并将设置为默认值
 - 唯一的设备 id 的每个装入点 （jre 修复 – GH #49）
-- 更正问题与包含的路径"。" 和"."
+- 更正问题与包含的路径"。" 和".."
 - 添加了先进先出的支持 (GH #71)
 - Resolv.conf，与本机 Ubuntu 格式匹配的更新的格式
 - 一些 procfs 清理
