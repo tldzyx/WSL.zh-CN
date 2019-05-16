@@ -86,7 +86,7 @@ ms.locfileid: "59063295"
 1. 单击“确定”
 
 ### <a name="error-0x80040154-after-windows-update"></a>"错误：0x80040154"Windows 更新后
-Linux 功能的 Windows 子系统可能会禁用在 Windows 更新过程。 如果发生这种情况必须在重新启用 Windows 功能。 有关启用 Windows 子系统，Linux 可查找中的说明[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+Linux 功能的 Windows 子系统可能会禁用在 Windows 更新过程。 如果发生这种情况必须在重新启用 Windows 功能。 有关启用 Windows 子系统，Linux 可查找中的说明[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ### <a name="changing-the-display-language"></a>更改显示语言
 WSL 安装将尝试自动更改 Ubuntu 区域设置，以便与 Windows 安装程序的区域设置匹配。  如果您不需要此行为可以运行此命令以安装完成后更改 Ubuntu 区域设置。  必须重新启动 bash.exe 此更改才会生效。
