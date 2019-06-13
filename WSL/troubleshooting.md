@@ -8,12 +8,12 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063295"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040846"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>适用于 Linux 的故障排除 Windows 子系统
 
@@ -86,7 +86,7 @@ ms.locfileid: "59063295"
 1. 单击“确定”
 
 ### <a name="error-0x80040154-after-windows-update"></a>"错误：0x80040154"Windows 更新后
-Linux 功能的 Windows 子系统可能会禁用在 Windows 更新过程。 如果发生这种情况必须在重新启用 Windows 功能。 有关启用 Windows 子系统，Linux 可查找中的说明[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+Linux 功能的 Windows 子系统可能会禁用在 Windows 更新过程。 如果发生这种情况必须在重新启用 Windows 功能。 有关启用 Windows 子系统，Linux 可查找中的说明[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ### <a name="changing-the-display-language"></a>更改显示语言
 WSL 安装将尝试自动更改 Ubuntu 区域设置，以便与 Windows 安装程序的区域设置匹配。  如果您不需要此行为可以运行此命令以安装完成后更改 Ubuntu 区域设置。  必须重新启动 bash.exe 此更改才会生效。
@@ -149,7 +149,6 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ### <a name="confirm-wsl-is-enabled"></a>确认启用 WSL
 你可以确认，运行以下命令在 PowerShell 中启用适用于 Linux 的 Windows 子系统：  
 ``` PowerShell
-PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -165,7 +164,22 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. 检查启动日志，并确保主机密钥并且未看到日志消息，例如： debug1: sshd 版本 OpenSSH_7.2，OpenSSL 1.0.2g 1 Mar 2016 debug1: key_load_private： 不正确的通行短语提供的用于解密私有密钥 debug1: key_load_public:没有此文件或目录无法加载主机密钥： /etc/ssh/ssh_host_rsa_key debug1: key_load_private:没有此类文件或目录 debug1: key_load_public:没有此文件或目录无法加载主机密钥： /etc/ssh/ssh_host_dsa_key debug1: key_load_private:没有此类文件或目录 debug1: key_load_public:没有此文件或目录无法加载主机密钥： /etc/ssh/ssh_host_ecdsa_key debug1: key_load_private:没有此类文件或目录 debug1: key_load_public:没有此文件或目录无法加载主机密钥： /etc/ssh/ssh_host_ed25519_key
+3. 检查启动日志，并确保主机密钥都可用，并且看不到日志消息，例如：
+   ```
+   debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
+   debug1: key_load_private: incorrect passphrase supplied to decrypt private key
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_rsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_dsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ed25519_key
+   ```
 
 如果你看到此类消息，并且密钥由下缺少`/etc/ssh/`，您将需要重新生成密钥，或只是清除并安装 openssh 服务器：
 ```BASH
