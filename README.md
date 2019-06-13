@@ -19,3 +19,6 @@
 有关详细信息请参阅[代码的行为准则常见问题解答](https://opensource.microsoft.com/codeofconduct/faq/)或联系[ opencode@microsoft.com ](mailto:opencode@microsoft.com)与任何其他问题或意见。
 
 欢迎使用 Microsoft 的命令行 shell 的 markdown 源和控制台文档。
+
+## <a name="license"></a>许可证
+在 Creative Commons Attribution 4.0 International (4.0 CC) 公共许可证下发布。

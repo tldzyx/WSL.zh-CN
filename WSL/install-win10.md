@@ -1,5 +1,5 @@
 ---
-title: Windows 子系统适用于 Linux (WSL) 上 Windows 10 上安装
+title: 安装适用于 Linux (WSL) 在 Windows 10 上的 Windows 子系统
 description: 适用于 Windows 10 上的 Linux 安装说明 Windows 子系统。
 keywords: BashOnWindows，bash、 wsl、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系统安装
 author: taraj
@@ -8,12 +8,12 @@ ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 40bbe73acbfd0483e18ab6ff1696fdb44eaff2e4
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: d30a5883d648e084193659e997c55d203eb5a735
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063285"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035051"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Linux 安装指南适用于 Windows 10 的 Windows 子系统
 
@@ -44,11 +44,18 @@ ms.locfileid: "59063285"
 
     以下链接将打开每个分布区的 Windows 应用商店页：
 
-    * [Ubuntu](https://www.microsoft.com/store/p/ubuntu/9nblggh4msv6)
-    * [OpenSUSE](https://www.microsoft.com/store/apps/9njvjts82tjx)
-    * [SLES](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+    * [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
+    * [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    * [OpenSUSE Leap 15](https://www.microsoft.com/store/apps/9n1tb6fpvj8c)
+    * [OpenSUSE Leap 42](https://www.microsoft.com/store/apps/9njvjts82tjx)
+    * [SUSE Linux Enterprise Server 12](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+    * [SUSE Linux Enterprise Server 15](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
     * [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
     * [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
+    * [WSL 的 fedora Remix](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    * [WLinux](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
+    * [WLinux 企业](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
 1. 从发行版的页上，选择"Get"
 
@@ -65,3 +72,8 @@ ms.locfileid: "59063285"
     * 系统驱动器上仅运行于 Linux 的 Windows 子系统 (通常这是你`C:`驱动器)。 请确保发行版都存储在您的系统驱动器上：  
     * 打开**设置** -> **存储** -> **更多的存储设置：保存新内容的更改**
     ![的系统设置的图片 c： 驱动器上安装应用](media/AppStorage.png)
+    
+    
+ * **失败，出现错误 0x8007019e WslRegisterDistribution**   
+  * 未启用 Linux 可选组件的 Windows 子系统： 
+   * 打开**Control Panel** -> **程序和功能**-> * * 打开或关闭 Windows 功能 * *-> 检查**适用于 Linux 的 Windows 子系统**或使用在本文开头所述的 PowerShell cmdlet。

@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: be1c1331183317d4f970696464110b9968208d21
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 669c017c97aba70c107484b32acd99296265d84a
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063565"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035033"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载 Linux 发行版包的 Windows 子系统
 
@@ -31,8 +31,9 @@ ms.locfileid: "59063565"
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux)
-* [OpenSUSE](https://aka.ms/wsl-opensuse-42)
-* [SLES](https://aka.ms/wsl-sles-12)
+* [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
+* [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
+* [WSL 的 fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
 这将导致`<distro>.appx`包下载到您选择的文件夹。 请按照[安装说明](#installing-your-distro)安装下载的 distro(s)。
 

@@ -7,12 +7,12 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063245"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040814"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows 与 Linux 互操作性的 Windows 子系统
 
@@ -81,7 +81,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>WSL 从运行 Windows 工具
 
-WSL 可以调用 Windows 二进制文件直接从 WSL 命令行使用`[binary name].exe`。  例如，`notepad.exe`。  若要使 Windows 可执行文件更轻松地运行，Windows 路径包括在 Linux `$PATH` Fall Creators Update 中。
+WSL 可以调用 Windows 二进制文件直接从 WSL 命令行使用`[binary name].exe`。  例如， `notepad.exe` 。  若要使 Windows 可执行文件更轻松地运行，Windows 路径包括在 Linux `$PATH` Fall Creators Update 中。
 
 此方式运行的应用程序具有以下属性：
 
@@ -198,7 +198,7 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 
 ## <a name="creators-update-and-anniversary-update"></a>创意者更新及周年更新
 
-互操作体验预 Fall Creators Update 是类似于较新的互操作体验，尽管有一些主要差异 handfull。
+虽然互操作体验预 Fall Creators Update 是类似于较新的互操作体验，有少量的主要差异。
 
 总结：
 

@@ -8,12 +8,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
-ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063595"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040831"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>用户帐户和适用于 Linux 的 Windows 子系统权限
 
@@ -128,11 +128,11 @@ Usage:
 * 正常 （非提升）：使用的登录的用户权限运行的 Linux
 * 提升/管理员：使用提升/管理的 Windows 权限运行的 Linux
 
-> 因为，提升的进程可以更改/损坏系统范围的设置和数据，和可以访问/修改受保护的文件和文件夹，**避免**启动提升的进程，除非绝对必要的-无论是 Windows 或Linux 应用程序/tools/shell ！
+> 已提升的进程可以访问/修改 （并因此损坏） 系统范围的设置和系统的范围/受保护的数据，因为**避免**启动已提升的进程，除非绝对必要的-它们是 Windows 或 Linux外壳程序的应用程序/工具 ！
 
 更高版本的 Windows 权限是独立的 Linux 实例中的权限：Linux"Root 权限"只影响在 Linux 环境和文件系统; 中的用户的权限它们将不会影响对授予的 Windows 特权。 因此，以根身份运行 Linux 进程 (例如通过`sudo`) 仅处理在 Linux 环境中的管理员权限的授予。
 
-**示例：**    
+**示例：**     
 具有 Windows 管理员权限的 Bash 会话可以访问`cd /mnt/c/Users/Administrator`没有管理员权限会看到"权限被拒绝"错误而 Bash 会话。
 
 在 Linux 中，键入`sudo cd /mnt/c/Users/Administrator`将授予对管理员的目录访问权限，因为 Windows 内的权限管理的 Windows。
