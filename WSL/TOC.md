@@ -8,5 +8,11 @@
 # [互操作性](./interop.md)
 # [生成自定义发行版](./build-custom-distro.md)
 # [常见问题](./faq.md)
+# [WSL 2](./wsl2-index.md)
+## [关于 WSL 2](./wsl2-about.md)
+## [安装 WSL 2](./wsl2-install.md)
+## [从 WSL 1 到 WSL 2 的用户体验更改](./wsl2-ux-changes.md)
+## [常见问题](./wsl2-faq.md)
+
 # [疑难解答](./troubleshooting.md)
 # [发行说明](./release-notes.md)
