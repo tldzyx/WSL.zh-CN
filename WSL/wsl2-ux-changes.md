@@ -1,6 +1,6 @@
 ---
-title: WSL 1 和 WSL 2 之间的用户体验更改
-description: WSL 1 和 WSL 2 之间的用户体验更改
+title: WSL 1 和 WSL 2 之间的用户体验差异
+description: WSL 1 和 WSL 2 之间的用户体验差异
 keywords: BashOnWindows，bash、 wsl、 wsl2、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系统
 author: mscraigloewen
 ms.author: mscraigloewen
@@ -17,25 +17,25 @@ ms.locfileid: "67038097"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 和 WSL 2 之间的用户体验更改
 
-此页都要通过 WSL 1 和 WSL 2 预览版之间的用户体验差异。 需要注意的关键更改是：
+此页主要描述 WSL 1 和 WSL 2 预览版之间的用户体验差异。 需要注意的关键差异是：
 
-- 将 Linux 应用程序将访问文件性能的速度在 Linux 根文件系统中的文件
-- 在 WSL 2 预览版的初始版本中，将需要访问网络应用程序使用的 IP 地址和不使用 localhost
+- 将 Linux 应用需要访问的文件放在 Linux 根文件系统中可以提高文件访问速度
+- 在 WSL 2 预览版的初始版本中，你需要使用 IP 地址而不是 localhost 来访问网络应用程序
 
-和下面是可能会注意到其他更改的完整列表：
+下面是可能会注意到的差异的完整列表：
 
 - WSL 2 使用 VHD 来存储你的文件，如果达到其最大大小可能需要将其展开
 - 在启动时，WSL 2 现在将使用内存的一小部分
-- 跨 OS 文件访问速度会变慢初始预览版本中
+- 初始预览版本中，跨 OS 文件访问速度会变慢
 
 ## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>将 Linux 文件放在 Linux 根文件系统中
-请务必将为您将访问频繁使用 Linux 文件放在 Linux 应用程序根文件系统，从而享受文件性能优势。 这些文件一定要在 Linux 根文件系统，从而更快的文件系统访问。 我们还了它的 Windows 应用以访问 Linux 根文件系统 （如文件资源管理器 ！ 尝试运行：`explorer.exe /`在 bash shell 和会发生什么情况，请参阅) 这会使这一转换更加便捷。 
+请务必将您将访问频繁使用 Linux 文件放在 Linux 应用程序根文件系统中，从而享受文件性能优势。 这些文件只有在 Linux 根文件系统中才能实现更快的文件系统访问。 我们还使 Windows 应用能访问 Linux 根文件系统 （如文件资源管理器！ 尝试在 Linux 发行版的 home 目录中运行：`explorer.exe .`，看看会发生什么) 这会使文件转移更加便捷。
 
 ## <a name="accessing-network-applications"></a>访问网络的应用程序
-在 WSL 2 预览版的初始版本中，需要从 Windows 使用你的 Linux 发行版和从 Linux 使用您的主机的 IP 地址的任何 Windows 服务器的 IP 地址访问的任何 Linux 服务器。 这是临时的且在我们的优先级列表以修复非常高。
+在 WSL 2 预览版的初始版本中，需要使用 Linux 系统的 IP 来从 Windows 中访问 Linux 服务器和从 Linux 系统中使用您的主机的 IP 地址访问 Windows 服务器。 这一不便是临时的，且它在我们的修复列表中具有很高的优先级。
 
 ### <a name="accessing-linux-applications-from-windows"></a>从 Windows 访问 Linux 应用程序
-如果在 WSL 发行版中的服务器，将需要查找增强发行版虚拟机的 IP 地址并使用该 IP 地址连接到它。 可以通过执行以下步骤来执行的操作：
+如果在 WSL 发行版中的服务器，将需要查找运行 Linux 发行版的虚拟机的 IP 地址并使用该 IP 地址连接到它。 可以通过执行以下步骤来执行的操作：
 
 - 通过运行命令获得的发行版的 IP 地址`ip addr`WSL 发行版和查找下将其内部`inet`的值`eth0`接口。
    - 通过筛选使用 grep 命令的输出，可以更轻松地找到此如下所示： `ip addr | grep eth0`。
