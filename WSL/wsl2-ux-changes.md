@@ -1,6 +1,6 @@
 ---
-title: WSL 1 和 WSL 2 之间的用户体验更改
-description: WSL 1 和 WSL 2 之间的用户体验更改
+title: WSL 1 与 WSL 2 的用户体验差异
+description: WSL 1 与 WSL 2 的用户体验差异
 keywords: BashOnWindows，bash、 wsl、 wsl2、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系统
 author: mscraigloewen
 ms.author: mscraigloewen
@@ -10,17 +10,17 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 0660f9f726811008685de9f1ff457e7515add67a
 ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67038097"
 ---
-# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 和 WSL 2 之间的用户体验更改
+# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 与 WSL 2 的用户体验差异
 
-此页都要通过 WSL 1 和 WSL 2 预览版之间的用户体验差异。 需要注意的关键更改是：
+此页主要描述 WSL 1 和 WSL 2 预览版之间的用户体验差异。 关键差异包括：
 
-- 将 Linux 应用程序将访问文件性能的速度在 Linux 根文件系统中的文件
-- 在 WSL 2 预览版的初始版本中，将需要访问网络应用程序使用的 IP 地址和不使用 localhost
+- 将 Linux 应用需要访问的文件放在 Linux 根文件系统中可以提高文件访问速度
+- 在 WSL 2 预览版的初始版本中，你需要使用 IP 地址而不是 localhost 来访问网络应用程序
 
 和下面是可能会注意到其他更改的完整列表：
 
