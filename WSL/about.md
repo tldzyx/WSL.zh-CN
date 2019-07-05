@@ -23,7 +23,7 @@ ms.locfileid: "67040803"
 你可以：
 
 1. 选择你最喜爱的 GNU/Linux 分发[从 Windows 应用商店](https://aka.ms/wslstore)。
-1. 运行常见命令行的免费软件，如`grep`， `sed`， `awk`，或其他 ELF 64 二进制文件。 
+1. 运行常见命令行的自由软件，如`grep`， `sed`， `awk`，或其他 ELF 64 二进制文件。 
 1. 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序包括：  
     * 工具： vim、 emacs、 tmux
     * 语言：Javascript/node.js、 Ruby、 Python、 C /C++， C# & F#、 信任、 转，等等。
