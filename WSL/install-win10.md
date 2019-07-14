@@ -1,6 +1,6 @@
 ---
-title: 安装适用于 Linux (WSL) 在 Windows 10 上的 Windows 子系统
-description: 适用于 Windows 10 上的 Linux 安装说明 Windows 子系统。
+title: 在 Windows 10 上安装适用于 Linux 的 Windows 子系统（WSL）
+description: 在 Windows 10 上的适用于 Linux 的 Windows 子系统安装说明
 keywords: BashOnWindows，bash、 wsl、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系统安装
 author: taraj
 ms.author: taraj
@@ -15,34 +15,34 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67035051"
 ---
-# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Linux 安装指南适用于 Windows 10 的 Windows 子系统
+# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>在 Windows 10 上的适用于 Linux 的 Windows 子系统安装指南
 
 ## <a name="install-the-windows-subsystem-for-linux"></a>安装适用于 Linux 的 Windows 子系统
 
-在之前安装 WSL 任何 Linux 发行版，您必须确保"Windows 子系统为 Linux"已启用可选功能：
+在为 WSL 安装任何 Linux 发行版之前，您必须确保启用了“适用于 Linux 的 Windows 子系统”可选功能：
 
 1. 以管理员身份打开 PowerShell 并运行：
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. 重新启动计算机时提示。
+2. 出现提示时重新启动计算机。
 
-## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 分发版
-若要下载并安装你首选的 distro(s)，您具有三个选项：
-1. 下载并安装来自 Windows 应用商店 （见下文）
-1. 从命令行/脚本下载并安装 ([读取手动安装说明](install-manual.md))
-1. 下载和手动解压缩并安装 (适用于 Windows Server-[此处的说明](install-on-server.md))
+## <a name="install-your-linux-distribution-of-choice"></a>安装您所选的 Linux 发行版
+若要下载并安装您首选的发行版，您有三种选择：
+1. 从 Microsoft Store 下载并安装（见下文）
+1. 从命令行/脚本下载并安装 ([阅读手动安装说明](install-manual.md))
+1. 下载并手动解压缩然后安装 (适用于 Windows Server - [此处的说明](install-on-server.md))
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 及更高版本：从 Microsoft Store 安装
 
-> 本部分是为 Windows 生成 16215 或更高版本。  请按照这些步骤[检查你的生成](troubleshooting.md#check-your-build-number)。 
+> 本节适用于 Windows build 16215 或更高版本。请按照这些步骤[检查您的版本号](troubleshooting.md#check-your-build-number)。 
 
-1. 打开 Microsoft Store，然后选择你喜爱的 Linux 分发。
+1. 打开 Microsoft Store，然后选择你喜爱的 Linux 发行版。
 
     ![在 Windows 应用商店中的 Linux 发行版的视图](media/store.png)
 
-    以下链接将打开每个分布区的 Windows 应用商店页：
+    以下链接将打开每个发行版的 Microsoft Store 页面：
 
     * [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
     * [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
@@ -57,23 +57,23 @@ ms.locfileid: "67035051"
     * [WLinux 企业](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
     * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
-1. 从发行版的页上，选择"Get"
+1. 从发行版的页面上，选择"Get"
 
     ![在 Windows 应用商店中的 Linux 发行版的视图](media/UbuntuStore.png)
 
-## <a name="complete-initialization-of-your-distro"></a>完成初始化的发行版
-安装 Linux 发行版后，您必须[初始化新的发行版实例](initialize-distro.md)一次，然后才能使用。
+## <a name="complete-initialization-of-your-distro"></a>完成发行版的初始化
+安装 Linux 发行版后，您必须先[初始化新的发行版实例](initialize-distro.md)一次，然后才能使用。
 
 ## <a name="troubleshooting"></a>疑难解答： 
 
-以下是相关的错误的建议修补程序。 请参阅[WSL 故障排除页](troubleshooting.md)其他常见的错误和其解决方案。
+以下是相关的错误的建议修补程序。有关其他常见错误及其解决方案，请参阅[WSL 故障排除页](troubleshooting.md)。
 
 * **安装失败，出现错误 0x80070003**
-    * 系统驱动器上仅运行于 Linux 的 Windows 子系统 (通常这是你`C:`驱动器)。 请确保发行版都存储在您的系统驱动器上：  
-    * 打开**设置** -> **存储** -> **更多的存储设置：保存新内容的更改**
+    * 适用于 Linux 的 Windows 子系统仅在您的系统驱动器上运行 (通常这是您的`C:`驱动器)。请确保发行版都存储在您的系统驱动器上：  
+    * 打开**设置** -> **存储** -> **更多存储设置：更改新内容的保存位置**
     ![的系统设置的图片 c： 驱动器上安装应用](media/AppStorage.png)
     
     
  * **失败，出现错误 0x8007019e WslRegisterDistribution**   
-  * 未启用 Linux 可选组件的 Windows 子系统： 
-   * 打开**Control Panel** -> **程序和功能**-> * * 打开或关闭 Windows 功能 * *-> 检查**适用于 Linux 的 Windows 子系统**或使用在本文开头所述的 PowerShell cmdlet。
+  * 未启用适用于 Linux 的 Windows 子系统可选组件：
+   * 打开**控制面板** -> **程序和功能** -> **启用或关闭 Windows 功能** -> 检查**适用于 Linux 的 Windows 子系统**或使用在本文开头所述的 PowerShell cmdlet。

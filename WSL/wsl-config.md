@@ -1,6 +1,6 @@
 ---
-title: 管理 Linux 分发版
-description: 引用列出和配置在 Windows 子系统上运行适用于 Linux 的多个 Linux 分发版。
+title: 管理 Linux 发行版
+description: 参考列出和配置在适用于 Linux 的 Windows 子系统上运行的多个 Linux 发行版。
 keywords: BashOnWindows，bash、 wsl、 windows、 linux、 windowssubsystem、 ubuntu、 wsl.conf、 wslconfig 适用于 windows 子系统
 author: scooley
 ms.author: scooley
@@ -21,7 +21,7 @@ ms.locfileid: "67040862"
 
 ## <a name="ways-to-run-wsl"></a>运行 WSL 方法
 
-有许多方法来运行 Linux 的 Windows 子系统 for Linux。
+使用适用于 Linux 的 Windows 子系统运行 Linux 的方法有很多种。
 
 1. `[distro]`例如 `ubuntu`
 1. `wsl.exe` 或 `bash.exe`
@@ -29,9 +29,9 @@ ms.locfileid: "67040862"
 
 应使用哪种方法取决于你正在执行的操作。
 
-### <a name="launch-wsl-by-distribution"></a>启动分发 WSL
+### <a name="launch-wsl-by-distribution"></a>通过发行版启动 WSL
 
-运行分发使用它的特定于发行版的应用程序将启动其自己的控制台窗口中的分发。
+使用它的特定于发行版的应用程序运行发行版会在其自己的控制台窗口中启动该发行版。
 
 ![从开始菜单启动 WSL](media/start-launch.png)
 
@@ -39,9 +39,9 @@ ms.locfileid: "67040862"
 
 ![启动从 Windows 应用商店的 WSL](media/store-launch.png)
 
-您还可以运行分布从命令行运行`[distribution].exe`。
+您还可以通过运行`[distribution].exe`从命令行运行发行版。
 
-从这种方式中的命令行运行分发的缺点是，它将自动更改你的工作目录当前目录中为分发的主目录。
+以这种方式从命令行运行发行版的缺点是，它会自动将您的工作目录从当前目录更改为发行版的主目录。
 
 **示例：**
 
@@ -64,7 +64,7 @@ PS C:\Users\sarah>
 
 ### <a name="wsl-and-wsl-command"></a>wsl 和 wsl [command]
 
-若要从命令行运行 WSL 的最佳方法使用`wsl.exe`。
+从命令行运行 WSL 的最佳方法是使用`wsl.exe`。
 
 **示例：**
 
@@ -81,7 +81,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 /mnt/c/Users/sarah
 ```
 
-不只是`wsl`就地保留当前工作目录，它允许您运行单个命令沿端 Windows 命令。
+`wsl`不仅保留了当前的工作目录，还允许您沿着 Windows 命令运行单个命令。
 
 **示例：**
 
@@ -120,68 +120,68 @@ PS C:\Users\sarah>
 ```
 
 
-## <a name="managing-multiple-linux-distributions"></a>管理多个 Linux 分发版
+## <a name="managing-multiple-linux-distributions"></a>管理多个 Linux 发行版
 
-### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本 1903年及更高版本
+### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本 1903 及更高版本
 
-可以使用`wsl.exe`来管理 Windows 子系统中你分发的 Linux (WSL)，包括列出可用的分发版以及设置一个默认值的分布，卸载分发版。
+您可以使用`wsl.exe`来管理适用于 Linux 的 Windows 子系统（WSL）中的发行版，包括列出可用的发行版，设置默认发行版和卸载发行版。
 
-每个 Linux 分发版独立地管理其自己的配置。 若要查看特定于分发的命令，运行`[distro.exe] /?`。  例如，`ubuntu /?`。
+每个 Linux 发行版独立地管理其自己的配置。若要查看特定于发行版的命令，运行`[distro.exe] /?`。例如，`ubuntu /?`。
 
-#### <a name="list-distributions"></a>列表分发版
+#### <a name="list-distributions"></a>列出发行版
 
 `wsl -l` , `wsl --list`  
-列出了可用于 WSL 提供 Linux 分发版。  如果列出的分发，它已安装并且可供使用。
+列出 WSL 可用的 Linux 发行版。如果列出了发行版，则表示已安装并可供使用。
 
 `wsl --list --all`   
-列出所有分布区，包括那些不是当前可用。  它们可能是正在安装，卸载，或处于中断状态。  
+列出所有发行版，包括当前不可用的发行版。他们可能正在安装，卸载或处于损坏状态。
 
 `wsl --list --running`   
-列出当前正在运行的所有分布区。
+列出当前正在运行的所有发行版。
 
-#### <a name="set-a-default-distribution"></a>设置默认分发
+#### <a name="set-a-default-distribution"></a>设置默认发行版
 
-默认 WSL 分发是运行在运行时`wsl`命令行上。
+默认 WSL 发行版是在命令行上运行`wsl`时所运行的发行版。
 
 `wsl -s <DistributionName>`， `wsl --setdefault <DistributionName>`
 
-设置为默认分发`<DistributionName>`。
+将默认发行版设置为`<DistributionName>`。
 
 **示例：**  
-`wsl -s Ubuntu` 将我的默认分发到 Ubuntu。  现在，当我运行`wsl npm init`它将在 Ubuntu 中运行。  如果我运行`wsl`会打开一个 Ubuntu 会话。
+`wsl -s Ubuntu` 会将我的默认发行版设置为 Ubuntu。现在，当我运行`wsl npm init`时，它将在 Ubuntu 中运行。如果我运行`wsl`，它将打开一个 Ubuntu 会话。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
+#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
 
-Linux 分发版可以通过 Windows 安装时存储，则它们无法卸载通过应用商店。  WSL 配置允许分发要注销/卸载。
+虽然可以通过 Microsoft Store 安装 Linux 发行版，但无法通过商店卸载它们。 WSL Config 允许注销/卸载发行版。
 
-取消注册还允许分发版必须重新安装。
+注销后仍然可以重新安装发行版。
 
-> **警告：** 后已注销，则所有数据、 设置和与该分发的软件都将永久丢失。  从存储区重新安装将安装全新的分布。
+> **警告：** 注销后，与该发行版相关的所有数据，设置和软件将永久丢失。从商店重新安装将安装发行版的干净副本。
 
 `wsl --unregister <DistributionName>`  
-注销 WSL 从分发，因此可以重新安装或清理。
+从 WSL 中注销发行版，以便可以重新安装或清除它。
 
-例如：`wsl -unregister Ubuntu`将 Ubuntu 移除在 WSL 中可用的分发版。  当我运行`wsl --list`不会列出。
+例如：`wsl -unregister Ubuntu`会从 WSL 中可用的发行版中删除 Ubuntu。当我运行`wsl --list`时，它不会被列出。
 
-若要重新安装，请在 Windows 应用商店中查找分布，并选择"启动"。
+若要重新安装，请在 Microsoft Store 中查找发行版，并选择"启动"。
 
 #### <a name="run-as-a-specific-user"></a>以特定用户身份运行
 
 `wsl -u <Username>`， `wsl --user <Username>`
 
-为指定的用户运行 WSL。 请注意该用户必须存在于内部 WSL 分发。
+以指定用户身份运行 WSL 。请注意，用户必须存在于 WSL 发行版内。
 
-#### <a name="run-a-specific-distribution"></a>运行特定的分发版
+#### <a name="run-a-specific-distribution"></a>运行特定的发行版
 
 `wsl --d <DistributionName>`， `wsl --distribution <DistributionName>`
 
-运行 WSL 在指定的分发，可用于将命令发送到特定分发中，而无需更改默认的。
+运行指定的 WSL 发行版，可用于将命令发送到特定发行版，而无需更改默认值。
 
 ### <a name="versions-earlier-than-windows-10-version-1903"></a>版本早于 Windows 10 版本 1903
 
-WSL 配置 (`wslconfig.exe`) 是用于管理 Linux 分发版的 Linux (WSL) 在 Windows 子系统上运行的命令行工具。  它允许您列表可用发行版中，设置一个默认值的分布，并卸载分发版。
+WSL 配置 (`wslconfig.exe`) 是一个命令行工具，用于管理在适用于 Linux 的 Windows 子系统（WSL）上运行的 Linux 发行版。它允许您列出可用的发行版，设置默认发行版和卸载发行版。
 
-S p a n 或协调分发的设置有助于 WSL 配置时，每个 Linux 分发版独立地管理其自己的配置。  若要查看特定于分发的命令，运行`[distro.exe] /?`。  例如，`ubuntu /?`。
+虽然 WSL Config 对跨越或协调发行版的设置很有帮助，但每个 Linux 发行版都独立管理自己的配置。若要查看特定于发行版的命令，请运行`[distro.exe] /?`。例如，`ubuntu /?`。
 
 若要查看 wslconfig 所有可用的选项，请运行：  `wslconfig /?`
 
@@ -197,51 +197,51 @@ Usage:
     /u, /unregister <DistributionName> - Unregisters a distribution.
 ```
 
-#### <a name="list-distributions"></a>列表分发版
+#### <a name="list-distributions"></a>列出发行版
 
 `wslconfig /list`  
-列出了可用于 WSL 提供 Linux 分发版。  如果列出的分发，它已安装并且可供使用。
+列出 WSL 可用的 Linux 发行版。如果列出了发行版，则表示已安装并可供使用。
 
 `wslconfig /list /all`  
-列出所有分布区，包括那些不是当前可用。  它们可能是正在安装，卸载，或处于中断状态。  
+列出所有发行版，包括当前不可用的发行版。他们可能正在安装，卸载或处于损坏状态。
 
-#### <a name="set-a-default-distribution"></a>设置默认分发
+#### <a name="set-a-default-distribution"></a>设置默认发行版
 
-默认 WSL 分发是运行在运行时`wsl`命令行上。
+默认 WSL 发行版是在命令行上运行`wsl`时所运行的发行版。
 
 `wslconfig /setdefault <DistributionName>`
 
-设置为默认分发`<DistributionName>`。
+将默认发行版设置为`<DistributionName>`。
 
 **示例：**  
-`wslconfig /setdefault Ubuntu` 将我的默认分发到 Ubuntu。  现在，当我运行`wsl npm init`它将在 Ubuntu 中运行。  如果我运行`wsl`会打开一个 Ubuntu 会话。
+`wslconfig /setdefault Ubuntu` 会将我的默认发行版设置为 Ubuntu。现在，当我运行`wsl npm init`时，它将在 Ubuntu 中运行。如果我运行`wsl`，它将打开一个 Ubuntu 会话。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
+#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
 
-Linux 分发版可以通过 Windows 安装时存储，则它们无法卸载通过应用商店。  WSL 配置允许分发要注销/卸载。
+虽然可以通过 Microsoft Store 安装 Linux 发行版，但无法通过商店卸载它们。 WSL Config 允许注销/卸载发行版。
 
-取消注册还允许分发版必须重新安装。
+注销后仍然可以重新安装发行版。
 
-> **警告：** 后已注销，则所有数据、 设置和与该分发的软件都将永久丢失。  从存储区重新安装将安装全新的分布。
+> **警告：** 注销后，与该发行版相关的所有数据，设置和软件将永久丢失。从商店重新安装将安装发行版的干净副本。
 
 `wslconfig /unregister <DistributionName>`  
-注销 WSL 从分发，因此可以重新安装或清理。
+从 WSL 中注销发行版，以便可以重新安装或清除它。
 
-例如：`wslconfig /unregister Ubuntu`将 Ubuntu 移除在 WSL 中可用的分发版。  当我运行`wslconfig /list`不会列出。
+例如：`wslconfig /unregister Ubuntu`会从 WSL 中可用的发行版中删除 Ubuntu。当我运行`wslconfig /list`时，它不会被列出。
 
-若要重新安装，请在 Windows 应用商店中查找分布，并选择"启动"。
+若要重新安装，请在 Microsoft Store 中查找发行版，并选择"启动"。
 
 ## <a name="set-wsl-launch-settings"></a>设置 WSL 启动设置
 
-> **可在 Windows 预览体验生成 17093 及更高版本**
+> **可在 Windows 预览体验 build 17093 及更高版本中使用**
 
-每次启动子系统使用将应用的 WSL 中自动配置的特定功能`wsl.conf`。 
+自动配置 WSL 中的某些功能，每次使用`wsl.conf`启动子系统时都会应用这些功能。
 
-权限现在，这包括自动装载选项和网络配置。
+现在，这包括自动挂载选项和网络配置。
 
-`wsl.conf` 位于中的每个 Linux 分发`/etc/wsl.conf`。 如果不存在该文件，您可以自行创建它。 WSL 将检测存在该文件，并将读取其内容。 如果文件缺失或格式不正确 （即，不正确标记格式设置），WSL 仍将正常启动。
+`wsl.conf` 在每个 Linux 发行版中都位于`/etc/wsl.conf`。 如果不存在该文件，您可以自行创建它。 WSL 将检测该文件，并将读取其内容。 如果文件缺失或格式不正确 （即，标记格式不正确），WSL 仍将正常启动。
 
-下面是一个示例`wsl.conf`文件可以添加到你的发行版：
+下面是一个示例`wsl.conf`文件，可以将其添加到你的发行版中：
 
 ```console
 # Enable extra metadata options by default
@@ -259,29 +259,29 @@ generateResolvConf = true
 
 ### <a name="configuration-options"></a>配置选项
 
-为了.ini 约定保持密钥声明部分下。 
+配置选项为了与.ini约定保持一致，键（key）在一个节（section）下声明。
 
-WSL 支持两个部分：`automount`和`network`。
+WSL 支持两个节（section）：`automount`和`network`。
 
-#### <a name="automount"></a>自动装载
+#### <a name="automount"></a>自动挂载
 
-部分中： `[automount]`
+节（Section）： `[automount]`
 
 
 | 键        | value                          | default      | 说明                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | boolean                        | true         | `true` 固定驱动器 （即的原因 `C:/` 或`D:/`) 以将其自动装入与 DrvFs 下`/mnt`。  `false` 表示不会自动装载驱动器，但您仍无法装载它们，手动或通过`fstab`。                                                                                                             |
-| mountFsTab | boolean                        | true         | `true` 设置`/etc/fstab`要处理在 WSL 启动。 /etc/fstab 是您可以在其中声明其他文件系统，如 SMB 共享的文件。 因此，你可以向上装载自动在开始上的 WSL 中这些文件系统。                                                                                                                |
-| 根       | 字符串                         | `/mnt/`      | 设置固定的驱动器会将其自动装入的目录。 例如，如果您有一个目录中在 WSL`/windir/`和指定，作为根，你会希望看到固定的驱动器装载在 `/windir/c`                                                                                              |
-| 选项    | 以逗号分隔的值列表 | 空字符串 | 此值追加到默认 DrvFs 装入选项字符串。 **可以指定仅特定于 DrvFs 的选项。** 不支持二进制装入通常会将分析成一个标志的选项。 如果你想要显式指定这些选项，则必须包括你想要这样做在 /etc/fstab 中每个的驱动器。 |
+| enabled    | boolean                        | true         | `true`导致固定驱动器（即`C:/`或`D:/`）与`/mnt`下的DrvF自动挂载。  `false`表示驱动器不会自动挂载，但您仍然可以手动或通过`fstab`挂载它们。                                                                                                             |
+| mountFsTab | boolean                        | true         | `true`设置要在 WSL 启动时处理的`/etc/fstab`。 `/etc/fstab`是一个文件，您可以在其中声明其他文件系统，如 SMB 共享。 因此，您可以在启动时自动将这些文件系统安装在 WSL 中。                                                                                                                |
+| root       | 字符串                         | `/mnt/` | 设置自动挂载固定驱动器的目录。 例如，如果你在的 WSL 中有一个目录`/windir/`并且你指定它作为 root，你可能会看到你的固定驱动器挂载在`/windir/c`                                                                                              |
+| options    | 以逗号分隔的值列表 | 空字符串 | 此值追加到默认 DrvFs 装入选项字符串。 **可以指定仅特定于 DrvFs 的选项。** 不支持二进制装入通常会将分析成一个标志的选项。 如果你想要显式指定这些选项，则必须包括你想要这样做在 /etc/fstab 中每个的驱动器。 |
 
-默认情况下，WSL 设置 uid 和 gid 的值的默认用户 (在 Ubuntu 发行版中的默认用户创建与 uid = 1000，gid = 1000年)。 如果用户指定了此密钥通过显式 gid 或 uid 选项，将覆盖相关联的值。 否则，将始终追加的默认值。
+默认情况下，WSL 将 uid 和 gid 设置为默认用户的值（在 Ubuntu 发行版中，默认用户使用 uid = 1000，gid = 1000 创建）。如果用户通过此键明确指定 gid 或 uid 选项，则将覆盖关联的值。否则，将始终追加默认值。
 
-**注意：** 这些选项将应用作为所有自动加载的驱动器装载选项。 若要更改特定驱动器的选项，请改为使用 /etc/fstab。
+**注意：** 这些选项适用于所有自动挂载的驱动器的挂载选项。 要仅更改特定驱动器的选项，请改用`/etc/fstab`。
 
 #### <a name="network"></a>网络
 
-章节标签： `[network]`
+节标签（Section label）： `[network]`
 
 | 键 | value | default | 说明|
 |:----|:----|:----|:----|
@@ -290,11 +290,11 @@ WSL 支持两个部分：`automount`和`network`。
 
 #### <a name="interop"></a>互操作
 
-章节标签： `[interop]`
+节标签（Section label）： `[interop]`
 
-这些选项是可用在内部生成 17713 及更高版本。
+Insider Build 17713 及更高版本中提供了这些选项。
 
 | 键 | value | default | 说明|
 |:----|:----|:----|:----|
-| enabled | boolean | `true` | 此键的设置将确定是否支持 WSL 启动 Windows 进程。 |
+| enabled | boolean | `true` | 此键的设置将确定 WSL 是否支持启动 Windows 进程。 |
 | appendWindowsPath | boolean | `true` | 此键的设置将确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 
