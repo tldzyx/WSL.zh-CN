@@ -1,5 +1,5 @@
 ---
-title: 在 Windows 10 上安装适用于 Linux 的 Windows 子系统（WSL）
+title: 在 Windows 10 上安装适用于 Linux 的 Windows 子系统 (WSL)
 description: 在 Windows 10 上的适用于 Linux 的 Windows 子系统安装说明
 keywords: BashOnWindows，bash、 wsl、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系统安装
 author: taraj
@@ -31,8 +31,8 @@ ms.locfileid: "67035051"
 ## <a name="install-your-linux-distribution-of-choice"></a>安装您所选的 Linux 发行版
 若要下载并安装您首选的发行版，您有三种选择：
 1. 从 Microsoft Store 下载并安装（见下文）
-1. 从命令行/脚本下载并安装 ([阅读手动安装说明](install-manual.md))
-1. 下载并手动解压缩然后安装 (适用于 Windows Server - [此处的说明](install-on-server.md))
+1. 通过命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
+1. 下载和手动解压缩并安装（适用于 Windows Server - [此处的说明](install-on-server.md)）
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 及更高版本：从 Microsoft Store 安装
 
@@ -40,7 +40,7 @@ ms.locfileid: "67035051"
 
 1. 打开 Microsoft Store，然后选择你喜爱的 Linux 发行版。
 
-    ![在 Windows 应用商店中的 Linux 发行版的视图](media/store.png)
+    ![在 Microsoft Store 中的 Linux 发行版的视图](media/store.png)
 
     以下链接将打开每个发行版的 Microsoft Store 页面：
 
@@ -52,28 +52,28 @@ ms.locfileid: "67035051"
     * [SUSE Linux Enterprise Server 15](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
     * [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
     * [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
-    * [WSL 的 fedora Remix](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    * [Fedora Remix for WSL](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
     * [WLinux](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
-    * [WLinux 企业](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    * [WLinux Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
     * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
-1. 从发行版的页面上，选择"Get"
+1. 在发行版的页面上，选择“获取”
 
-    ![在 Windows 应用商店中的 Linux 发行版的视图](media/UbuntuStore.png)
+    ![在 Microsoft Store 中的 Linux 发行版的视图](media/UbuntuStore.png)
 
 ## <a name="complete-initialization-of-your-distro"></a>完成发行版的初始化
 安装 Linux 发行版后，您必须先[初始化新的发行版实例](initialize-distro.md)一次，然后才能使用。
 
 ## <a name="troubleshooting"></a>疑难解答： 
 
-以下是相关的错误的建议修补程序。有关其他常见错误及其解决方案，请参阅[WSL 故障排除页](troubleshooting.md)。
+以下是相关的错误和建议的修补程序。 有关其他常见错误及其解决方案，请参阅[WSL 故障排除页](troubleshooting.md)。
 
 * **安装失败，出现错误 0x80070003**
-    * 适用于 Linux 的 Windows 子系统仅在您的系统驱动器上运行 (通常这是您的`C:`驱动器)。请确保发行版都存储在您的系统驱动器上：  
+    * 适用于 Linux 的 Windows 子系统仅在您的系统驱动器上运行（通常这是您的`C:`驱动器）。请确保发行版都存储在您的系统驱动器上：  
     * 打开**设置** -> **存储** -> **更多存储设置：更改新内容的保存位置**
     ![的系统设置的图片 c： 驱动器上安装应用](media/AppStorage.png)
     
     
  * **失败，出现错误 0x8007019e WslRegisterDistribution**   
-  * 未启用适用于 Linux 的 Windows 子系统可选组件：
+  * 未启用“适用于 Linux 的 Windows 子系统”可选组件： 
    * 打开**控制面板** -> **程序和功能** -> **启用或关闭 Windows 功能** -> 检查**适用于 Linux 的 Windows 子系统**或使用在本文开头所述的 PowerShell cmdlet。
