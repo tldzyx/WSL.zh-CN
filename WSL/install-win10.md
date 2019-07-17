@@ -19,20 +19,20 @@ ms.locfileid: "67035051"
 
 ## <a name="install-the-windows-subsystem-for-linux"></a>安装适用于 Linux 的 Windows 子系统
 
-在为 WSL 安装任何 Linux 发行版之前，您必须确保启用了“适用于 Linux 的 Windows 子系统”可选功能：
+在为 WSL 安装任何 Linux 发行版之前，必须确保启用了“适用于 Linux 的 Windows 子系统”可选功能：
 
 1. 以管理员身份打开 PowerShell 并运行：
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. 出现提示时重新启动计算机。
+2. 出现提示时重启计算机。
 
-## <a name="install-your-linux-distribution-of-choice"></a>安装您所选的 Linux 发行版
-若要下载并安装您首选的发行版，您有三种选择：
+## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 发行版
+若要下载并安装首选的发行版，你有三种选择：
 1. 从 Microsoft Store 下载并安装（见下文）
-1. 通过命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
-1. 下载和手动解压缩并安装（适用于 Windows Server - [此处的说明](install-on-server.md)）
+1. 从命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
+1. 下载并手动解压缩，然后进行安装（适用于 Windows Server - [此处提供说明](install-on-server.md)）
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 及更高版本：从 Microsoft Store 安装
 
@@ -57,23 +57,23 @@ ms.locfileid: "67035051"
     * [WLinux Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
     * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
-1. 在发行版的页面上，选择“获取”
+1. 从发行版的页面上，选择“获取”
 
     ![在 Microsoft Store 中的 Linux 发行版的视图](media/UbuntuStore.png)
 
 ## <a name="complete-initialization-of-your-distro"></a>完成发行版的初始化
-安装 Linux 发行版后，您必须先[初始化新的发行版实例](initialize-distro.md)一次，然后才能使用。
+安装 Linux 发行版后，必须先[初始化新的发行版实例](initialize-distro.md)一次，然后才能使用它。
 
 ## <a name="troubleshooting"></a>疑难解答： 
 
-以下是相关的错误和建议的修补程序。 有关其他常见错误及其解决方案，请参阅[WSL 故障排除页](troubleshooting.md)。
+以下是相关的错误和建议的修补措施。有关其他常见错误及其解决方案，请参阅 [WSL 故障排除页](troubleshooting.md)。
 
 * **安装失败，出现错误 0x80070003**
-    * 适用于 Linux 的 Windows 子系统仅在您的系统驱动器上运行（通常这是您的`C:`驱动器）。请确保发行版都存储在您的系统驱动器上：  
-    * 打开**设置** -> **存储** -> **更多存储设置：更改新内容的保存位置**
+    * 适用于 Linux 的 Windows 子系统仅在系统驱动器（通常为 `C:` 驱动器）上运行。请确保发行版存储在系统驱动器上：  
+    * 打开“设置”****->“存储”****->“更多存储设置: 更改新内容的保存位置”****
     ![的系统设置的图片 c： 驱动器上安装应用](media/AppStorage.png)
     
     
  * **失败，出现错误 0x8007019e WslRegisterDistribution**   
   * 未启用“适用于 Linux 的 Windows 子系统”可选组件： 
-   * 打开**控制面板** -> **程序和功能** -> **启用或关闭 Windows 功能** -> 检查**适用于 Linux 的 Windows 子系统**或使用在本文开头所述的 PowerShell cmdlet。
+   * 打开“控制面板”****->“程序和功能”****->“启用或关闭 Windows 功能”****->勾选“适用于 Linux 的 Windows 子系统”****或使用本文开头所述的 PowerShell cmdlet。
