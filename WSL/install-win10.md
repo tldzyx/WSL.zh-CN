@@ -36,7 +36,7 @@ ms.locfileid: "67035051"
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 及更高版本：从 Microsoft Store 安装
 
-> 本节适用于 Windows build 16215 或更高版本。请按照这些步骤[检查您的版本号](troubleshooting.md#check-your-build-number)。 
+> 此部分适用于 Windows 16215 或更高版本。请按照相关步骤[检查你的版本](troubleshooting.md#check-your-build-number)。
 
 1. 打开 Microsoft Store，然后选择你喜爱的 Linux 发行版。
 
@@ -70,7 +70,7 @@ ms.locfileid: "67035051"
 
 * **安装失败，出现错误 0x80070003**
     * 适用于 Linux 的 Windows 子系统仅在系统驱动器（通常为 `C:` 驱动器）上运行。请确保发行版存储在系统驱动器上：  
-    * 打开“设置”****->“存储”****->“更多存储设置: 更改新内容的保存位置”****
+    * 打开“设置”****->“存储”****->“更多存储设置: 更改新内容的保存位置”***
     ![的系统设置的图片 c： 驱动器上安装应用](media/AppStorage.png)
     
     
