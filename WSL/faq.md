@@ -19,17 +19,17 @@ ms.locfileid: "67035067"
 ## <a name="what-is-windows-subsystem-for-linux-wsl"></a>什么是适用于 Linux 的 Windows 子系统 (WSL)？
 适用于 Linux 的 Windows 子系统 (WSL) 是一个新的 Windows 10 功能，使您能够直接在 Windows 上运行原生 Linux 命令行工具，以及传统 Windows 桌面和新式应用商店应用。
 
-请参阅[有关页面](./about.md)查看更多详细信息。
+请参阅[关于页面](./about.md)，了解更多详细信息。
 
-## <a name="who-is-wsl-for"></a>WSL 为谁准备？
-这是开发人员 - 尤其是 web 开发人员以及工作或使用开源项目的员工的主要工具。 这允许那些想要/需要使用 Bash，常用 Linux 工具 (`sed`，`awk`等) 和许多 Linux 优先工具（Ruby、 Python 等）的人在 Windows 上使用他们的工具链。
+## <a name="who-is-wsl-for"></a>谁适合使用 WSL？
+这是主要适合开发人员使用的工具，尤其是 Web 开发人员以及参与或涉及开源项目的开发人员。 通过它，那些想要/需要使用 Bash、常用 Linux 工具（sed、awk 等）和许多 Linux 优先工具（Ruby、 Python 等）的人可以在 Windows 上使用他们的工具链。
 
 ## <a name="what-can-i-do-with-wsl"></a>使用 WSL 可以做什么？
-WSL提供了一个名为 Bash.exe 的应用程序，它在启动时会打开一个运行 Bash shell 的 Windows 控制台。使用 Bash，可以运行 Linux 的命令行工具和应用程序。 例如，键入`lsb_release -a`并按 enter，可以看到当前正在运行的 Linux 发行版的详细信息：
+WSL 提供了一个名为 Bash.exe 的应用程序，它在启动时会打开一个运行 Bash shell 的 Windows 控制台。使用 Bash，可以运行 Linux 的命令行工具和应用程序。 例如，键入`lsb_release -a`并按 enter，可以看到当前正在运行的 Linux 发行版的详细信息：
 
 ![发行版的详细信息的屏幕截图](media/distro.png)
 
-您还可以从 Linux Bash shell 中访问本地计算机的文件系统 - 您会发现您的本地驱动器挂载在`/mnt`文件夹。 例如，你`C:`驱动器挂载在`/mnt/c`下:  
+您还可以从 Linux Bash shell 访问本地计算机的文件系统 - 您会发现您的本地驱动器挂载在`/mnt`文件夹。 例如，`C:`驱动器挂载在`/mnt/c`下:  
 
 ![加载的 C 驱动器的屏幕截图](media/ls.png)
 
@@ -37,7 +37,7 @@ WSL提供了一个名为 Bash.exe 的应用程序，它在启动时会打开一�
 [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)是一种流行的基于文本的 shell 和命令语言。它是 Ubuntu 和其他 Linux 发行版以及 macOS 中包含的默认 shell。 用户在 shell 中键入命令以执行脚本和/或运行命令和工具来完成许多任务。
 
 ## <a name="how-does-this-work"></a>这是如何实现的？
-请查看我们[博客](https://blogs.msdn.microsoft.com/wsl/)，我们将详细介绍基础技术。
+请查看我们的[博客](https://blogs.msdn.microsoft.com/wsl/)，里面详细介绍了基础技术。
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>为什么要使用 WSL 而不是在 VM 中使用 Linux？
 WSL 需要较少的资源 （CPU、 内存和存储） 比完整的虚拟机。 WSL 还允许您运行 Linux 命令行工具和应用程序和 Windows 命令行中，桌面和应用商店应用，以及访问 Windows 文件从 Linux 中。 这样，如果你想在同一组文件上使用 Windows 应用和 Linux 命令行工具。
@@ -170,7 +170,7 @@ WSL 共享运行在 Windows 上的 Windows，IP 地址。 这种情况下可以�
 
 ## <a name="where-can-i-provide-feedback"></a>在哪里可以提供反馈？
 
-您可以通过多种渠道分享反馈并提出问题：反馈和问题应指向：
+您可以通过多种渠道分享反馈和提出问题：反馈和问题应在以下位置提出：
 * 我们的[GitHub 问题跟踪程序](https://github.com/Microsoft/BashOnWindows/issues)
 * 我们的[命令行 UserVoice 门户](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
 * 我们的[命令行团队博客](https://blogs.msdn.microsoft.com/commandline/)
