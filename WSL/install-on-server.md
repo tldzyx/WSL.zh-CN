@@ -30,7 +30,7 @@ ms.locfileid: "67035075"
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. 出现提示时重新启动计算机。**需要重新启动**是为了确保 WSL 可以启动受信任的执行环境。
+2. 出现提示时重新启动计算机。**必须重新启动**，这是为了确保 WSL 可以启动受信任的执行环境。
 
 ## <a name="download-a-linux-distro"></a>下载 Linux 发行版
 
