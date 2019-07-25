@@ -29,7 +29,7 @@ ms.locfileid: "67891788"
 - 初始预览版本中，跨 OS 文件访问速度会变慢
 
 ## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>将 Linux 文件放在 Linux 根文件系统中
-请确保将经常访问的文件放在 Linux 根文件系统内的 Linux 应用程序中, 以享受文件性能优势。 为了更快地访问文件系统, 这些文件必须位于 Linux 根文件系统中。 我们还可以使 Windows 应用程序访问 Linux 根文件系统 (如文件资源管理器) 尝试运行: `explorer.exe .`在 Linux 发行版的主目录中, 看看会发生什么情况, 这会使此转换变得更加容易。 
+请务必将使用 Linux 应用程序频繁访问的文件放在 Linux 根文件系统中，从而获取文件性能方面的优势。 这些文件只有在 Linux 根文件系统中才能实现更快的文件系统访问。 我们还使 Windows 应用能访问 Linux 根文件系统（如文件资源管理器！ 尝试在 Linux 发行版的 home 目录中运行：`explorer.exe .`，看看会发生什么)， 这会使文件转移更加便捷。 
 
 ## <a name="accessing-network-applications"></a>访问网络应用程序
 在 WSL 2 预览版的初始版本中，需要使用 Linux 发行版的 IP 地址从 Windows 中访问 Linux 服务器并使用主机的 IP 地址从 Linux 中访问 Windows 服务器。 这不是临时性的问题，而是需要解决的首要问题之一。

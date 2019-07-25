@@ -296,5 +296,5 @@ WSL 支持两个部分`automount` : `network`和。
 
 | 键 | value | default | 本票|
 |:----|:----|:----|:----|
-| enabled | boolean | `true` | 设置此项将确定 WSL 是否将支持启动 Windows 进程。 |
+| enabled | boolean | `true` | 此键的设置将确定 WSL 是否支持启动 Windows 进程。 |
 | appendWindowsPath | boolean | `true` | 设置此项将确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 
