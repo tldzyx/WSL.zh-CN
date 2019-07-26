@@ -161,7 +161,7 @@ PS C:\Users\sarah>
 `wsl --unregister <DistributionName>`  
 从 WSL 中注销分发, 以便能够重新安装或清理。
 
-例如: `wsl --unregister Ubuntu`将从 WSL 中提供的分发中删除 Ubuntu。  运行`wsl --list`时, 不会列出。
+例如：`wsl --unregister Ubuntu` 会从 WSL 中可用的发行版中删除 Ubuntu。  当我运行 `wsl --list` 时，它不会被列出。
 
 若要重新安装, 请在 Microsoft 应用商店中找到分发版, 然后选择 "启动"。
 
@@ -169,19 +169,19 @@ PS C:\Users\sarah>
 
 `wsl -u <Username>`， `wsl --user <Username>`
 
-以指定的用户身份运行 WSL。 请注意, 用户必须存在于 WSL 分发中。
+以指定用户的身份运行 WSL。 请注意，用户必须存在于 WSL 发行版内。
 
-#### <a name="run-a-specific-distribution"></a>运行特定分发
+#### <a name="run-a-specific-distribution"></a>运行特定的发行版
 
 `wsl --d <DistributionName>`， `wsl --distribution <DistributionName>`
 
-运行 WSL 的指定分发, 可用于将命令发送到特定的分发, 无需更改默认值。
+运行指定的 WSL 发行版。可用于将命令发送到特定发行版，而无需更改默认值。
 
 ### <a name="versions-earlier-than-windows-10-version-1903"></a>早于 Windows 10 版本1903的版本
 
-WSL Config (`wslconfig.exe`) 是一个命令行工具, 用于管理在适用于 linux 的 Windows 子系统 (WSL) 上运行的 linux 分发。  它允许列出可用的分发、设置默认分发和卸载分发。
+WSL Config (`wslconfig.exe`) 是一个命令行工具，用于管理在适用于 Linux 的 Windows 子系统 (WSL) 上运行的 Linux 发行版。  通过它，可列出可用的发行版，设置默认发行版以及卸载发行版。
 
-尽管 WSL Config 对于跨或协调分布的设置很有帮助, 但每个 Linux 发行版都独立管理自己的配置。  若要查看特定于分发的命令`[distro.exe] /?`, 请运行。  例如，`ubuntu /?`。
+虽然 WSL Config 对跨越或协调发行版的设置很有帮助，但每个 Linux 发行版都独立管理自己的配置。  若要查看特定于发行版的命令，请运行 `[distro.exe] /?`。  例如，`ubuntu /?`。
 
 若要查看 wslconfig 的所有可用选项, 请运行:`wslconfig /?`
 
@@ -197,13 +197,13 @@ Usage:
     /u, /unregister <DistributionName> - Unregisters a distribution.
 ```
 
-#### <a name="list-distributions"></a>列出分布
+#### <a name="list-distributions"></a>列出发行版
 
 `wslconfig /list`  
-列出可用于 WSL 的可用 Linux 分发版。  如果列出了分发版, 则它已安装并可供使用。
+列出 WSL 可用的 Linux 发行版。  如果已列出某个发行版，则表示它已安装并可供使用。
 
 `wslconfig /list /all`  
-列出所有分发, 包括当前不可用的分发。  它们可能正在安装、卸载或处于损坏状态。  
+列出所有发行版，包括当前不可用的发行版。  它们可能正在安装、正在卸载或处于断开状态。  
 
 #### <a name="set-a-default-distribution"></a>设置默认分布
 
