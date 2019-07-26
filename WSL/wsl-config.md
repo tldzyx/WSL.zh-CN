@@ -163,7 +163,7 @@ PS C:\Users\sarah>
 
 例如：`wsl --unregister Ubuntu` 会从 WSL 中可用的发行版中删除 Ubuntu。  当我运行 `wsl --list` 时，它不会被列出。
 
-若要重新安装, 请在 Microsoft 应用商店中找到分发版, 然后选择 "启动"。
+若要重新安装，请在 Microsoft Store 中查找发行版，并选择"启动。
 
 #### <a name="run-as-a-specific-user"></a>以特定用户身份运行
 
@@ -229,7 +229,7 @@ Usage:
 
 例如: `wslconfig /unregister Ubuntu`将从 WSL 中提供的分发中删除 Ubuntu。  运行`wslconfig /list`时, 不会列出。
 
-若要重新安装, 请在 Microsoft 应用商店中找到分发版, 然后选择 "启动"。
+若要重新安装，请在 Microsoft Store 中查找发行版，并选择"启动。
 
 ## <a name="set-wsl-launch-settings"></a>设置 WSL 启动设置
 
