@@ -8,16 +8,16 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 55cea2c4b7087f3dd8a29986aaddc8c313763448
-ms.sourcegitcommit: b07769a3140db9ac63e42c7d7d1290c0bad8c40d
+ms.openlocfilehash: bf2f2e24fb8a2db49270fb77558d4fda1828dedf
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67467550"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523773"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
-在多种情况下, 你可能无法 (或不想) 通过 Microsoft Store 安装 WSL Linux 发行版。 具体而言, 你可能运行的是不支持 Microsoft Store 或公司网络策略和/或管理员在你的环境中不允许 Microsoft Store 使用的 Windows Server 或长期维护 (LTSB/LTSC) 桌面操作系统 SKU。
+在多种情况下, 你可能无法 (或不想) 通过 Microsoft Store 安装 WSL Linux 发行版。 具体而言, 你可能运行的是不支持 Microsoft Store 或公司网络策略和/或管理员在你的环境中不允许 Microsoft Store 使用的 Windows Server 或长期服务 (LTSC) 桌面操作系统 SKU。
 
 在这些情况下, 虽然 WSL 本身可用, 但如果你无法访问应用商店, 如何下载并在 WSL 中安装 Linux 发行版？
 
