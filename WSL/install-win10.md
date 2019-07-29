@@ -30,15 +30,15 @@ ms.locfileid: "67499282"
 
 ## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 发行版
 若要下载并安装首选发行版, 你有三种选择:
-1. 从 Microsoft Store 下载并安装 (请参阅下文)
-1. 从命令行/脚本下载并安装 ([阅读手动安装说明](install-manual.md))
-1. 下载并手动解压缩和安装 (适用于 Windows Server-[此处为说明](install-on-server.md))
+1. 从 Microsoft Store 下载并安装（见下文）
+1. 从命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
+1. 下载并手动解压缩，然后进行安装（适用于 Windows Server - [此处提供说明](install-on-server.md)）
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 秋季创意者更新及更高版本:从 Microsoft Store 安装
 
 > 本部分适用于 Windows 版本16215或更高版本。  请按照以下步骤[检查您的生成](troubleshooting.md#check-your-build-number)。 
 
-1. 打开 Microsoft Store, 然后选择你最喜爱的 Linux 分发版。
+1. 打开 Microsoft Store，然后选择你喜爱的 Linux 发行版。
 
     ![Microsoft Store 中的 Linux 发行版的视图](media/store.png)
 
@@ -69,11 +69,11 @@ ms.locfileid: "67499282"
 下面是相关错误和建议的修补程序。 有关其他常见错误及其解决方案, 请参阅[WSL 故障排除页](troubleshooting.md)。
 
 * **安装失败, 出现错误0x80070003**
-    * 适用于 Linux 的 Windows 子系统仅在系统驱动器上运行 (通常是`C:`驱动器)。 请确保发行版存储在系统驱动器上:  
-    * 打开**设置** -> 存储->更多存储设置: **更改保存**
+    * 适用于 Linux 的 Windows 子系统仅在系统驱动器（通常为 `C:` 驱动器）上运行。 请确保发行版存储在系统驱动器上：  
+    * 打开 **“设置”** -> **“存储”** ->“更多存储设置 **: 更改新内容的保存位置”更改保存**
     新内容的位置,以在C:驱动器上安装应用程序的系统设置图片![](media/AppStorage.png)
     
     
  * **WslRegisterDistribution 失败, 出现错误0x8007019e**   
   * 未启用适用于 Linux 的 Windows 子系统可选组件: 
-   * 打开 **"控制面板" "**  -> **程序和功能**"-> "打开或关闭 windows 功能" * *-> 检查**适用于 Linux 的 windows 子系统**或使用本文开头提到的 PowerShell cmdlet。
+   * 打开“控制面板” -> “程序和功能” ->“启用或关闭 Windows 功能”->勾选“适用于 Linux 的 Windows 子系统”或使用本文开头所述的 PowerShell cmdlet。
