@@ -1,6 +1,6 @@
 ---
 title: 管理 Linux 发行版
-description: 参考列出和配置在适用于 Linux 的 Windows 子系统上运行的多个 Linux 分发。
+description: 参考列出和配置在适用于 Linux 的 Windows 子系统上运行的多个 Linux 发行版。
 keywords: BashOnWindows、bash、wsl、windows、适用于 linux 的 windows 子系统、windowssubsystem、ubuntu、wsl、wslconfig
 author: scooley
 ms.author: scooley
@@ -21,7 +21,7 @@ ms.locfileid: "67499277"
 
 ## <a name="ways-to-run-wsl"></a>运行 WSL 的方式
 
-有多种方法可通过适用于 Linux 的 Windows 子系统运行 Linux。
+使用适用于 Linux 的 Windows 子系统运行 Linux 的方法有很多种。
 
 1. `[distro]`, 例如`ubuntu`
 1. `wsl.exe` 或 `bash.exe`
@@ -29,9 +29,9 @@ ms.locfileid: "67499277"
 
 应使用哪种方法取决于所执行的操作。
 
-### <a name="launch-wsl-by-distribution"></a>按分发启动 WSL
+### <a name="launch-wsl-by-distribution"></a>通过发行版启动 WSL
 
-使用发行版特定的应用程序运行分发时, 会在其自己的控制台窗口中启动该分发。
+使用它的特定于发行版的应用程序运行发行版会在其自己的控制台窗口中启动该发行版。
 
 ![从 "开始" 菜单启动 WSL](media/start-launch.png)
 
@@ -39,9 +39,9 @@ ms.locfileid: "67499277"
 
 ![从 Microsoft 应用商店启动 WSL](media/store-launch.png)
 
-还可以通过运行`[distribution].exe`从命令行运行分发。
+还可以通过运行 `[distribution].exe`，从命令行运行发行版。
 
-以这种方式从命令行运行分发的缺点是, 它会自动将工作目录从当前目录更改为分发的主目录。
+以这种方式从命令行运行发行版的缺点是，它会自动将你的工作目录从当前目录更改为发行版的主目录。
 
 **示例：**
 
@@ -64,7 +64,7 @@ PS C:\Users\sarah>
 
 ### <a name="wsl-and-wsl-command"></a>wsl 和 wsl [command]
 
-从命令行运行 WSL 的最佳方式是使用`wsl.exe`。
+从命令行运行 WSL 的最佳方法是使用 `wsl.exe`。
 
 **示例：**
 
@@ -81,7 +81,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 /mnt/c/Users/sarah
 ```
 
-不只`wsl`是保留当前的工作目录, 它允许您在 Windows 命令的两侧运行单个命令。
+`wsl` 不仅保留了当前的工作目录，还允许你随 Windows 命令运行单个命令。
 
 **示例：**
 
@@ -120,46 +120,46 @@ PS C:\Users\sarah>
 ```
 
 
-## <a name="managing-multiple-linux-distributions"></a>管理多个 Linux 分发
+## <a name="managing-multiple-linux-distributions"></a>管理多个 Linux 发行版
 
-### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本1903及更高版本
+### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本 1903 及更高版本
 
-你可以使用`wsl.exe`在适用于 Linux 的 Windows 子系统 (WSL) 中管理你的分发版, 其中包括列出可用的分发、设置默认分发和卸载分发。
+可使用 `wsl.exe` 来管理适用于 Linux 的 Windows 子系统 (WSL) 中的发行版，包括列出可用的发行版，设置默认发行版和卸载发行版。
 
-每个 Linux 分发独立管理自己的配置。 若要查看特定于分发的命令`[distro.exe] /?`, 请运行。  例如，`ubuntu /?`。
+每个 Linux 发行版独立地管理其自己的配置。 若要查看特定于发行版的命令，请运行 `[distro.exe] /?`。  例如：`ubuntu /?`。
 
-#### <a name="list-distributions"></a>列出分布
+#### <a name="list-distributions"></a>列出发行版
 
 `wsl -l`,`wsl --list`  
-列出可用于 WSL 的可用 Linux 分发版。  如果列出了分发版, 则它已安装并可供使用。
+列出 WSL 可用的 Linux 发行版。  如果已列出某个发行版，则表示它已安装并可供使用。
 
 `wsl --list --all`   
-列出所有分发, 包括当前不可用的分发。  它们可能正在安装、卸载或处于损坏状态。  
+列出所有发行版，包括当前不可用的发行版。  它们可能正在安装、正在卸载或处于断开状态。  
 
 `wsl --list --running`   
-列出当前正在运行的所有分发版。
+列出当前正在运行的所有发行版。
 
-#### <a name="set-a-default-distribution"></a>设置默认分布
+#### <a name="set-a-default-distribution"></a>设置默认发行版
 
-默认的 WSL 分布是在命令行上运行`wsl`时运行的分发。
+默认 WSL 发行版是在命令行上运行 `wsl` 时所运行的发行版。
 
 `wsl -s <DistributionName>`， `wsl --setdefault <DistributionName>`
 
-将默认分布设置为`<DistributionName>`。
+将默认发行版设置为 `<DistributionName>`。
 
 **示例：**  
-`wsl -s Ubuntu`会将我的默认分发设置为 Ubuntu。  现在, 运行`wsl npm init`时, 它将在 Ubuntu 中运行。  如果运行`wsl`它, 将打开 Ubuntu 会话。
+`wsl -s Ubuntu` 会将我的默认发行版设置为 Ubuntu。  现在，当我运行 `wsl npm init` 时，它将在 Ubuntu 中运行。  如果我运行 `wsl`，它将打开一个 Ubuntu 会话。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
 
-虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载分发。
+虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载发行版。
 
-取消注册还允许重新安装分发。
+注销后仍然可以重新安装发行版。
 
-> **警告：** 注销后, 与该分发关联的所有数据、设置和软件都将永久丢失。  从存储重新安装将安装分发的干净副本。
+> **警告：** 注销后，与该发行版相关的所有数据、设置和软件将永久丢失。  从 Store 重新安装将安装发行版的干净副本。
 
 `wsl --unregister <DistributionName>`  
-从 WSL 中注销分发, 以便能够重新安装或清理。
+从 WSL 中注销发行版，以便可以重新安装或清除它。
 
 例如：`wsl --unregister Ubuntu` 会从 WSL 中可用的发行版中删除 Ubuntu。  当我运行 `wsl --list` 时，它不会被列出。
 
@@ -181,7 +181,7 @@ PS C:\Users\sarah>
 
 WSL Config (`wslconfig.exe`) 是一个命令行工具，用于管理在适用于 Linux 的 Windows 子系统 (WSL) 上运行的 Linux 发行版。  通过它，可列出可用的发行版，设置默认发行版以及卸载发行版。
 
-虽然 WSL Config 对跨越或协调发行版的设置很有帮助，但每个 Linux 发行版都独立管理自己的配置。  若要查看特定于发行版的命令，请运行 `[distro.exe] /?`。  例如，`ubuntu /?`。
+虽然 WSL Config 对跨越或协调发行版的设置很有帮助，但每个 Linux 发行版都独立管理自己的配置。  若要查看特定于发行版的命令，请运行 `[distro.exe] /?`。  例如：`ubuntu /?`。
 
 若要查看 wslconfig 的所有可用选项, 请运行:`wslconfig /?`
 
@@ -205,27 +205,27 @@ Usage:
 `wslconfig /list /all`  
 列出所有发行版，包括当前不可用的发行版。  它们可能正在安装、正在卸载或处于断开状态。  
 
-#### <a name="set-a-default-distribution"></a>设置默认分布
+#### <a name="set-a-default-distribution"></a>设置默认发行版
 
-默认的 WSL 分布是在命令行上运行`wsl`时运行的分发。
+默认 WSL 发行版是在命令行上运行 `wsl` 时所运行的发行版。
 
 `wslconfig /setdefault <DistributionName>`
 
-将默认分布设置为`<DistributionName>`。
+将默认发行版设置为 `<DistributionName>`。
 
 **示例：**  
-`wslconfig /setdefault Ubuntu`会将我的默认分发设置为 Ubuntu。  现在, 运行`wsl npm init`时, 它将在 Ubuntu 中运行。  如果运行`wsl`它, 将打开 Ubuntu 会话。
+`wslconfig /setdefault Ubuntu`会将我的默认分发设置为 Ubuntu。  现在，当我运行 `wsl npm init` 时，它将在 Ubuntu 中运行。  如果我运行 `wsl`，它将打开一个 Ubuntu 会话。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
 
-虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载分发。
+虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载发行版。
 
-取消注册还允许重新安装分发。
+注销后仍然可以重新安装发行版。
 
-> **警告：** 注销后, 与该分发关联的所有数据、设置和软件都将永久丢失。  从存储重新安装将安装分发的干净副本。
+> **警告：** 注销后，与该发行版相关的所有数据、设置和软件将永久丢失。  从 Store 重新安装将安装发行版的干净副本。
 
 `wslconfig /unregister <DistributionName>`  
-从 WSL 中注销分发, 以便能够重新安装或清理。
+从 WSL 中注销发行版，以便可以重新安装或清除它。
 
 例如: `wslconfig /unregister Ubuntu`将从 WSL 中提供的分发中删除 Ubuntu。  运行`wslconfig /list`时, 不会列出。
 
