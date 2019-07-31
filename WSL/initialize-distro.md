@@ -63,4 +63,4 @@ sudo apt update && sudo apt upgrade
 
 > **安装失败, 出现错误 0x8007007e**当你的系统不支持应用商店中的 Linux 时, 会发生此错误。  请确保：
 > * 你正在运行 Windows 版本16215或更高版本。 [检查生成](troubleshooting.md#check-your-build-number)。
-> * 已启用适用于 Linux 的 Windows 子系统可选组件, 并已重新启动计算机。  [请确保已启用 WSL](troubleshooting.md#confirm-wsl-is-enabled)。
+> * 适用于 Linux 的 Windows 子系统可选组件已启用，并重新启动计算机。  [请确保已启用 WSL](troubleshooting.md#confirm-wsl-is-enabled)。
