@@ -21,7 +21,7 @@ ms.locfileid: "67237388"
 
 有关更多详细信息, 请参阅 "[关于" 页](./about.md)。
 
-## <a name="who-is-wsl-for"></a>谁 WSL？
+## <a name="who-is-wsl-for"></a>谁适合使用 WSL？
 这主要是一种面向开发人员的工具, 尤其是 web 开发人员和使用开源项目的用户。 这允许需要/需要使用 Bash、通用 Linux 工具 (`sed`、 `awk`等) 的用户和许多 Linux 优先工具 (Ruby、Python 等) 在 Windows 上使用工具链。
 
 ## <a name="what-can-i-do-with-wsl"></a>我可以对 WSL 做些什么？
@@ -180,6 +180,6 @@ Windows 版本1809及更高版本中提供了备份发行版的最佳方式。 �
 
 可以通过多个渠道共享反馈和提问:反馈和问题应定向到:
 * [GitHub 问题跟踪](https://github.com/Microsoft/BashOnWindows/issues)器
-* 我们[的命令行 UserVoice 门户](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
-* 我们[的命令行团队博客](https://blogs.msdn.microsoft.com/commandline/)
-* 通过 Twitter。 请关注[@richturn_ms](https://twitter.com/richturn_MS) Twitter 了解新闻、更新等。
+* 我们的[命令行 UserVoice 门户](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
+* 我们的[命令行团队博客](https://blogs.msdn.microsoft.com/commandline/)
+* 通过 Twitter。 请在 Twitter 上关注[@richturn_ms](https://twitter.com/richturn_MS)以了解新闻，更新等。
