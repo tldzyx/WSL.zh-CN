@@ -17,9 +17,9 @@ ms.locfileid: "67237388"
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题
 
 ## <a name="what-is-windows-subsystem-for-linux-wsl"></a>什么是适用于 Linux 的 Windows 子系统 (WSL)？
-适用于 Linux 的 Windows 子系统 (WSL) 是一项新的 Windows 10 功能, 使你能够直接在 Windows 上运行本机 Linux 命令行工具, 以及传统的 Windows 桌面和新式应用程序。
+适用于 Linux 的 Windows 子系统 (WSL) 是一项新的 Windows 10 功能, 使你能够直接在 Windows 上运行原生 Linux 命令行工具, 以及传统的 Windows 桌面和新式应用程序。
 
-有关更多详细信息, 请参阅 "[关于" 页](./about.md)。
+有关更多详细信息, 请参阅 "[关于页面](./about.md)，了解更多详细信息。
 
 ## <a name="who-is-wsl-for"></a>谁适合使用 WSL？
 这主要是一种面向开发人员的工具, 尤其是 web 开发人员和使用开源项目的用户。 这允许需要/需要使用 Bash、通用 Linux 工具 (`sed`、 `awk`等) 的用户和许多 Linux 优先工具 (Ruby、Python 等) 在 Windows 上使用工具链。
@@ -34,7 +34,7 @@ WSL 提供了一个名为 Bash 的应用程序, 该应用程序在启动时将�
 ![装载的 C 驱动器的屏幕截图](media/ls.png)
 
 ## <a name="what-is-bash"></a>什么是 Bash？
-[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)是基于文本的常用 shell 和命令语言。 它是 Ubuntu 和其他 Linux 发行版中包含的默认 shell, 在 macOS 中。 用户在 shell 中键入命令以执行脚本和/或运行命令和工具来完成许多任务。
+[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)是一种流行的基于文本的 shell 和命令语言。 它是 Ubuntu 和其他 Linux 发行版以及 macOS 中包含的默认 shell。 用户在 shell 中键入命令以执行脚本和/或运行命令和工具来完成许多任务。
 
 ## <a name="how-does-this-work"></a>这是如何实现的？
 请查看我们的[博客](https://blogs.msdn.microsoft.com/wsl/), 了解基础技术的详细信息。

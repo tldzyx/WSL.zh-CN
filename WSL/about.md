@@ -24,7 +24,7 @@ ms.locfileid: "67694625"
 
 1. [从 Microsoft Store 中](https://aka.ms/wslstore)选择你最喜爱的 GNU/Linux 分发。
 1. 运行通用的命令行免费软件，如 `grep`、`sed`、`awk` 或其他 ELF-64 二进制文件。 
-1. 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序, 包括:  
+1. 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序，这包括：  
     * 工具: vim、emacs、tmux
     * 语言：Javascript/node.js、Ruby、Python、C/C++、 C# & F#、Rust、中转等。
     * 服务: sshd、MySQL、Apache、lighttpd
@@ -40,7 +40,7 @@ ms.locfileid: "67694625"
 
 ## <a name="team-blogs"></a>团队博客
 *  [概述使用视频和博客的集合](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
-* [命令行博客](https://blogs.msdn.microsoft.com/commandline/)正在
+* [命令行博客](https://blogs.msdn.microsoft.com/commandline/)（活跃）
 * [适用于 Linux 的 Windows 子系统博客](https://blogs.msdn.microsoft.com/wsl/)记录
 
 ## <a name="posts--articles"></a>文章 & 文章

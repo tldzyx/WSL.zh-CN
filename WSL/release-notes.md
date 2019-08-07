@@ -7,12 +7,12 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523786"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832114"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统的发行说明
 
@@ -37,7 +37,7 @@ ms.locfileid: "68523786"
 * [WSL2]Fix CopyFile 挂起 with \\ \\wsl $
 * 将默认 umask 切换到 0022, 并将 umask 设置设置为/etc/wsl.conf
 * 修复 wslpath 以正确解析符号链接, 这是19h1 中的回归 [GH 4078]
-* 引入% UserProfile%\.wslconfig 文件以调整 WSL2 设置
+* 引入% UserProfile%\\. wslconfig 文件以调整 WSL2 设置
 ```
 [wsl2]
 kernel=<path>              # An absolute Windows path to a custom Linux kernel.
@@ -506,7 +506,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL 更易于配置 WSL
 添加了一种方法, 用于在 WSL 中自动配置某些功能, 这些功能将在每次启动子系统时应用。 这包括自动装载选项和网络配置。 在博客文章中了解更多相关信息: https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允许在 WSL 和 Windows 本机进程上的 Linux 进程之间进行套接字连接
+#### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允许在 WSL 和 Windows 本机进程上的 Linux 进程之间进行套接字连接
 现在, WSL 和 Windows 应用程序可以通过 Unix 套接字彼此通信。 假设你想要在 Windows 中运行服务, 并使其可用于 Windows 和 WSL 应用。 现在, 可以通过 Unix 套接字实现。 有关详细信息, 请阅读我们的博客文章 https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
