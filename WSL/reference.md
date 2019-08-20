@@ -8,78 +8,84 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
-ms.openlocfilehash: 465f55f8ba210cd366adc66d433f1873e295136f
-ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
+ms.openlocfilehash: 018b02b43e859476f7ee38f54df8efa0ca0e652b
+ms.sourcegitcommit: 62c49d435a91f2e390c3c495f3e09e62b5ada13c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307657"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69578838"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统的命令参考
 
 与适用于 Linux 的 Windows 子系统交互的最佳方式是使用`wsl.exe`命令。 
 
-## `wsl.exe` 
+
+## `wsl.exe`
 
 下面是在使用 Windows 版本1903时使用`wsl.exe`的所有选项的列表。
 
-* 用于运行 Linux 二进制文件的参数:
+利用`wsl [Argument] [Options...] [CommandLine]`
 
-    * 如果未提供命令行, wsl 将启动默认 shell。
+### <a name="arguments-for-running-linux-binaries"></a>用于运行 Linux 二进制文件的参数
 
-    * --exec,-e<CommandLine>
-        * 执行指定的命令, 而不使用默认的 Linux shell。
+* **不带参数**
 
-    * --
-        * 按原样传递剩余的命令行。
+  如果未提供命令行, wsl 将启动默认 shell。
 
-* 选项：
-    * --分发,-d<Distro>
-        * 运行指定的分发。
+* **--exec,-e \<命令行 >**
+  
+  执行指定的命令, 而不使用默认的 Linux shell。
 
-    * --user,-u<UserName>
-        * 以指定用户身份运行。
+* **--**
+  
+  按原样传递剩余的命令行。
 
-* 用于管理适用于 Linux 的 Windows 子系统的参数:
+上述命令也接受以下选项:
 
-    * --export <Distro><FileName>
-        * 将分发导出到 tar 文件。
-        文件名可以是-标准输出。
+* **--分发,-d \<发行版 >**
 
-    * --import <Distro> <InstallLocation>[Options <FileName> ]
-        * 导入指定的 tar 文件作为新的分发。
-        文件名可以是-标准输入。
+  运行指定的分发。
 
-        * 选项：
-            * --version <Version>指定要用于新分发的版本。
+* **--user,-u \<UserName >**
 
-    * --list,-l [Options]
-        * 列出分布。
+  以指定用户身份运行。
 
-        * 选项：
-            * --all
-                * 列出所有分发, 包括当前正在安装或卸载的分发。
+### <a name="arguments-for-managing-windows-subsystem-for-linux"></a>用于管理适用于 Linux 的 Windows 子系统的参数
 
-            * --正在运行
-                * 仅列出当前正在运行的分发。
+* **--export \<发行版 > \<FileName >**
+  
+  将分发导出到 tar 文件。 文件名可以是-标准输出。
 
-    * --set-默认值,-s<Distro>
-        * 将分布设置为默认值。
+* **--import \<发行版 > \<InstallLocation > \<FileName >**
+  
+  导入指定的 tar 文件作为新的分发。 文件名可以是-标准输入。
 
-    * --set-默认-版本<Version>
-        * 更改新分发版的默认安装版本。
+* **--list,-l [Options]**
+  
+  列出分布。
 
-    * --set-版本<Distro><Version>
-        * 更改指定分发的版本。
+  选项：
+  * **--all**
+      
+    列出所有分发, 包括当前正在安装或卸载的分发。
 
-    * --terminate,-t<Distro>
-        * 终止指定的分发。
+  * **--正在运行**
+      
+    仅列出当前正在运行的分发。
 
-    * --取消注册<Distro>
-        * 注销分布。
+* **--set-default、-s \<发行版 >**
+  
+  将分布设置为默认值。
 
-    * --help
-        * 显示用法信息。
+* **--terminate,-t \<发行版 >**
+  
+  终止指定的分发。
+
+* **--取消\<注册发行版 >**
+  
+  注销分布。
+   
+* **--帮助**显示用法信息。
 
 ## <a name="additional-commands"></a>其他命令
 
@@ -89,33 +95,57 @@ ms.locfileid: "67307657"
 
 此命令可让你配置 WSL 分布。 下面是其选项的列表。
 
-* /l,/list [选项]
-    * 列出已注册的分发。
-        * /all-(可选) 列出所有分发, 包括当前正在安装或卸载的分发。
+利用`wslconfig [Argument] [Options...]`
 
-        * /running-仅列出当前正在运行的分发。
+#### <a name="arguments"></a>参数
+* **/l,/list [选项]**
+  
+  列出已注册的分发。
+  
+  选项：
+    * **/all**
+    
+      根据需要列出所有分发, 包括当前正在安装或卸载的分发。
 
-* /s、/setdefault<DistributionName>
-    * 将分布设置为默认值。
+    * **/running**
+      
+      仅列出当前正在运行的分发。
 
-* /t、/terminate<DistributionName>
-    * 终止分布。
+* **/s、/setdefault \<发行版 >**
+  
+  将分布设置为默认值。
 
-* /u,/unregister<DistributionName>
-    * 注销分布。
+* **/t、/terminate \<发行版 >**
+  
+  终止分布。
+
+* **/u,/unregister \<发行版 >**
+  
+  注销分布。
+   
+* **/upgrade \<发行版 >**
+  
+  将分发升级到 WslFs 文件系统格式。
 
 ### `bash.exe`
 
 此命令用于启动 bash shell。 下面是可用于此命令的选项。
 
-* 未给定选项
-    * 在当前目录中启动 Bash shell。 如果未自动安装 Bash shell, 则运行`lxrun /install`
+利用`bash [Options...]`
 
-* bash ~
-    * 在用户的主目录中启动 bash shell。  类似于运行`cd ~`。
+* **未给定选项**
+  
+  在当前目录中启动 Bash shell。 如果未自动安装 Bash shell, 则运行`lxrun /install`
 
-* bash-c "&lt;command&gt;"
-    * 运行命令, 打印输出并退出到 Windows 命令提示符。 <br/> <br/> 实例`bash -c "ls"`
+* **~**
+  
+  `bash ~`在用户的主目录中启动 bash shell。  类似于运行`cd ~`。
+
+* **-c "\<command >"**
+  
+  运行命令, 打印输出并退出到 Windows 命令提示符。
+    
+  示例: `bash -c "ls"`。
 
 ## <a name="deprecated-commands"></a>弃用的命令
 
