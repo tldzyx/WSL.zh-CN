@@ -159,7 +159,7 @@ C:\temp>dir | findstr foo.txt
 
 > 在 Windows 有问必答版本17063及更高版本中可用。
 
-在17063之前, 只有 WSL 可以访问的 Windows 环境变量是`PATH` (因此, 你可以从 WSL 下启动 Win32 可执行文件)。
+在17063之前, WSL 可以访问的 Windows 环境变量只有`PATH` (因此, 你可以从 WSL 下启动 Win32 可执行文件)。
 
 从17063、WSL 和 Windows 共享`WSLENV`开始, 创建了一个特殊的环境变量, 用于在 WSL 上运行的 Windows 和 Linux 发行版。
 
@@ -169,11 +169,11 @@ C:\temp>dir | findstr foo.txt
 * 它是要在 Windows 和 WSL 之间共享的环境变量的列表。
 * 它可以设置环境变量的格式, 以便在 Windows 和 WSL 中正常工作。
 
-中`WSLENV`提供了四个标志来影响如何转换该环境变量。
+`WSLENV`提供了四个标志来影响如何转换该环境变量。
 
-`WSLENV`随意
+`WSLENV`标志
 
-* `/p`-翻译 WSL/Linux 样式路径和 Win32 路径之间的路径。
+* `/p`-在 WSL/Linux 样式路径和 Win32 路径之间的路径翻译。
 * `/l`-指示环境变量是路径的列表。
 * `/u`-指示此环境变量只应在从 Win32 运行 WSL 时包括在内。
 * `/w`-指示此环境变量只应在从 WSL 运行 Win32 时包括在内。
@@ -182,7 +182,7 @@ C:\temp>dir | findstr foo.txt
 
 ## <a name="disable-interop"></a>禁用互操作
 
-用户可以通过以 root 身份运行以下命令, 禁止为单个 WSL 会话运行 Windows 二进制文件的功能。
+用户可以通过以 root 身份运行以下命令, 为单个 WSL 会话禁用运行 Windows 二进制文件的功能。
 
 ``` BASH
 $ echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
