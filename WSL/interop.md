@@ -173,7 +173,7 @@ C:\temp>dir | findstr foo.txt
 
 `WSLENV`标志
 
-* `/p`-在 WSL/Linux 样式路径和 Win32 路径之间的路径翻译。
+* `/p`-翻译 WSL/Linux 样式路径和 Win32 路径之间的路径。
 * `/l`-指示环境变量是路径的列表。
 * `/u`-指示此环境变量只应在从 Win32 运行 WSL 时包括在内。
 * `/w`-指示此环境变量只应在从 WSL 运行 Win32 时包括在内。
@@ -182,7 +182,7 @@ C:\temp>dir | findstr foo.txt
 
 ## <a name="disable-interop"></a>禁用互操作
 
-用户可以通过以 root 身份运行以下命令, 为单个 WSL 会话禁用运行 Windows 二进制文件的功能。
+用户可以通过以 root 身份运行以下命令, 禁止为单个 WSL 会话运行 Windows 二进制文件的功能。
 
 ``` BASH
 $ echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
