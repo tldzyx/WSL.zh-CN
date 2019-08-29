@@ -8,13 +8,13 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.localizationpriority: High
-ms.openlocfilehash: edff78b1447aa382253417d27df52fe497c58b08
-ms.sourcegitcommit: e17038c166b69f73e593ae3ac351c9d66e2ba64b
+ms.localizationpriority: high
+ms.openlocfilehash: 7c8e3b3f7ec13109485d7efa29739dadc8bfacf7
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67694625"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122672"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>适用于 Linux 的 Windows 子系统文档
 
@@ -23,12 +23,12 @@ ms.locfileid: "67694625"
 你可以：
 
 1. [从 Microsoft Store 中](https://aka.ms/wslstore)选择你最喜爱的 GNU/Linux 分发。
-1. 运行通用的命令行免费软件，如 `grep`、`sed`、`awk` 或其他 ELF-64 二进制文件。 
+1. 运行常见命令行的自由软件，如`grep`， `sed`， `awk`，或其他 ELF 64 二进制文件。 
 1. 运行 Bash shell 脚本和 GNU/Linux 命令行应用程序，这包括：  
     * 工具: vim、emacs、tmux
-    * 语言：Javascript/node.js、Ruby、Python、C/C++、 C# & F#、Rust、中转等。
-    * 服务: sshd、MySQL、Apache、lighttpd
-1. 使用自己的 GNU/Linux 分发包管理器安装其他软件。
+    * 语言：Javascript/node.js、Ruby、Python、C /C++、C# & F#、Rust、Go 等。
+    * 服务：sshd、MySQL、Apache、lighttpd
+1. 使用自己的 GNU/Linux 发行版包管理器安装其他软件。
 1. 使用类似于 Unix 的命令行 shell 调用 Windows 应用程序。
 1. 在 Windows 上调用 GNU/Linux 应用程序。
 

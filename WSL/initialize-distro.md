@@ -8,12 +8,13 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 30cb1de0a01fd46bc434061cd36794f4ece77e4b
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: e544dc461913c6e044c70f39103cced62167c4b8
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499299"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122717"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>初始化新安装的发行版
 下载并安装发行版后, 需要完成新发行版的初始化:
@@ -59,8 +60,8 @@ sudo apt update && sudo apt upgrade
 
 ## <a name="troubleshooting"></a>疑难解答
 
-下面是相关错误和建议的修补程序。 有关其他常见错误及其解决方案, 请参阅[WSL 故障排除页](troubleshooting.md)。
+以下是相关的错误和建议的修补措施。 有关其他常见错误及其解决方案，请参阅 [WSL 故障排除页](troubleshooting.md)。
 
 > **安装失败, 出现错误 0x8007007e**当你的系统不支持应用商店中的 Linux 时, 会发生此错误。  请确保：
-> * 你正在运行 Windows 版本16215或更高版本。 [检查生成](troubleshooting.md#check-your-build-number)。
-> * 适用于 Linux 的 Windows 子系统可选组件已启用，并重新启动计算机。  [请确保已启用 WSL](troubleshooting.md#confirm-wsl-is-enabled)。
+> * 正在运行 Windows build 16215 或更高版本。 [检查你的版本号](troubleshooting.md#check-your-build-number)。
+> * 适用于 Linux 的 Windows 子系统可选组件已启用，并重新启动计算机。  [请确保启用 WSL](troubleshooting.md#confirm-wsl-is-enabled)。

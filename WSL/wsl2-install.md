@@ -8,18 +8,20 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 0220d642854f9fc7fe2a85357ad2e70e0b888ed8
-ms.sourcegitcommit: f878e88921d36e01e32624a9c60ee9de3d706a2e
+ms.openlocfilehash: 6b7ed18480ea88200d00b67a3a6dc859947397db
+ms.sourcegitcommit: 6f10b40f6199538c8eedf6301f02b7d70ead3fe7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620099"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70117832"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
 若要安装并开始使用 WSL 2，请完成以下步骤：
 
 - 确保已安装 WSL (可以在[此处](./install-win10.md)找到相关说明), 并且运行的是 Windows 10 内部版本18917或更高版本
+   - 若要确保使用的是版本18917或更高版本, 请加入[Windows 预览体验计划](https://insider.windows.com/en-us/), 并选择 "快速" 环。 
+   - 可以通过打开命令提示符并运行`ver`命令来检查 Windows 版本。
 - 启用“虚拟机平台”可选组件
 - 使用命令行设置要由 WSL 2 支持的发行版
 - 验证发行版使用的 WSL 版本

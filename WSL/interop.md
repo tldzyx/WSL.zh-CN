@@ -7,12 +7,13 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.localizationpriority: high
+ms.openlocfilehash: 3f3df3337ece75d7af77313f5fc55eb4e18e31cb
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040814"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122732"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>适用于 Linux 的 windows 子系统与 Windows 的互操作性
 
@@ -81,7 +82,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>从 WSL 运行 Windows 工具
 
-WSL 可以使用`[binary name].exe`从 WSL 命令行直接调用 Windows 二进制文件。  例如，`notepad.exe` 。  为了使 windows 可执行文件更易于运行, windows 路径包含在`$PATH`秋季创意者更新中。
+WSL 可以使用`[binary name].exe`从 WSL 命令行直接调用 Windows 二进制文件。  例如， `notepad.exe` 。  为了使 windows 可执行文件更易于运行, windows 路径包含在`$PATH`秋季创意者更新中。
 
 以这种方式运行的应用程序具有以下属性:
 
@@ -117,7 +118,7 @@ $ cmd.exe /c dir
 
 Windows 二进制文件必须包含文件扩展名, 与文件大小写匹配, 并可执行。  包括批处理脚本的不可执行文件。  CMD 本机命令 ( `dir`如) 可以通过`cmd.exe /C`命令运行。
 
-示例：
+例如：
 
 ``` BASH
 $ cmd.exe /C dir
@@ -159,7 +160,7 @@ C:\temp>dir | findstr foo.txt
 
 > 在 Windows 有问必答版本17063及更高版本中可用。
 
-在17063之前, WSL 可以访问的 Windows 环境变量只有`PATH` (因此, 你可以从 WSL 下启动 Win32 可执行文件)。
+在17063之前, 只有 WSL 可以访问的 Windows 环境变量是`PATH` (因此, 你可以从 WSL 下启动 Win32 可执行文件)。
 
 从17063、WSL 和 Windows 共享`WSLENV`开始, 创建了一个特殊的环境变量, 用于在 WSL 上运行的 Windows 和 Linux 发行版。
 
@@ -169,9 +170,9 @@ C:\temp>dir | findstr foo.txt
 * 它是要在 Windows 和 WSL 之间共享的环境变量的列表。
 * 它可以设置环境变量的格式, 以便在 Windows 和 WSL 中正常工作。
 
-`WSLENV`提供了四个标志来影响如何转换该环境变量。
+中`WSLENV`提供了四个标志来影响如何转换该环境变量。
 
-`WSLENV`标志
+`WSLENV`随意
 
 * `/p`-翻译 WSL/Linux 样式路径和 Win32 路径之间的路径。
 * `/l`-指示环境变量是路径的列表。
@@ -224,7 +225,7 @@ C:\temp> bash -c "ls -la"
 
 以这种方式调用的 Linux 命令的处理方式与任何其他 Windows 应用程序一样。  输入、管道和文件重定向等功能按预期方式工作。
 
-示例：
+例如：
 
 ```console
 C:\temp>bash -c "sudo apt-get update"
@@ -264,7 +265,7 @@ C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
 $ /mnt/c/Windows/System32/notepad.exe
 ```
 
-在 WSL 中, 这些可执行文件的处理方式类似于本机 Linux 可执行文件。  这意味着将目录添加到 Linux 路径, 并按预期方式在命令之间进行管道操作。  示例：
+在 WSL 中, 这些可执行文件的处理方式类似于本机 Linux 可执行文件。  这意味着将目录添加到 Linux 路径, 并按预期方式在命令之间进行管道操作。  例如：
 
 ``` BASH
 $ export PATH=$PATH:/mnt/c/Windows/System32
@@ -276,7 +277,7 @@ $ cmd.exe /c dir
 
 Windows 二进制文件必须包含文件扩展名, 与文件大小写匹配, 并可执行。  可执行文件 (包括批处理脚本) 和`dir`命令 (如) `/mnt/c/Windows/System32/cmd.exe /C`可以通过命令运行。
 
-示例：
+例如：
 
 ``` BASH
 $ /mnt/c/Windows/System32/cmd.exe /C dir

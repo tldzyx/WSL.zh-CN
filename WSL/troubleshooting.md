@@ -8,12 +8,13 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 0c84fb710eca1b0ffabe437f98d5c17edbd6ea39
-ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
+ms.localizationpriority: high
+ms.openlocfilehash: 6a5fec8b8e054b4d3399ee9bcd903acebca7aace
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307648"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122695"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统疑难解答
 
@@ -114,11 +115,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情况下, 关闭防火墙允许进行访问。  在某些情况下, 只需安装防火墙即可阻止访问。
 
 ### <a name="permission-denied-error-when-using-ping"></a>使用 ping 时权限被拒绝错误
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[周年更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[周年更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 Windows 中的管理员权限需要在 WSL 中运行 ping。  若要运行 ping, 请在 Windows 上的 Ubuntu 上以管理员身份运行 Bash, 或从具有管理员权限的 CMD/PowerShell 提示符运行 bash。
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[生成 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[生成 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   不再需要管理员权限。
 
 ### <a name="bash-is-hung"></a>Bash 挂起

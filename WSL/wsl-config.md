@@ -1,5 +1,5 @@
 ---
-title: 管理 Linux 发行版
+title: 管理 Linux 分发版
 description: 参考列出和配置在适用于 Linux 的 Windows 子系统上运行的多个 Linux 发行版。
 keywords: BashOnWindows、bash、wsl、windows、适用于 linux 的 windows 子系统、windowssubsystem、ubuntu、wsl、wslconfig
 author: scooley
@@ -8,12 +8,13 @@ ms.date: 02/7/2018
 ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
-ms.openlocfilehash: 0c9f9315b17d5156aa111e7619ee25534653b27e
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: ca65cf6fde3e0ba4750ffc44f5aec542be6cfabf
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499277"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122704"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和配置适用于 Linux 的 Windows 子系统
 
@@ -150,7 +151,7 @@ PS C:\Users\sarah>
 **示例：**  
 `wsl -s Ubuntu` 会将我的默认发行版设置为 Ubuntu。  现在，当我运行 `wsl npm init` 时，它将在 Ubuntu 中运行。  如果我运行 `wsl`，它将打开一个 Ubuntu 会话。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
+#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
 
 虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载发行版。
 
@@ -214,9 +215,9 @@ Usage:
 将默认发行版设置为 `<DistributionName>`。
 
 **示例：**  
-`wslconfig /setdefault Ubuntu`会将我的默认分发设置为 Ubuntu。  现在，当我运行 `wsl npm init` 时，它将在 Ubuntu 中运行。  如果我运行 `wsl`，它将打开一个 Ubuntu 会话。
+`wslconfig /setdefault Ubuntu` 会将我的默认发行版设置为 Ubuntu。  现在，当我运行 `wsl npm init` 时，它将在 Ubuntu 中运行。  如果我运行 `wsl`，它将打开一个 Ubuntu 会话。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装发行版
+#### <a name="unregister-and-reinstall-a-distribution"></a>注销并重新安装分发
 
 虽然可以通过 Microsoft store 安装 Linux 分发版, 但无法通过应用商店卸载。  WSL Config 允许注销/卸载发行版。
 
@@ -227,21 +228,21 @@ Usage:
 `wslconfig /unregister <DistributionName>`  
 从 WSL 中注销发行版，以便可以重新安装或清除它。
 
-例如: `wslconfig /unregister Ubuntu`将从 WSL 中提供的分发中删除 Ubuntu。  运行`wslconfig /list`时, 不会列出。
+例如：`wslconfig /unregister Ubuntu` 会从 WSL 中可用的发行版中删除 Ubuntu。  当我运行 `wslconfig /list` 时，它不会被列出。
 
 若要重新安装，请在 Microsoft Store 中查找发行版，并选择"启动。
 
 ## <a name="set-wsl-launch-settings"></a>设置 WSL 启动设置
 
-> **Windows 预览体验内部版本17093及更高版本中可用**
+> **适用于 Windows 预览体验内部版本 17093 及更高版本**
 
-自动配置 WSL 中的某些功能, 这些功能将在每次使用`wsl.conf`启动子系统时应用。 
+自动配置 WSL 中的某些功能，每次使用 `wsl.conf` 启动子系统时都会应用这些功能。 
 
-目前, 这包括自动装载选项和网络配置。
+现在，这包括自动装载选项和网络配置。
 
-`wsl.conf`位于中`/etc/wsl.conf`的每个 Linux 分发中。 如果文件不存在, 您可以自行创建。 WSL 将检测文件是否存在, 并读取其内容。 如果文件丢失或格式不正确 (即标记格式不正确), WSL 将继续正常启动。
+`wsl.conf` 在每个 Linux 发行版中都位于`/etc/wsl.conf`。 如果文件不在该位置，你可以自行创建。 WSL 将检测该文件是否存在，并读取其内容。 如果文件缺失或格式不正确 （即，标记格式不正确），WSL 仍将正常启动。
 
-下面是可以添加`wsl.conf`到发行版的示例文件:
+下面是一个示例 `wsl.conf` 文件，可以将其添加到发行版中：
 
 ```console
 # Enable extra metadata options by default
@@ -259,29 +260,29 @@ generateResolvConf = true
 
 ### <a name="configuration-options"></a>配置选项
 
-为了保持 .ini 约定, 密钥在部分下声明。 
+为了与 .ini 约定保持一致，键 (key) 在一个节 (section) 下声明。 
 
-WSL 支持两个部分`automount` : `network`和。
+WSL 支持两个节 (section)：`automount`和`network`。
 
 #### <a name="automount"></a>装载
 
-区`[automount]`
+节 (Section)：`[automount]`
 
 
 | 键        | value                          | default      | 本票                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | boolean                        | true         | `true`导致固定驱动器 (即 `C:/`或`D:/`) 自动装载到下`/mnt`的 DrvFs。  `false`表示不会自动装入驱动器, 但你仍然可以手动或通过`fstab`手动装载它们。                                                                                                             |
-| mountFsTab | boolean                        | true         | `true`要`/etc/fstab`在 WSL start 上处理的设置。 /etc/fstab 是一个文件, 你可以在其中声明其他文件系统, 例如 SMB 共享。 因此, 可以在启动时在 WSL 中自动装入这些文件系统。                                                                                                                |
-| root       | String                         | `/mnt/`      | 设置固定驱动器将自动装载到的目录。 例如, 如果在`/windir/` WSL 中有一个目录, 并将其指定为根, 则会看到你的固定驱动器已装载到`/windir/c`                                                                                              |
-| 选项    | 以逗号分隔的值列表 | 空字符串 | 此值将追加到默认的 DrvFs 装载选项字符串。 **只能指定 DrvFs 特定的选项。** 装载二进制文件通常会分析为标志的选项不受支持。 如果要显式指定这些选项, 则必须在/etc/fstab 中包含要为其执行此操作的每个驱动器。 |
+| enabled    | boolean                        | 真         | `true` 固定驱动器 （即 `C:/` 或 `D:/`）会自动装载 `/mnt` 下的 DrvF。  `false` 表示驱动器不会自动装载，但你仍然可以手动或通过 `fstab` 装载它们。                                                                                                             |
+| mountFsTab | boolean                        | 真         | `true` - 设置为在 WSL 启动时处理 `/etc/fstab`。 /etc/fstab 是一个文件，可以在其中声明其他文件系统，如 SMB 共享。 因此，可以在启动时自动将这些文件系统安装在 WSL 中。                                                                                                                |
+| root       | 字符串                         | `/mnt/`      | 设置自动装载固定驱动器的目录。 例如，如果你在的 WSL 中的 `/windir/` 有一个目录并且指定它作为 root，则可能会看到固定驱动器装载在 `/windir/c`                                                                                              |
+| options    | 以逗号分隔的值列表 | 空字符串 | 此值会追加到默认 DrvFs 装载选项字符串。 **只能指定 DrvFs 特定的选项。** 不支持二进制装载通常会将分析成一个标志的选项。 如果要显式指定这些选项，则必须在 /etc/fstab 中包括想对其执行此操作的每个驱动器。 |
 
-默认情况下, WSL 会将 uid 和 gid 设置为默认用户的值 (在 Ubuntu 发行版中, 使用 uid = 1000, gid = 1000 创建默认用户)。 如果用户通过此键显式指定了 gid 或 uid 选项, 将覆盖相关值。 否则, 将始终追加默认值。
+默认情况下，WSL 将 uid 和 gid 设置为默认用户的值（在 Ubuntu 发行版中，默认用户使用 uid = 1000，gid = 1000 创建）。 如果用户通过此键显式指定 gid 或 uid 选项，则将覆盖关联的值。否则，将始终追加默认值。 否则, 将始终追加默认值。
 
-**注意：** 这些选项应用为所有自动装入驱动器的装载选项。 若要仅更改特定驱动器的选项, 请改用/etc/fstab。
+**注意：** 这些选项用作所有自动装载的驱动器的装载选项。 要想仅更改特定驱动器的选项，请改用 /etc/fstab。
 
 #### <a name="network"></a>网络
 
-节标签:`[network]`
+节 (section) 标签： `[network]`
 
 | 键 | value | default | 本票|
 |:----|:----|:----|:----|
@@ -290,11 +291,11 @@ WSL 支持两个部分`automount` : `network`和。
 
 #### <a name="interop"></a>交互
 
-节标签:`[interop]`
+节 (section) 标签： `[interop]`
 
-内部版本17713及更高版本中提供了这些选项。
+这些选项适用于预览体验内部版本 17713 及更高版本。
 
 | 键 | value | default | 本票|
 |:----|:----|:----|:----|
-| enabled | boolean | `true` | 此键的设置将确定 WSL 是否支持启动 Windows 进程。 |
+| enabled | boolean | `true` | 设置此项将确定 WSL 是否将支持启动 Windows 进程。 |
 | appendWindowsPath | boolean | `true` | 设置此项将确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 

@@ -8,12 +8,13 @@ ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 82b5c0ccba7a444f13f186a2e33f210ac2cf48da
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: 218e3e652d0849f944e8aaceef3fb954294222be
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499282"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122769"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>适用于 Linux 的 windows 子系统安装指南 (适用于 Windows 10)
 
@@ -26,9 +27,9 @@ ms.locfileid: "67499282"
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. 出现提示时, 请重新启动计算机。
+2. 出现提示时重新启动计算机。
 
-## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 发行版
+## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 分发版
 若要下载并安装首选发行版, 你有三种选择:
 1. 从 Microsoft Store 下载并安装（见下文）
 1. 从命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
@@ -70,10 +71,10 @@ ms.locfileid: "67499282"
 
 * **安装失败, 出现错误0x80070003**
     * 适用于 Linux 的 Windows 子系统仅在系统驱动器（通常为 `C:` 驱动器）上运行。 请确保发行版存储在系统驱动器上：  
-    * 打开“设置”->“存储”->“更多存储设置: 更改新内容的保存位置”更改保存
+    * 打开“设置”->“存储”->“更多存储设置: 更改新内容的保存位置”更改保存**
     新内容的位置,以在C:驱动器上安装应用程序的系统设置图片![](media/AppStorage.png)
     
     
  * **WslRegisterDistribution 失败, 出现错误0x8007019e**   
   * 未启用适用于 Linux 的 Windows 子系统可选组件: 
-   * 打开“控制面板” -> “程序和功能” ->“启用或关闭 Windows 功能”->勾选“适用于 Linux 的 Windows 子系统”或使用本文开头所述的 PowerShell cmdlet。
+   * 打开 "**控制面板" "**  -> **程序和功能** ->  **" "打开或关闭 windows" 功能**-> 检查**适用于 Linux 的 windows 子系统**或使用本文开头提到的 PowerShell cmdlet。

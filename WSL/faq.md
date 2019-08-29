@@ -7,17 +7,18 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 2bbcec661146fcb570209fd895e6543657e98996
-ms.sourcegitcommit: 939fe561d178454219adbee96c0ad3f768db2208
+ms.localizationpriority: high
+ms.openlocfilehash: e3376f8dff83262577bc52fb3ac368b70b21d922
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67237388"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122767"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题
 
 ## <a name="what-is-windows-subsystem-for-linux-wsl"></a>什么是适用于 Linux 的 Windows 子系统 (WSL)？
-适用于 Linux 的 Windows 子系统 (WSL) 是一项新的 Windows 10 功能, 使你能够直接在 Windows 上运行原生 Linux 命令行工具, 以及传统的 Windows 桌面和新式应用程序。
+适用于 Linux 的 Windows 子系统 (WSL) 是一项新的 Windows 10 功能, 使你能够直接在 Windows 上运行本机 Linux 命令行工具, 以及传统的 Windows 桌面和新式应用程序。
 
 有关更多详细信息, 请参阅 "[关于页面](./about.md)，了解更多详细信息。
 
@@ -67,7 +68,7 @@ WSL 不支持 GUI 桌面或应用程序 (例如, GNOME、KDE 等)
 从秋季创意者更新开始, WSL 将在 Windows 的桌面和服务器 Sku 上可用。
 
 ## <a name="what-processors-does-wsl-support"></a>WSL 支持哪些处理器？
-WSL 支持 x64 和 ARM CPU。
+WSL 支持 x64 和 ARM Cpu。
 
 ## <a name="how-do-i-access-my-c-drive"></a>如何实现访问我的 C: 驱动器？
 将自动创建本地计算机上的硬盘驱动器的装入点, 并提供对 Windows filesystem 的轻松访问。 

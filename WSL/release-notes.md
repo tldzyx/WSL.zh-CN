@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
-ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
+ms.localizationpriority: high
+ms.openlocfilehash: 56a596c39b0d07e75d0beb381b80af5a14612e00
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68832114"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122753"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统的发行说明
 
@@ -631,7 +632,7 @@ wslconfig.exe /terminate <DistributionName>
 
 有关生成17046的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)。
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 允许在没有活动终端的情况下运行进程。 [GH 709, 1007, 1511, 2252, 2391, et al]
 - 更好地支持 CLONE_VFORK 和 CLONE_VM。 [GH 1878, 2615]
@@ -664,7 +665,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成17040的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 自17035以来没有修复。
 
@@ -679,7 +680,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成17035的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 访问 DrvFs 上的文件有时会因 EINVAL 而失败。 [GH 2448]
 
@@ -694,7 +695,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成17025的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 启动新的前台进程组中的初始进程 [GH 1653, 2510]。
 - SIGHUP 传递修复 [GH 2496]。
@@ -714,7 +715,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成17017的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 忽略空的 ELF 程序头 [GH 330]。
 - 允许 LxssManager 为非交互式用户 (ssh 和计划任务支持) 创建 WSL 实例 [GH 777, 1602]。
@@ -742,7 +743,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16288的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 正确初始化和报告套接字文件描述符的 uid、gid 和模式 [GH 2490]
 - 其他改进和 bug 修复
@@ -758,7 +759,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成162738的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 当撕裂 LX MM 状态 [GH 2415] 时, 显式取消文件所支持节的映射视图
 - 其他改进和 bug 修复
@@ -774,7 +775,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成162735的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 此版本中没有与 WSL 相关的更改。
 
@@ -789,7 +790,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16273的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 解决了 DrvFs 有时报告了目录的错误文件类型 [GH 2392] 的问题
 - 允许创建 NETLINK_KOBJECT_UEVENT 套接字来取消阻止使用 UEVENT 的程序 [GH 1121、2293、2242、2295、2235、648、637]
@@ -823,7 +824,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16257的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 实现 prlimit64 系统调用
 - 添加对 ulimit 的支持-n (setrlimit RLIMIT_NOFILE) [GH 1688]
@@ -861,7 +862,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16251的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 从 WSL 可选组件中删除 beta 标记, 有关详细信息, 请参阅[博客文章](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)。
 - 正确地为 exec [GH 962, 1415, 2072] 上的设置用户 ID 和组 ID 二进制文件初始化已保存的设置的 uid 和 gid
@@ -886,7 +887,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16241的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 #### <a name="wsl"></a>WSL
 - 此版本中没有与 WSL 相关的更改。
 
@@ -911,7 +912,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16237的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 在 lxfs 中使用不带 Ea 的文件的默认属性 (root、root、0000)
 - 添加了对使用扩展属性的分发的支持
 - 修复 getdents 和 getdents64 返回的项的填充
@@ -931,7 +932,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16232的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 此版本中没有与 WSL 相关的更改。
 
 </br>
@@ -941,7 +942,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16226的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - xattr 相关 syscall 支持 (getxattr、setxattr、listxattr、removexattr)。
 - capablity xattr 支持。
 - 提高了与某些文件系统和筛选器 (包括非 MS SMB 服务器) 的兼容性。 [GH #1952]
@@ -955,7 +956,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16215的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - WSL 不再需要开发人员模式。
 - 支持 drvfs 中的目录联接。
 - 处理 WSL 分发 appx 包的卸载。
@@ -972,7 +973,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16199的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 这些版本中没有与 WSL 相关的更改。
 
 </br>
@@ -982,7 +983,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16193的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 发送 SIGCONT 和 threadgroup 终止之间的争用条件 [GH 1973]
 - 将 tty 和 pty 设备更改为 report FILE_DEVICE_NAMED_PIPE, 而不是 FILE_DEVICE_CONSOLE [GH 1840]
 - IP_OPTIONS 的 SSH 修补程序
@@ -996,7 +997,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16184的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 删除 apt 包维护任务 (lxrun/update)
 - 固定输出不显示在 node.js 中的 Windows 进程中 [GH 1840]
 - 放宽 lxcore 中的对齐要求 [GH 1794]
@@ -1011,7 +1012,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16179的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 本周不会更改 WSL。
 
 </br>
@@ -1021,7 +1022,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成16176的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - [启用的串行支持](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
 - 添加了 IP 套接字选项 IP_OPTIONS [GH 1116]
@@ -1049,7 +1050,7 @@ wslconfig.exe /terminate <DistributionName>
 
 我们发布了新的[博客文章](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/), 讨论了测试 WSL 的努力。
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - Support socket 选项 IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]
 - 添加对 PTRACE_OLDSETOPTIONS 的支持。 [GH 1692]
@@ -1069,7 +1070,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成15042的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 解决在删除以 "..." 结尾的路径时出现死锁的问题
 - 修复了 FIONBIO 在成功时不返回0的问题 [GH 1683]
@@ -1089,7 +1090,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成15031的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 修复了时间 (2) 偶尔错误行为的 bug。
 - 已修复并发出 * SIGPROCMASK syscall 可能会损坏信号掩码。
@@ -1112,7 +1113,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成15025的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 修复破坏 grep 2.27 [GH 1578] 的 bug
 - Eventfd2 syscall 的已实现 EFD_SEMAPHORE 标志 [GH 452]
@@ -1142,7 +1143,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成15019的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 修复了在 procfs 中错误报告了 CPU 使用率的 bug, 如 htop (GH 823、945、971)
 - 在现有文件上对 O_TRUNC 调用 open () 时, inotify 现在会在 IN_OPEN 之前生成 IN_MODIFY
@@ -1164,7 +1165,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成15014的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - Ctrl + C 现在按预期方式工作
 - htop 和 ps auxw 现在显示正确的资源利用率 (GH #516)
@@ -1201,7 +1202,7 @@ wslconfig.exe /terminate <DistributionName>
 
   - 解决方法：将备用键映射到 Ctrl + C。 例如, 若要将 Ctrl + K 映射到 Ctrl + C, `stty intr \^k`请执行:。  此映射按终端进行, 并且*每*次启动 bash 时都必须执行此映射。 用户可以在其`.bashrc`
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 更正了运行 WSL 会消耗 100% 的 CPU 内核的问题
 - 套接字选项 IP_PKTINFO、IPV6_RECVPKTINFO 现在支持。 (GH #851, 987)
@@ -1229,7 +1230,7 @@ wslconfig.exe /terminate <DistributionName>
 
 - 当 WSL 运行时, 系统线程将消耗 100% 的 CPU 内核。  根本原因已解决并在内部修复。
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 现在必须在同一权限级别创建所有 bash 会话。  尝试在不同级别启动会话将被阻止。  这意味着管理员和非管理员控制台不能同时运行。 (GH #626)
 <br/>
@@ -1287,7 +1288,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14986的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 修复了与 Netlink 和 Pty IOCTLs 的错误检查
 - 内核版本现在报告 4.4.0-43 与 Xenial 的一致性
@@ -1322,7 +1323,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14971的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
  - 由于控件之外的情况, 对于适用于 Linux 的 Windows 子系统, 此版本中没有更新。  定期计划的更新将在下一版本中继续进行。
 
@@ -1339,7 +1340,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14965的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 支持 Netlink socket NETLINK_ROUTE 协议的 RTM_GETLINK 和 RTM_GETADDR (GH #468)
   - 为网络枚举启用 ifconfig 和 ip 命令
@@ -1377,7 +1378,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14959的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 改善了 Windows 的 Pico 过程通知。  [WSL 博客](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)上的其他信息。
 - 提高了 Windows 互操作性的稳定性
@@ -1396,7 +1397,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14955的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
  - 由于控件之外的情况, 对于适用于 Linux 的 Windows 子系统, 此版本中没有更新。  定期计划的更新将在下一版本中继续进行。
 
@@ -1428,7 +1429,7 @@ wslconfig.exe /terminate <DistributionName>
 - [互操作的 WSL 团队博客](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
 - [MSDN 互操作文档](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 现在为所有新的 WSL 实例安装了 Ubuntu 16.04 (Xenial)。  将不会自动升级具有现有 14.04 (t) 实例的用户。
 - 现在会显示安装过程中设置的区域设置
@@ -1449,7 +1450,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14946的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 修复了阻止为具有包含空格或引号的 NT 用户名的用户创建 WSL 用户帐户的问题。 
 - 更改 VolFs 和 DrvFs, 以在 stat 中为目录的链接计数返回0
@@ -1474,7 +1475,7 @@ wslconfig.exe /terminate <DistributionName>
 有关生成14942的常规 Windows 信息, 请访问[Windows 博客](https://aka.ms/onefourninefourtwoooooo)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 解决了多个错误检查, 包括正在阻止 SSH 的 "尝试执行 NOEXECUTE 内存" 网络崩溃
 - inotifiy 对 DrvFs 上的 Windows 应用程序生成的通知的支持现已在
@@ -1505,7 +1506,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="known-issue"></a>已知问题
 WSL 遇到一些套接字实现问题。  错误检查会将自身视为崩溃, 并出现错误 "已尝试执行 NOEXECUTE 内存"。  此问题的最常见表现形式是使用 ssh 时出现故障。  根本原因是在内部版本中修复的, 将按最早的机会推送到内部版本。
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - 实现了 chroot 系统调用
 - Inotify 中的改进~~, 包括支持在 DrvFs 上的 Windows 应用程序中生成的通知~~
@@ -1536,7 +1537,7 @@ WSL 遇到一些套接字实现问题。  错误检查会将自身视为崩溃, 
 有关生成14931的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
  - 由于控件之外的情况, 对于适用于 Linux 的 Windows 子系统, 此版本中没有更新。  定期计划的更新将在下一版本中继续进行。
 
@@ -1547,7 +1548,7 @@ WSL 遇到一些套接字实现问题。  错误检查会将自身视为崩溃, 
 有关生成14926的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 
 - Ping 现在适用于没有管理员权限的控制台
 - 现在还支持 Ping6, 无需管理员权限
@@ -1572,7 +1573,7 @@ WSL 遇到一些套接字实现问题。  错误检查会将自身视为崩溃, 
 有关生成14915的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 -  Socketpair for unix 数据报套接字 (GH #262)
 - 适用于 SO_REUSEADDR 的 Unix 套接字支持
 - UNIX 套接字支持 SO_BROADCAST (GH #568)
@@ -1596,7 +1597,7 @@ WSL 遇到一些套接字实现问题。  错误检查会将自身视为崩溃, 
 有关生成14905的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 现在支持可重启的系统调用 (GH #349, GH #520)
 - 符号链接结束/立即操作的目录 (GH #650)
 - 为/dev/random 实现了 RNDGETENTCNT ioctl
@@ -1611,7 +1612,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 有关生成14901的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 修复了尾随斜杠问题
     - 像现在这样`$ mv a/c/ a/b/`的命令
 - 如果 Ubuntu 区域设置应设置为 Windows 区域设置, 则立即安装
@@ -1644,7 +1645,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 ## <a name="build-14388-to-windows-10-anniversary-update"></a>生成14388到 Windows 10 周年更新
 有关生成14388的常规 Windows 信息, 请访问[Windows 博客](https://aka.ms/14388wip)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 修复了8/2 上 Windows 10 周年更新的准备工作
   - 有关周年更新中的 WSL 的详细信息, 请参阅我们的[博客](https://blogs.msdn.microsoft.com/wsl/)
 
@@ -1653,7 +1654,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 ## <a name="build-14376"></a>生成14376
 有关生成14376的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 删除了一些实例, 其中 apt 挂起 (GH #493)
 - 修复了未正确处理空装载的问题
 - 修复了 ramdisks 未正确装载的问题
@@ -1668,7 +1669,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 ## <a name="build-14371"></a>生成14371
 有关生成14371的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 使用 ptrace 更正计时争用与 SIGCHLD 和 wait ()
 - 当路径具有尾随/(GH #432) 时更正了某些行为
 - 修复了重命名/取消链接因打开子句柄而失败的问题
@@ -1679,7 +1680,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 ## <a name="build-14366"></a>生成14366
 有关生成14366的常规 Windows 信息, 请访问[Windows 博客](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 通过符号链接在文件创建中修复
 -   添加了适用于 Python 的 listxattr (GH 385)
 -   其他 bug 修复和改进
@@ -1693,7 +1694,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 ## <a name="build-14361"></a>生成14361
 有关生成14361的常规 Windows 信息, 请访问[Windows 博客](https://aka.ms/wip14361)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 在 Windows 上的 Ubuntu 上运行 Bash 时, DrvFs 现在区分大小写。
   - 用户可以为 .txt 和 CASE。/Mnt/c 驱动器上的 TXT
   - Windows 上的 Bash 中仅支持区分大小写。 在 Bash NTFS 外, 会正确报告文件, 但可能会发生意外行为, 与 Windows 中的文件交互。
@@ -1739,7 +1740,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 有关生成14352的常规 Windows 信息, 请访问[Windows 博客](https://aka.ms/wip14352)。<br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 修复了找不到正确下载/创建大型文件的问题。  这应取消阻止 npm 和其他方案 (GH #3, GH #313)
 - 删除了套接字挂起的一些实例
 - 更正了一些 ptrace 错误
@@ -1767,7 +1768,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 
 有关 VolFs 和 DriveFs 的信息, 请参阅[WSL 博客](https://blogs.msdn.microsoft.com/wsl)。 <br/>
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 修复了 Windows 用户在用户名中包含 Unicode 字符时的安装问题
 - 默认情况下, 在首次运行时, 默认情况下提供常见问题中的 apt-get update udev 解决方法
 - 已启用 DriveFs (/mnt/<drive>) 目录中的符号链接
@@ -1813,7 +1814,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 有关生成14332的常规 Windows 信息, 请访问[Windows 博客](https://aka.ms/wip14332)。 <br/>
 
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 - 更好的 resolv.conf 生成, 包括优先级 DNS 条目
 - 在/mnt 和非/mnt 驱动器之间移动文件和目录时出现的问题
 - 现在可以通过符号链接创建 Tar 文件。
@@ -1839,7 +1840,7 @@ Windows 10 周年更新版本的第一批内幕构建。
 * 现在, 主机名设置为 Windows 计算机名称, 不能再@localhost
 * 有关生成14328的详细信息, 请访问: https://aka.ms/wip14328
 
-### <a name="fixed"></a>固定
+### <a name="fixed"></a>已修复
 * 非/mnt/<drive>文件的符号改进
     * npm 安装现可正常运行
     * 现在使用[此处](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)的说明可安装 jdk/jre。
