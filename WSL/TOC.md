@@ -16,3 +16,4 @@
 
 # [疑难解答](./troubleshooting.md)
 # [发行说明](./release-notes.md)
+# [命令行参考](./reference.md)
