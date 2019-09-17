@@ -2,25 +2,25 @@
 title: 安装 WSL 2
 description: WSL 2 的安装说明
 keywords: BashOnWindows, bash, wsl, wsl2, Windows, 适用于 Linux 的 Windows 子系统, windowssubsystem, ubuntu, debian, suse, Windows 10, 安装
-author: mscraigloewen
-ms.author: mscraigloewen
+author: craigloewen-msft
+ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 6b7ed18480ea88200d00b67a3a6dc859947397db
-ms.sourcegitcommit: 6f10b40f6199538c8eedf6301f02b7d70ead3fe7
+ms.openlocfilehash: 4ae5b8452ae2aec679c2f0450dc48644b77fc1c9
+ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70117832"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71020945"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
 若要安装并开始使用 WSL 2，请完成以下步骤：
 
-- 确保已安装 WSL (可以在[此处](./install-win10.md)找到相关说明), 并且运行的是 Windows 10 内部版本18917或更高版本
-   - 若要确保使用的是版本18917或更高版本, 请加入[Windows 预览体验计划](https://insider.windows.com/en-us/), 并选择 "快速" 环。 
+- 确保已安装 WSL （可以在[此处](./install-win10.md)找到相关说明），并且运行的是 Windows 10 内部版本18917或更高版本
+   - 若要确保使用的是版本18917或更高版本，请加入[Windows 预览体验计划](https://insider.windows.com/en-us/)，并选择 "快速" 环。 
    - 可以通过打开命令提示符并运行`ver`命令来检查 Windows 版本。
 - 启用“虚拟机平台”可选组件
 - 使用命令行设置要由 WSL 2 支持的发行版
