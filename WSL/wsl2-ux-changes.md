@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 3addfd27d777731bf92efab42c6bcd4be415779b
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: 347c965dbbc2a328590d3a8149a8316979d6793d
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020960"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070320"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 与 WSL 2 的用户体验差异
 
@@ -32,18 +32,7 @@ ms.locfileid: "71020960"
 请务必将使用 Linux 应用程序频繁访问的文件放在 Linux 根文件系统中，从而获取文件性能方面的优势。 这些文件只有在 Linux 根文件系统中才能实现更快的文件系统访问。 我们还使 Windows 应用能访问 Linux 根文件系统（如文件资源管理器！ 尝试在 Linux 发行版的 home 目录中运行：`explorer.exe .`，看看会发生什么)， 这会使文件转移更加便捷。 
 
 ## <a name="accessing-network-applications"></a>访问网络应用程序
-在 WSL 2 预览版的初始版本中，需要使用 Linux 发行版的 IP 地址从 Windows 中访问 Linux 服务器并使用主机的 IP 地址从 Linux 中访问 Windows 服务器。 这不是临时性的问题，而是需要解决的首要问题之一。
-
-### <a name="accessing-linux-applications-from-windows"></a>从 Windows 访问 Linux 应用程序
-如果在 WSL 发行版中有服务器，需要查找运行 Linux 发行版的虚拟机的 IP 地址并使用该 IP 地址连接它。 可以通过以下步骤来实现此目的：
-
-- 通过在 WSL 发行版中运行命令`ip addr` ，并`inet`在该`eth0`接口的值下面查找，来获取发行版的 IP 地址。
-   - 可以通过使用 grep 筛选命令的输出来更轻松地找到此内容，如下所`ip addr | grep eth0`示：。
-- 使用上面找到的 IP 连接到 Linux 服务器。
-
-下图显示了一个示例，该示例通过使用 Edge 浏览器连接到 node.js 服务器。
-
-![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-w2l.jpg)
+在 WSL 2 预览版的初始版本中，需要使用主机的 IP 地址从 Linux 访问任何 Windows server。
 
 ### <a name="accessing-windows-applications-from-linux"></a>从 Linux 访问 Windows 应用程序
 若要访问 Windows 网络应用程序，需要使用主机的 IP 地址。 为此，可以执行以下步骤：
@@ -54,6 +43,19 @@ ms.locfileid: "71020960"
 下图显示了一个示例，该示例通过连接到通过曲线在 Windows 中运行的 node.js 服务器。 
 
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-l2w.png)
+
+### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>从 Windows 访问 Linux 应用程序（仅在版本低于18945的版本中）
+如果在 WSL 发行版中有服务器，需要查找运行 Linux 发行版的虚拟机的 IP 地址并使用该 IP 地址连接它。 可以通过以下步骤来实现此目的：
+
+- 通过在 WSL 发行版中运行命令`ip addr` ，并`inet`在该`eth0`接口的值下面查找，来获取发行版的 IP 地址。
+   - 可以通过使用 grep 筛选命令的输出来更轻松地找到此内容，如下所`ip addr | grep eth0`示：。
+- 使用上面找到的 IP 连接到 Linux 服务器。
+
+下图显示了一个示例，该示例通过使用 Edge 浏览器连接到 node.js 服务器。
+
+![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-w2l.jpg)
+
+如果生成为18945或更高版本，则可以像平时一样使用 localhost。 
 
 ### <a name="other-networking-considerations"></a>其他网络注意事项
 

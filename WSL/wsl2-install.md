@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 4ae5b8452ae2aec679c2f0450dc48644b77fc1c9
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: bced0fd0bf948842b8c465f645aa5c368c2f4335
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020945"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070302"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
@@ -26,13 +26,16 @@ ms.locfileid: "71020945"
 - 使用命令行设置要由 WSL 2 支持的发行版
 - 验证发行版使用的 WSL 版本
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>启用“虚拟机平台”可选组件
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>启用 "虚拟机平台" 可选组件，并确保已启用 WSL
 
 以管理员身份打开 PowerShell 并运行：
 
-`Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
 
-启用这些更改后，需要重新启动计算机。
+这将确保安装了适用于 Linux 的虚拟机平台和 Windows 子系统可选组件。 运行这些命令后，需要重新启动计算机。 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令行设置要由 WSL 2 支持的发行版
 
