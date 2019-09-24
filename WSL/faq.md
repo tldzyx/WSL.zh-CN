@@ -62,8 +62,8 @@ WSL 不支持 GUI 桌面或应用程序 (例如, GNOME、KDE 等)
 
 此外, 即使您能够运行多个常用的服务器应用程序 (例如 Redis), 我们也不建议使用 WSL 来托管生产服务– Microsoft 提供了多种解决方案, 用于在 Azure、Hyper-v 和 Docker 中运行生产 Linux 工作负荷。 
 
-## <a name="what-windows-skus-is-wsl-included-in"></a>WSL 包含在哪些 Windows Sku？
-windows 10 周年和创意者更新或更高版本的 Windows 的桌面版本中提供了适用于 Linux 的 windows 子系统。
+## <a name="what-windows-skus-is-wsl-included-in"></a>WSL 包含在哪些 Windows SKU 中？
+适用于 Windows 10 周年和创意者更新或更高版本的 Windows 的桌面版本中提供了适用于 Linux 的 Windows 子系统。
 
 从秋季创意者更新开始, WSL 将在 Windows 的桌面和服务器 Sku 上可用。
 
@@ -139,7 +139,7 @@ WSL 将计算机的固定驱动器装载到 Linux `/mnt/<drive>`发行版中的�
 ## <a name="how-do-i-run-an-openssh-server"></a>如何实现运行 OpenSSH 服务器？
 Windows 中的管理员权限需要在 WSL 中运行 OpenSSH。 若要运行 OpenSSH 服务器, 请在 Windows 上的 Ubuntu 上以管理员身份运行 Bash, 或从具有管理员权限的 CMD/PowerShell 提示符运行 bash。
 
-## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>为什么当我尝试安装时会出现 "错误:0x80040306 "？
+## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>为什么在我尝试安装时会出现“错误: 0x80040306”？
 WSL 不支持在旧控制台中运行。 关闭旧版控制台:
 
 1. 打开 WSL、PowerShell 或 Cmd
