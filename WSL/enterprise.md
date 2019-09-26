@@ -2,18 +2,16 @@
 title: 适用于 Linux for Enterprise 的 Windows 子系统
 description: 有关如何在企业环境中最好地使用适用于 Linux 的 Windows 子系统的资源和说明。
 keywords: BashOnWindows，bash，wsl，windows，适用于 linux 的 windows 子系统，windowssubsystem，ubuntu，debian，suse，windows 10，企业，部署，脱机，打包，存储，分发，安装，安装
-author: craigloewen-msft
-ms.author: crloewen
 ms.date: 09/04/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: ea03f2c67d8389eb41d686a99140e11b3181401c
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: c32d62267c77d87fb200cfe43b8e6f43b4e3a56d
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020974"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269863"
 ---
 # <a name="windows-subsystem-for-linux-for-enterprise"></a>适用于 Linux for Enterprise 的 Windows 子系统
 

@@ -2,18 +2,16 @@
 title: WSL 2 常见问题
 description: 有关适用于 Linux 2 的 Windows 子系统的常见问题
 keywords: BashOnWindows, bash, wsl, wsl2, Windows, 适用于 Linux 的 Windows 子系统, windowssubsystem, ubuntu, debian, suse, Windows 10, 安装
-author: craigloewen-msft
-ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: ea6a1e4fc813ec80393a0c4e2beb89e9a40fb68e
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: c4a8c02db6563d7ad572917578c1a49d419f1756
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020927"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269573"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 常见问题
 
