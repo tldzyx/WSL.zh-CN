@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9dfd4704eee537c053d874d6fcee47b70efbc33c
-ms.sourcegitcommit: 212d3e0092dbc584a8422de47599a4ce46f0f016
+ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
+ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902415"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249188"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-18990"></a>版本 18990
+有关版本 18990 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/)。
+
+* 提高 \\wsl$ 中目录列表的性能
+* [WSL2] 注入额外的启动熵 [GH 4416]
+* [WSL2] 修复使用 su/sudo 时的 Windows 互操作 [GH 4465]
+
 
 ## <a name="build-18980"></a>内部版本 18980
 有关内部版本 18980 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/)。

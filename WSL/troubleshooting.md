@@ -2,19 +2,17 @@
 title: 排查适用于 Linux 的 Windows 子系统问题
 description: 提供有关在适用于 Linux 的 Windows 子系统上运行 Linux 时遇到的常见错误和问题的详细信息。
 keywords: BashOnWindows, bash, wsl, windows, windows 子系统, windowssubsystem, ubuntu
-author: scooley
-ms.author: scooley
 ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a73de13853c124de38cae1b9c6c51d0ee9978d44
-ms.sourcegitcommit: f1780bf174c67c531864497ae78cf3f26ef68503
+ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
+ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205972"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71279253"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>排查适用于 Linux 的 Windows 子系统问题
 
@@ -78,7 +76,7 @@ Windows 上的 Ubuntu Bash 有两个组件需要更新。
    ln -s /bin/true /sbin/initctl
    ```
   
-### <a name="error-0x80040306-on-installation"></a>安装时出现“错误: 0x80040306”
+### <a name="error-0x80040306-on-installation"></a>安装时出现“错误:0x80040306”
 此错误与我们不支持旧版控制台这一事实有关。
 若要关闭旧版控制台：
 
@@ -86,7 +84,7 @@ Windows 上的 Ubuntu Bash 有两个组件需要更新。
 1. 右键单击标题栏 -> 选择“属性”-> 取消选中“使用旧版控制台”
 1. 单击“确定”
 
-### <a name="error-0x80040154-after-windows-update"></a>Windows 更新后出现“错误: 0x80040154”
+### <a name="error-0x80040154-after-windows-update"></a>Windows 更新后出现“错误:0x80040154”
 在 Windows 更新期间可能禁用了“适用于 Linux 的 Windows 子系统”功能。 如果出现这种情况，则必须重新启用 Windows 功能。 在[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)中可以找到有关启用“适用于 Linux 的 Windows 子系统”的说明。
 
 ### <a name="changing-the-display-language"></a>更改显示语言
@@ -188,3 +186,10 @@ sudo apt-get purge openssh-server
 sudo apt-get install openssh-server
 ```
 
+### <a name="the-referenced-assembly-could-not-be-found-when-enabling-the-wsl-optional-feature"></a>“找不到引用的程序集。” 在启用 WSL 可选功能后出现
+
+此错误与处于错误的安装状态相关。 请完成以下步骤来尝试解决此问题：
+
+* 如果是从 PowerShell 运行了启用 WSL 功能的命令，请尝试改用 GUI，方法是打开“开始”菜单，搜索“启用或关闭 Windows 功能”，然后在列表中选择“适用于 Linux 的 Windows 子系统”，这将安装可选组件。
+* 转到“设置”、“更新”，然后单击“检查更新”来更新 Windows 版本
+* 如果这两个操作均失败，并且你需要访问 WSL，请考虑使用安装介质重新安装 Windows 10 并选择“保留所有内容”以确保保留你的应用和文件，从而就地升级。 可以在[“重新安装 Windows 10”页面](https://support.microsoft.com/en-us/help/4000735/windows-10-reinstall)中找到有关如何执行此操作的说明。
