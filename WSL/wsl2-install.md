@@ -6,18 +6,20 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: af70bf567cd548d0ca84bbe535003052ec49256b
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 386b6793f00300bc9dabd1613cfd69b19d222f0b
+ms.sourcegitcommit: eb7b572388c6bddbf6e8ad8d01927660fe66aecf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269577"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692468"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
 若要安装并开始使用 WSL 2，请完成以下步骤：
 
-- 确保已安装 WSL （可以在[此处](./install-win10.md)找到相关说明），并且运行的是 Windows 10 内部版本18917或更高版本
+> WSL 2 仅适用于 Windows 10 版本18917或更高版本
+
+- 确保已安装 WSL （可以在[此处](./install-win10.md)找到相关说明），并且运行的是 Windows 10**内部版本 18917**或更高版本
    - 若要确保使用的是版本18917或更高版本，请加入[Windows 预览体验计划](https://insider.windows.com/en-us/)，并选择 "快速" 环。 
    - 可以通过打开命令提示符并运行`ver`命令来检查 Windows 版本。
 - 启用“虚拟机平台”可选组件
@@ -51,7 +53,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成验证发行版使用的 WSL 版本
 
-若要验证每个发行版使用的 WSL 版本，请使用以下命令：
+若要验证每个发行版使用的 WSL 版本，请使用以下命令（仅适用于 Windows 版本18917或更高版本）：
 
 `wsl --list --verbose` 或 `wsl -l -v`
 
