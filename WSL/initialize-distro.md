@@ -2,19 +2,17 @@
 title: 初始化新的 WSL Linux 分发版
 description: 安装适用于 WSL 的 Linux 分发版后，请执行以下简单步骤来完成初始化
 keywords: BashOnWindows, bash, wsl, Windows, 适用于 Linux 的 Windows 子系统, windowssubsystem, ubuntu, debian, suse, Windows 10
-author: taraj
-ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: e544dc461913c6e044c70f39103cced62167c4b8
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: c33d349a6d39c325b079ccbf7ed6350bed796e33
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122717"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269591"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>初始化新安装的分发版
 下载并安装分发版后，需要对新的分发版完成初始化：
