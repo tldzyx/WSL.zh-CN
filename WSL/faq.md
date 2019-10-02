@@ -2,18 +2,16 @@
 title: 常见问题 (FAQ)
 description: 有关适用于 Linux 的 Windows 子系统的常见问题解答。
 keywords: BashOnWindows, bash, wsl, windows, windows 子系统, windowssubsystem, faq
-author: taraj
-ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: e3376f8dff83262577bc52fb3ac368b70b21d922
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122767"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269745"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题解答
 
@@ -139,14 +137,14 @@ WSL 将计算机的固定驱动器装载到 Linux 分发版中的 `/mnt/<drive>`
 ## <a name="how-do-i-run-an-openssh-server"></a>如何运行 OpenSSH 服务器？
 在 WSL 中运行 OpenSSH 需要拥有 Windows 中的管理员特权。 若要运行 OpenSSH 服务器，请以管理员身份运行 Windows 上的 Ubuntu Bash，或使用管理员特权从 CMD/PowerShell 提示符运行 bash.exe。
 
-## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>尝试安装时，为何会出现“错误: 0x80040306”？
+## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>尝试安装时，为何会出现“错误:0x80040306”？
 WSL 不支持在旧版控制台中运行。 若要关闭旧版控制台：
 
 1. 打开 WSL、PowerShell 或 Cmd
 1. 右键单击标题栏 -> 选择“属性”-> 取消选中“使用旧版控制台”
 1. 单击“确定”
 
-## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>升级 Windows 后运行 bash.exe 时，为何会出现“错误: 0x80040154”？
+## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>在升级 Windows 后运行 bash.exe 时，为何会出现“错误:0x80040154”？
 在 Windows 更新期间可能禁用了“适用于 Linux 的 Windows 子系统”功能。 如果出现这种情况，则必须重新启用 Windows 功能。 在[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)中可以找到有关启用“适用于 Linux 的 Windows 子系统”功能的说明。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何更改 WSL 的显示语言？
