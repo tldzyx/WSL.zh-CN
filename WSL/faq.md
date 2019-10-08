@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
+ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269745"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934905"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题解答
 
@@ -145,7 +145,7 @@ WSL 不支持在旧版控制台中运行。 若要关闭旧版控制台：
 1. 单击“确定”
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>在升级 Windows 后运行 bash.exe 时，为何会出现“错误:0x80040154”？
-在 Windows 更新期间可能禁用了“适用于 Linux 的 Windows 子系统”功能。 如果出现这种情况，则必须重新启用 Windows 功能。 在[安装指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)中可以找到有关启用“适用于 Linux 的 Windows 子系统”功能的说明。
+在 Windows 更新期间可能禁用了“适用于 Linux 的 Windows 子系统”功能。 如果出现这种情况，则必须重新启用 Windows 功能。 在[安装指南](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)中可以找到有关启用“适用于 Linux 的 Windows 子系统”功能的说明。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何更改 WSL 的显示语言？
 WSL 安装会尝试自动更改 Ubuntu 区域设置，使之与 Windows 安装的区域设置相匹配。 如果你不希望出现此行为，可以在安装完成后，运行此命令来更改 Ubuntu 区域设置。 必须重新启动 bash.exe 才能使此项更改生效。
