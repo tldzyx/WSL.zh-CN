@@ -8,19 +8,36 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
-ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
+ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
+ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249188"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71910303"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-18995"></a>内部版本 18995
+有关内部版本 18995 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/)。
+
+* [WSL2] 修复了 DrvFs 装载在某项操作被中断（例如 ctrl-c）后失效的问题 [GH 4377]
+* [WSL2] 修复了处理极大型 hvsocket 消息的问题 [GH 4105]
+* [WSL2] 修复了当 stdin 为文件时互操作出现的问题 [GH 4475]
+* [WSL2] 修复了当遇到意外网络状态时服务崩溃的问题 [GH 4474]
+* [WSL2] 在当前进程没有环境变量的情况下从互操作服务器查询发行版名称
+* [WSL2] 修复了当 stdin 为文件时互操作出现的问题
+* [WSL2] 将 Linux 内核版本更新到 4.19.72
+* [WSL2] 添加了通过 .wslconfig 指定其他内核命令行参数的功能
+```
+[wsl2]
+kernelCommandLine = <string> # Additional kernel command line arguments
+
+```
 
 ## <a name="build-18990"></a>版本 18990
 有关版本 18990 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/)。
 
-* 提高 \\wsl$ 中目录列表的性能
+* 提高 \\\\wsl$ 中目录列表的性能
 * [WSL2] 注入额外的启动熵 [GH 4416]
 * [WSL2] 修复使用 su/sudo 时的 Windows 互操作 [GH 4465]
 
@@ -38,7 +55,7 @@ ms.locfileid: "71249188"
 * 添加在 /etc/wsl.conf 中设置默认用户名的功能：
 ```
 [user]
-default=root
+default=<string>
 ```
 
 ## <a name="build-18975"></a>内部版本 18975
@@ -120,7 +137,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 * epoll delete 代码中的死锁 [GH 3922]
 * 处理 --import 和 –export 的参数中的空格 [GH 3932]
 * 无法正常扩展 mmap 的文件 [GH 3939]
-* 修复无法正常访问 ARM64 \\wsl $ 的问题
+* 修复了 ARM64 \\\\wsl$ 访问不正常的问题
 * 为 wsl.exe 添加更好的默认图标
 
 ## <a name="build-18342"></a>内部版本 18342
