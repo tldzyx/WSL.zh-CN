@@ -38,7 +38,8 @@ ms.locfileid: "71269876"
 - 通过运行命令`cat /etc/resolv.conf`并复制该字词`nameserver`后面的 ip 地址来获取主机的 ip 地址。 
 - 使用复制的 IP 地址连接到任何 Windows server。
 
-下图展示了一个示例，该示例通过 curl 连接到在 Windows 中运行的 Node.js 服务器。 
+下图展示了一个示例，该示例通过 curl 连接到在 Windows 中运行的 Node.js 服务器。
+
 
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-l2w.png)
 
