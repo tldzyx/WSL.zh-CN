@@ -8,14 +8,21 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
-ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
+ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
+ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71910303"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72549578"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-19002"></a>版本 19002
+有关版本 19002 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)。
+
+* [WSL] 解决了有关处理某些 Unicode 字符的问题： https://github.com/microsoft/terminal/issues/2770
+* [WSL] 解决了在版本到版本升级后立即启动时可能会注销发行版的罕见情况。
+* [WSL] 解决了 wsl.exe --shutdown 的以下小问题：无法取消实例空闲计时器。
 
 ## <a name="build-18995"></a>内部版本 18995
 有关内部版本 18995 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/)。
@@ -40,7 +47,6 @@ kernelCommandLine = <string> # Additional kernel command line arguments
 * 提高 \\\\wsl$ 中目录列表的性能
 * [WSL2] 注入额外的启动熵 [GH 4416]
 * [WSL2] 修复使用 su/sudo 时的 Windows 互操作 [GH 4465]
-
 
 ## <a name="build-18980"></a>内部版本 18980
 有关内部版本 18980 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/)。

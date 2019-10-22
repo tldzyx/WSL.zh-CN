@@ -40,6 +40,7 @@ ms.locfileid: "71269876"
 
 下图展示了一个示例，该示例通过 curl 连接到在 Windows 中运行的 Node.js 服务器。
 
+
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-l2w.png)
 
 ### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>从 Windows 访问 Linux 应用程序（仅在版本低于18945的版本中）
