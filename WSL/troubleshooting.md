@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
-ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
+ms.openlocfilehash: 24a899df78e705630c6cb95f8719594aec340c5c
+ms.sourcegitcommit: 600853005bd2b42d6e47bf36ebed4b868ff2af26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71279253"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72987518"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>排查适用于 Linux 的 Windows 子系统问题
 
@@ -124,7 +124,7 @@ sudo update-locale LANG=en_US.UTF8
 如果使用 bash 时发现 bash 挂起（或死锁）且不响应输入，请收集并报告内存转储来帮助我们诊断问题。 请注意，这些步骤会导致系统崩溃。 如果你不熟悉此过程，请不要这样做，或者，请在执行此操作之前保存你的工作。  <br/>
 若要收集内存转储：
 1. 将内存转储类型更改为“完整内存转储”。 更改转储类型时，请记下当前类型。
-2. 遵循这些[步骤](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)使用键盘控制来配置崩溃。
+2. 遵循这些[步骤](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/How-to-Force-a-Diagnostic-Memory-Dump-When-a-Computer-Hangs/ba-p/257809)使用键盘控制来配置崩溃。
 3. 再现挂起或死锁场景。
 4. 使用步骤 (2) 中的按键顺序来使系统崩溃。
 5. 系统将会崩溃并收集内存转储。
