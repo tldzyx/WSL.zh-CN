@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 386b6793f00300bc9dabd1613cfd69b19d222f0b
-ms.sourcegitcommit: eb7b572388c6bddbf6e8ad8d01927660fe66aecf
+ms.openlocfilehash: d4ce22fda7baea77c0a8d3d7101d0ab09b78e8f8
+ms.sourcegitcommit: d110e2bbcd92438781453137ba0ab747cddb28e8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692468"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998254"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
@@ -21,7 +21,7 @@ ms.locfileid: "71692468"
 
 - 确保已安装 WSL （可以在[此处](./install-win10.md)找到相关说明），并且运行的是 Windows 10**内部版本 18917**或更高版本
    - 若要确保使用的是版本18917或更高版本，请加入[Windows 预览体验计划](https://insider.windows.com/en-us/)，并选择 "快速" 环。 
-   - 可以通过打开命令提示符并运行`ver`命令来检查 Windows 版本。
+   - 可以通过打开命令提示符并运行 `ver` 命令来检查 Windows 版本。
 - 启用“虚拟机平台”可选组件
 - 使用命令行设置要由 WSL 2 支持的发行版
 - 验证发行版使用的 WSL 版本
@@ -68,3 +68,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
    
 * **尝试升级时出错：`Invalid command line option: wsl --set-version Ubuntu 2`**
     * 请确保已启用适用于 Linux 的 Windows 子系统，并且你使用的是 Windows 内部版本 18917 或更高版本。 若要启用 WSL，请在 Powershell 提示符下以具有管理员权限的身份运行此命令：`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。 可在[此处](./install-win10.md)找到完整的 WSL 安装说明。
+
+* **由于虚拟磁盘系统限制，无法完成请求的操作。虚拟硬盘文件必须是解压缩和未加密的，并且不能是稀疏的。**
+    * 请查看[WSL Github 线程 #4103](https://github.com/microsoft/WSL/issues/4103)正在跟踪此问题的更新信息。
