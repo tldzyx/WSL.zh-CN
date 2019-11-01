@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: d4ce22fda7baea77c0a8d3d7101d0ab09b78e8f8
-ms.sourcegitcommit: d110e2bbcd92438781453137ba0ab747cddb28e8
+ms.openlocfilehash: e3593aaf0e1c176cbeec2d3ba7d8eca1ede6b1ec
+ms.sourcegitcommit: d74fab7469f4e589ab0bf4418be575381a3f72a0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72998254"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240370"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
@@ -31,8 +31,8 @@ ms.locfileid: "72998254"
 以管理员身份打开 PowerShell 并运行：
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
 这将确保安装了适用于 Linux 的虚拟机平台和 Windows 子系统可选组件。 运行这些命令后，需要重新启动计算机。 
