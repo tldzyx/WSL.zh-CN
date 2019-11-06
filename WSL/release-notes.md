@@ -8,14 +8,27 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
-ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
+ms.openlocfilehash: 63c0e14dab73faf7f835e9ae1eb23eb490b13c44
+ms.sourcegitcommit: 48ca05ce1ac8bf35408af3bc2a2b92a43adba0af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72549578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166657"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-19013"></a>内部版本 19013
+有关内部版本 19013 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/)。
+
+* [WSL2] 提高 WSL 实用工具 VM 的内存性能。 不再处于使用状态的内存将释放回主机。
+* [WSL2] 将内核版本更新到 4.19.79。 （添加 CONFIG_HIGH_RES_TIMERS、CONFIG_TASK_XACCT、CONFIG_TASK_IO_ACCOUNTING、CONFIG_SCHED_HRTICK 和 CONFIG_BRIDGE_VLAN_FILTERING）。
+* [WSL2] 修复了输入中继，以处理 stdin 为未关闭管道句柄的情况 [GH 4424]
+* 检查 \\\\wsl$ 是否不区分大小写。
+```
+[wsl2]
+pageReporting = <bool>    # Enable or disable the free memory page reporting feature (default true).
+idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disables the feature (default 1).
+```
 
 ## <a name="build-19002"></a>版本 19002
 有关版本 19002 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)。
@@ -38,7 +51,6 @@ ms.locfileid: "72549578"
 ```
 [wsl2]
 kernelCommandLine = <string> # Additional kernel command line arguments
-
 ```
 
 ## <a name="build-18990"></a>版本 18990
