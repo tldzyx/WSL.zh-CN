@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: e3593aaf0e1c176cbeec2d3ba7d8eca1ede6b1ec
-ms.sourcegitcommit: d74fab7469f4e589ab0bf4418be575381a3f72a0
+ms.openlocfilehash: 91994f3a075436c022acb9dadeea072142687b72
+ms.sourcegitcommit: cf6d8e277ed3102f8f879b9f39ba0966d4ea6135
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240370"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164342"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
@@ -28,16 +28,24 @@ ms.locfileid: "73240370"
 
 ## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>启用 "虚拟机平台" 可选组件，并确保已启用 WSL
 
-以管理员身份打开 PowerShell 并运行：
+若要启用 "虚拟机平台" 组件，请以管理员身份打开 PowerShell 并运行以下命令。 如果是第一次安装 WSL，则在系统提示重新启动时选择 "否"，因为在安装 "适用于 Linux 的 Windows 子系统" 可选组件后，你将需要重新启动计算机。
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
-这将确保安装了适用于 Linux 的虚拟机平台和 Windows 子系统可选组件。 运行这些命令后，需要重新启动计算机。 
+还需要确保已启用适用于 Linux 的 Windows 子系统可选组件。 要执行此操作，可以在具有管理员权限的 PowerShell 窗口中运行以下命令： 
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+请重新启动计算机以完成两个组件的安装。
+
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令行设置要由 WSL 2 支持的发行版
+
+如果尚未安装 Linux 发行版，请参阅在[Windows 10 文档上安装](./install-win10.md#install-your-linux-distribution-of-choice)页，获取有关安装一个的说明。 
 
 在 PowerShell 中运行：
 

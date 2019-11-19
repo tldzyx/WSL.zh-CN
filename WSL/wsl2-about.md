@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 9ed24b185ad6aef3589b23a114853b6f78b5899f
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 7122fcbd73e064871eba2ac80c727178aaf3ca7b
+ms.sourcegitcommit: 5c92b820f84de57a04ab11faf4dd0d24fff6b320
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269831"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161481"
 ---
 # <a name="about-wsl-2"></a>关于 WSL 2
 
@@ -25,11 +25,11 @@ WSL 2 中的 Linux 内核内置于最新稳定分支中，基于 kernel.org 提�
 
 ## <a name="brief-overview-of-the-wsl-2-architecture"></a>WSL 2 体系结构的简要概述
 
-WSL 2 使用最新和最高的虚拟化技术在轻型实用程序虚拟机（VM）内部运行 Linux 内核。 但是，WSL 2 不会成为传统的 VM 体验。 传统的 VM 体验启动速度慢，隔离，消耗大量资源，需要你的时间进行管理。 WSL 2 没有这些属性。 它仍将为 WSL 1 带来优异的好处：Windows 和 Linux 的高级集成、极快的启动时间、小资源占用量，并且最重要的是，不需要 VM 配置或管理。 尽管 WSL 2 使用 VM，但会管理并在后台运行，从而使你拥有与 WSL 1 相同的用户体验。
+WSL 2 使用最新和最高的虚拟化技术在轻型实用程序虚拟机（VM）内部运行 Linux 内核。 但是，WSL 2 不会成为传统的 VM 体验。 传统的 VM 体验启动速度慢，隔离，消耗大量资源，需要你的时间进行管理。 WSL 2 没有这些属性。 它仍将为 WSL 1：在 Windows 和 Linux 之间实现高水平的集成、极快的启动时间、小资源占用量，并且最大的好处是不需要 VM 配置或管理。 尽管 WSL 2 使用 VM，但会管理并在后台运行，从而使你拥有与 WSL 1 相同的用户体验。
 
 ## <a name="increased-file-io-performance"></a>文件 IO 性能提高
 
-文件密集型操作（如 git 克隆、npm 安装、apt 更新、apt 升级等）都将以更快的速度显著提高。 实际的速度提高将取决于正在运行的应用以及与文件系统交互的方式。 WSL 2 的初始版本与 WSL 1 相比，在打开 zipped tarball 时，运行最多20倍速度，在使用 git 克隆时，可在不同项目中安装和 npm cmake。
+文件密集型操作（如 `git clone`、`npm install`、`apt update`、`apt upgrade`等）的速度都明显提高。 实际的速度提高将取决于正在运行的应用以及与文件系统交互的方式。 WSL 2 的初始版本在解压缩压缩的 tarball 时，与 WSL 1 相比，运行速度最多可20倍，而在不同项目上使用 `git clone`、`npm install` 和 `cmake` 时速度大约快2到5。
 
 ## <a name="full-system-call-compatibility"></a>完全系统调用兼容性
 
