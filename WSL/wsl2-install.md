@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 91994f3a075436c022acb9dadeea072142687b72
-ms.sourcegitcommit: cf6d8e277ed3102f8f879b9f39ba0966d4ea6135
+ms.openlocfilehash: 8af5ffeffdeedc5298af8125cea5c7428c8f29f8
+ms.sourcegitcommit: 3c9ebe5f9ef5fb64070e21b479c2f2d31243f310
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164342"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74248765"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安装说明
 
@@ -28,16 +28,11 @@ ms.locfileid: "74164342"
 
 ## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>启用 "虚拟机平台" 可选组件，并确保已启用 WSL
 
-若要启用 "虚拟机平台" 组件，请以管理员身份打开 PowerShell 并运行以下命令。 如果是第一次安装 WSL，则在系统提示重新启动时选择 "否"，因为在安装 "适用于 Linux 的 Windows 子系统" 可选组件后，你将需要重新启动计算机。
+你将需要确保你已安装适用于 Linux 的 Windows 子系统和已安装的虚拟机平台可选组件。 可以通过在 PowerShell 中运行以下命令来执行此操作： 
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
-```
-
-还需要确保已启用适用于 Linux 的 Windows 子系统可选组件。 要执行此操作，可以在具有管理员权限的 PowerShell 窗口中运行以下命令： 
-
-```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 请重新启动计算机以完成两个组件的安装。
@@ -47,15 +42,19 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 如果尚未安装 Linux 发行版，请参阅在[Windows 10 文档上安装](./install-win10.md#install-your-linux-distribution-of-choice)页，获取有关安装一个的说明。 
 
-在 PowerShell 中运行：
+若要设置发行版，请运行： 
 
-`wsl --set-version <Distro> 2`
+```
+wsl --set-version <Distro> 2
+```
 
 并且确保将 `<Distro>` 替换为你的发行版的实际名称。 （可使用以下命令找到这些内容：`wsl -l`）。 可以随时更改回 WSL 1，方法是运行与上面相同的命令，但将“2”替换为“1”。
 
 此外，如果要使 WSL 2 成为你的默认体系结构，可以通过此命令执行该操作：
 
-`wsl --set-default-version 2`
+```
+wsl --set-default-version 2`
+```
 
 这会使你安装的任何新发行版均初始化为 WSL 2 发行版。
 
@@ -79,3 +78,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 * **由于虚拟磁盘系统限制，无法完成请求的操作。虚拟硬盘文件必须是解压缩和未加密的，并且不能是稀疏的。**
     * 请查看[WSL Github 线程 #4103](https://github.com/microsoft/WSL/issues/4103)正在跟踪此问题的更新信息。
+
+* **术语 "wsl" 未被识别为 cmdlet、函数、脚本文件或可运行程序的名称。** 
+    * 确保[已安装适用于 Linux 的 Windows 子系统可选组件](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled)。<br> 此外，如果使用 Arm64 设备，并从 PowerShell 运行此命令，将收到此错误。 改为从[PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)或命令提示符运行 `wsl.exe`。 
