@@ -17,32 +17,32 @@ ms.locfileid: "74309050"
 
 若要安装并开始使用 WSL 2，请完成以下步骤：
 
-> WSL 2 is only available in Windows 10 builds 18917 or higher
+> WSL 2 仅适用于 Windows 10 版本18917或更高版本
 
-- Ensure that you have WSL installed (you can find instructions to do so [here](./install-win10.md)) and that you are running Windows 10 **build 18917** or higher
-   - To make sure you are using build 18917 or higher please join [the Windows Insider Program](https://insider.windows.com/en-us/) and select the 'Fast' ring. 
-   - You can check your Windows version by opening Command Prompt and running the `ver` command.
+- 确保已安装 WSL （可以在[此处](./install-win10.md)找到相关说明），并且运行的是 Windows 10**内部版本 18917**或更高版本
+   - 若要确保使用的是版本18917或更高版本，请加入[Windows 预览体验计划](https://insider.windows.com/en-us/)，并选择 "快速" 环。 
+   - 可以通过打开命令提示符并运行 `ver` 命令来检查 Windows 版本。
 - 启用“虚拟机平台”可选组件
 - 使用命令行设置要由 WSL 2 支持的发行版
 - 验证发行版使用的 WSL 版本
 
-## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>Enable the 'Virtual Machine Platform' optional component and make sure WSL is enabled
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>启用 "虚拟机平台" 可选组件，并确保已启用 WSL
 
-You will need to make sure that you have both the Windows Subsystem for Linux and the Virtual Machine Platform optional components installed. You can do that by running the following command in PowerShell: 
+你将需要确保你已安装适用于 Linux 的 Windows 子系统和已安装的虚拟机平台可选组件。 可以通过在 PowerShell 中运行以下命令来执行此操作： 
 
 ```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Please restart your machine to finish installing both components.
+请重新启动计算机以完成两个组件的安装。
 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令行设置要由 WSL 2 支持的发行版
 
-If you do not have a Linux distro installed, please refer to the [Install on Windows 10](./install-win10.md#install-your-linux-distribution-of-choice) docs page for instructions on installing one. 
+如果尚未安装 Linux 发行版，请参阅在[Windows 10 文档上安装](./install-win10.md#install-your-linux-distribution-of-choice)页，获取有关安装一个的说明。 
 
-To set a distro please run: 
+若要设置发行版，请运行： 
 
 ```
 wsl --set-version <Distro> 2
@@ -60,7 +60,7 @@ wsl --set-default-version 2
 
 ## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成验证发行版使用的 WSL 版本
 
-To verify what versions of WSL each distro is using use the following command (only available in Windows Build 18917 or higher):
+若要验证每个发行版使用的 WSL 版本，请使用以下命令（仅适用于 Windows 版本18917或更高版本）：
 
 `wsl --list --verbose` 或 `wsl -l -v`
 
@@ -76,8 +76,8 @@ To verify what versions of WSL each distro is using use the following command (o
 * **尝试升级时出错：`Invalid command line option: wsl --set-version Ubuntu 2`**
     * 请确保已启用适用于 Linux 的 Windows 子系统，并且你使用的是 Windows 内部版本 18917 或更高版本。 若要启用 WSL，请在 Powershell 提示符下以具有管理员权限的身份运行此命令：`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。 可在[此处](./install-win10.md)找到完整的 WSL 安装说明。
 
-* **The requested operation could not be completed due to a virtual disk system limitation. Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.**
-    * Please check [WSL Github thread #4103](https://github.com/microsoft/WSL/issues/4103) where this issue is being tracked for updated information.
+* **由于虚拟磁盘系统限制，无法完成请求的操作。虚拟硬盘文件必须是解压缩和未加密的，并且不能是稀疏的。**
+    * 请查看[WSL Github 线程 #4103](https://github.com/microsoft/WSL/issues/4103)正在跟踪此问题的更新信息。
 
-* **The term 'wsl' is not recognized as the name of a cmdlet, function, script file, or operable program.** 
-    * Ensure that the [Windows Subsystem for Linux Optional Component is installed](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled).<br> Additionally, if you are using an Arm64 device and running this command from PowerShell, you will receive this error. Instead run `wsl.exe` from [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6), or Command Prompt. 
+* **术语 "wsl" 未被识别为 cmdlet、函数、脚本文件或可运行程序的名称。** 
+    * 确保[已安装适用于 Linux 的 Windows 子系统可选组件](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled)。<br> 此外，如果使用 Arm64 设备，并从 PowerShell 运行此命令，将收到此错误。 改为从[PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)或命令提示符运行 `wsl.exe`。 
