@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: c53c4507fb56f8e4a3456963b1d6f50ceac8ef37
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269810"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200236"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>适用于 Linux 的 Windows 子系统安装指南 (Windows 10)
 
@@ -29,9 +29,9 @@ ms.locfileid: "71269810"
 
 ## <a name="install-your-linux-distribution-of-choice"></a>安装所选的 Linux 分发版
 若要下载并安装首选的分发版，可以选择三种做法：
-1. 从 Microsoft Store 下载并安装（参阅下文）
-1. 从命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
-1. 下载并手动解压缩和安装（适用于 Windows Server - [参阅此处的说明](install-on-server.md)）
+* 从 Microsoft Store 下载并安装（参阅下文）
+* 从命令行/脚本下载并安装（[阅读手动安装说明](install-manual.md)）
+* 下载并手动解压缩和安装（适用于 Windows Server - [参阅此处的说明](install-on-server.md)）
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 和更高版本：从 Microsoft Store 安装
 
