@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 299b939383a98752cb54cafa23bb8b7662d53e0a
-ms.sourcegitcommit: ac6029d7d7440b8ed0e866fcea5b693edfdc163e
+ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73633856"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200227"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-19028"></a>内部版本 19028
+有关内部版本 19028 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)。
+
+* [WSL2] 将 Linux 内核更新到 4.19.81
+* [WSL2] 将 /dev/net/tun 的默认权限更改为 0666 [GH 4629]
+* [WSL2] 将分配给 Linux VM 的默认内存量调整为主机内存的 80%
+* [WSL2] 修复互操作服务器以便使用“超时”功能处理请求，从而使不良调用方无法挂起服务器
 
 ## <a name="build-19018"></a>内部版本 19018
 有关内部版本 19018 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/)。
