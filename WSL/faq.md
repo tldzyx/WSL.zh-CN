@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
-ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
+ms.openlocfilehash: d5c4308c531e4df02acbfb17a76b3f83d912b512
+ms.sourcegitcommit: 33290fd88a461a1a36d6106e737490bd57dc77bd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934905"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951255"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题解答
 
@@ -177,8 +177,11 @@ Windows 版本 1809 和更高版本中提供了备份分发版的最佳方式。
 
 ## <a name="where-can-i-provide-feedback"></a>可以在何处提供反馈？
 
-可以通过多个渠道分享反馈和提问：反馈和问题将定向到：
-* 我们的 [GitHub 问题跟踪器](https://github.com/Microsoft/BashOnWindows/issues)
-* 我们的[命令行 UserVoice 门户](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
+可以通过多个渠道分享反馈并提出问题。
+
+如果有技术问题，或者想要请求新功能，请转到 Github 问题跟踪器：
+* [GitHub 问题跟踪器](https://github.com/Microsoft/BashOnWindows/issues)
+
+如果想要随时了解最新的 WSL 新闻，可以访问：
 * 我们的[命令行团队博客](https://blogs.msdn.microsoft.com/commandline/)
-* 通过 Twitter。 请关注 Twitter 上的 [@richturn_ms](https://twitter.com/richturn_MS) 来了解最新信息、更新等。
+* Twitter。 请关注 Twitter 上的 [@craigaloewen](https://twitter.com/craigaloewen) 来了解最新信息、更新等。
