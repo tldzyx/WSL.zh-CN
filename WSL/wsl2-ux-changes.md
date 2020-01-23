@@ -1,33 +1,33 @@
 ---
-title: WSL 1 和 WSL 2 之间的 UX 更改
-description: WSL 1 和 WSL 2 之间的用户体验更改
+title: WSL 1 与 WSL 2 的用户体验差异
+description: WSL 1 与 WSL 2 的用户体验差异
 keywords: BashOnWindows、bash、wsl、wsl2、windows、适用于 linux、windowssubsystem、ubuntu、debian、suse、windows 10 的 windows 子系统
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 635e4335bd3fe5dd1629faba0168ec4fa331e190
-ms.sourcegitcommit: 6f6b7b67dd35b5fc7b582bb7ac27b9936dedb23d
+ms.openlocfilehash: a8f298a69acf44f152da626a0ba571f6bba1970c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681647"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520556"
 ---
-# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 和 WSL 2 之间的用户体验更改
+# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 与 WSL 2 的用户体验差异
 
-此页面介绍了 WSL 1 和 WSL 2 preview 之间的用户体验差异。 需要注意的关键变化是：
+此页主要描述 WSL 1 和 WSL 2 预览版之间的用户体验差异。 关键差异包括：
 
-- 将 Linux 应用访问的文件放置在 Linux 根文件系统中，以提高文件性能速度
-- 在 WSL 2 预览版的初始版本中，你将需要使用 IP 地址访问网络应用程序，而不是使用 localhost
+- 将 Linux 应用需要访问的文件放在 Linux 根文件系统中可以提高文件访问速度
+- 在 WSL 2 预览版的初始版本中，你需要使用 IP 地址而不是 localhost 来访问网络应用程序
 
-下面是你可能注意到的其他更改的完整列表：
+下面是可能会注意到的差异的完整列表：
 
 - WSL 2 使用[虚拟硬件磁盘](https://en.wikipedia.org/wiki/VHD_(file_format))（VHD）来存储文件，如果达到其最大大小，则可能需要将其扩展
 - 启动时，WSL 2 现在将使用少量内存
-- 在初始预览版中，跨 OS 文件访问速度会变慢
+- 初始预览版本中，跨 OS 文件访问速度会变慢
 
 ## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>将 Linux 文件放在 Linux 根文件系统中
-请确保将经常访问的文件放在 Linux 根文件系统内的 Linux 应用程序中，以享受文件性能优势。 为了更快地访问文件系统，这些文件必须位于 Linux 根文件系统中。 我们还可以使 Windows 应用程序访问 Linux 根文件系统（如文件资源管理器） 尝试运行：在 Linux 发行版的主目录中 `explorer.exe .`，看看会发生什么情况，这会使此转换变得更加轻松。 
+请务必将使用 Linux 应用程序频繁访问的文件放在 Linux 根文件系统中，从而获取文件性能方面的优势。 这些文件只有在 Linux 根文件系统中才能实现更快的文件系统访问。 我们还使 Windows 应用能访问 Linux 根文件系统（如文件资源管理器！ 尝试在 Linux 发行版的 home 目录中运行：`explorer.exe .`，看看会发生什么)， 这会使文件转移更加便捷。 
 
 ## <a name="accessing-network-applications"></a>访问网络应用程序
 在 WSL 2 预览版的初始版本中，需要使用主机的 IP 地址从 Linux 访问任何 Windows server。
@@ -42,8 +42,13 @@ ms.locfileid: "74681647"
 
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-l2w.png)
 
-### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>从 Windows 访问 Linux 应用程序（仅在版本低于18945的版本中）
-如果在 WSL 发行版中有一个服务器，则需要找到虚拟机的 IP 地址，并使用该 IP 地址连接到发行版。 可以通过执行以下步骤来执行此操作：
+### <a name="accessing-linux-applications-from-windows"></a>从 Windows 访问 Linux 应用程序
+
+根据你使用的 Windows 版本，你可能需要检索虚拟机的 IP 地址。 如果生成为18945或更高版本，则可以使用 `localhost`，就像正常一样。 
+
+#### <a name="accessing-linux-on-builds-lower-than-18945httpsblogswindowscomwindowsexperience20190726announcing-windows-10-insider-preview-build-18945"></a>在低于[18945](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)的版本上访问 Linux
+
+如果在 WSL 发行版中有服务器，需要查找运行 Linux 发行版的虚拟机的 IP 地址并使用该 IP 地址连接它。 可以通过以下步骤来实现此目的：
 
 - 通过在 WSL 发行版中运行命令 `ip addr` 来获取发行版的 IP 地址，并在 `eth0` 接口的 `inet` 值下找到它。
    - 可以通过使用 grep （如下所示）筛选命令的输出来更轻松地找到此方法： `ip addr | grep eth0`。
@@ -52,8 +57,6 @@ ms.locfileid: "74681647"
 下图显示了一个示例，该示例通过使用 Edge 浏览器连接到 node.js 服务器。
 
 ![从 Windows 访问 Linux 网络应用程序](media/wsl2-network-w2l.jpg)
-
-如果生成为18945或更高版本，则可以像平时一样使用 localhost。 
 
 ### <a name="other-networking-considerations"></a>其他网络注意事项
 

@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: c4a8c02db6563d7ad572917578c1a49d419f1756
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: c694b3476976241422d079eb65e72beca415ff62
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269573"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520566"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 常见问题
 
@@ -35,11 +35,11 @@ WSL 2 将在所有 WSL 当前可用的 Sku 上可用，包括 Windows 10 家庭�
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>能否在 WSL 2 中访问 GPU？ 是否计划增加硬件支持？
 
-在 WSL 2 的初始版本中，将限制硬件访问支持，例如：你将无法访问 GPU、串行或 USBs。 但是，在积压工作（backlog）上添加更好的设备支持更高，因为这会为希望与这些设备进行交互的开发人员打开更多用例。 同时，你始终可以使用具有串行端口和 USB 访问权限的 WSL 1。 请继续关注此博客并 WSL Twitter 上的团队成员，随时了解即将到来的内部版本的最新功能，并向我们提供有关你想要与之交互的设备的反馈！
+在 WSL 2 的初始版本中，将会限制硬件访问支持，例如：你将无法访问 GPU、串行或 USB 设备。 但是，在积压工作（backlog）上添加更好的设备支持更高，因为这会为希望与这些设备进行交互的开发人员打开更多用例。 同时，你始终可以使用具有串行端口访问的 WSL 1。 请继续关注此博客并 WSL Twitter 上的团队成员，随时了解即将到来的内部版本的最新功能，并向我们提供有关你想要与之交互的设备的反馈！
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2 是否能够使用网络应用程序？
 
-是的，在常规网络应用程序中，可以更快、更好地工作，因为我们具有完全的系统调用兼容性。 但是，新的体系结构使用虚拟化的网络组件。 这意味着，在初始预览版本中，WSL 2 的行为将更类似于虚拟机，例如：WSL 2 的 IP 地址将与主机不同。 我们承诺使 WSL 2 感觉与 WSL 1 相同，这包括改善我们的网络故事。 我们希望尽快添加改进，如使用 localhost 从 Linux 或 Windows 访问所有网络应用。 我们将在 WSL 2 的发布时，公布有关网络故事和改进的更多详细信息。
+是的，在常规网络应用程序中，可以更快、更好地工作，因为我们具有完全的系统调用兼容性。 但是，新的体系结构使用虚拟化的网络组件。 这意味着，在初始预览版本中，WSL 2 的行为将与虚拟机更相似，例如： WSL 2 的 IP 地址与主机不同。 我们承诺使 WSL 2 感觉与 WSL 1 相同，这包括改善我们的网络故事。 我们希望尽快添加改进，如使用 localhost 从 Linux 或 Windows 访问所有网络应用。 我们将在 WSL 2 的发布时，公布有关网络故事和改进的更多详细信息。
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>能否在虚拟机中运行 WSL 2？
 
