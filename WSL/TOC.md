@@ -4,6 +4,7 @@
 # [初始化发行版](./initialize-distro.md)
 # [用户帐户和权限](./user-support.md)
 # [发行版管理](./wsl-config.md)
+# [文件系统权限](./file-permissions.md)
 # [适用于 Linux for Enterprise 的 Windows 子系统](./enterprise.md)
 # [互操作性](./interop.md)
 # [生成自定义发行版](./build-custom-distro.md)
