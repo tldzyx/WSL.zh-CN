@@ -2,7 +2,7 @@
 # [在 Windows 10 上安装](./install-win10.md)
 # [在 Windows Server 上安装](./install-on-server.md)
 # [初始化发行版](./initialize-distro.md)
-# [用户帐户和权限](./user-support.md)
+# [用户帐户](./user-support.md)
 # [发行版管理](./wsl-config.md)
 # [文件系统权限](./file-permissions.md)
 # [适用于 Linux for Enterprise 的 Windows 子系统](./enterprise.md)
