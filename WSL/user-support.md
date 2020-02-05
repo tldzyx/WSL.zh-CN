@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 30dea11adb68639f645ca800a695b0404661845a
+ms.sourcegitcommit: e5fb773dd44abab7bcf289340da00f59528b88f7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520576"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76973677"
 ---
 # <a name="create-and-update-user-accounts-for-wsl-distributions"></a>为 WSL 分发版创建和更新用户帐户
 
@@ -38,7 +38,7 @@ ms.locfileid: "76520576"
 
 1. 请打开 PowerShell，并使用以下命令进入默认 WSL 分发版的根目录：`wsl -u root`
 
--- 如果需要在非默认分发版中更新忘记的密码，请使用命令：`wsl -d Debian -u root`，并将 `Debian` 替换为目标分发版的名称。
+> 如果需要在非默认分发版中更新忘记的密码，请使用命令：`wsl -d Debian -u root`，并将 `Debian` 替换为目标分发版的名称。
 
 2. 在 PowerShell 内的根级别打开 WSL 分发版后，可以使用此命令更新密码：`passwd`
 

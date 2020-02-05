@@ -8,14 +8,32 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
-ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
+ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
+ms.sourcegitcommit: 7069b8d452308c32cc7fa31d1158fcb130d42e06
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74200227"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911701"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
+
+## <a name="build-19555"></a>内部版本 19555
+有关内部版本 19555 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)。
+
+* [WSL2] 使用 memory cgroup 限制了安装和转换操作使用的内存量 [GH 4669]
+* 在未启用适用于 Linux 的 Windows 子系统可选组件时使 wsl.exe 存在，以提高功能的可发现性。
+* 更改了 wsl.exe 以在未安装 WSL 可选组件时输出帮助文本
+* 修复了创建实例时的争用条件
+* 创建了包含所有命令行功能的 slclient.dll
+* 防止了在 LxssManagerUser 服务停止期间发生崩溃
+* 修复了当 distroName 参数为 NULL 时的 wslapi.dll 快速失败
+
+## <a name="build-19041"></a>内部版本 19041
+有关内部版本 19041 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/12/10/announcing-windows-10-insider-preview-build-19041/)。
+
+* [WSL2] 在启动进程之前清除信号掩码
+* [WSL2] 将 Linux 内核更新到 4.19.84
+* 当 symlink 非相关时，处理 /etc/resolv.conf symlink 的创建
 
 ## <a name="build-19028"></a>内部版本 19028
 有关内部版本 19028 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)。
@@ -585,7 +603,7 @@ wslconfig.exe /terminate <DistributionName>
 ## <a name="build-17093"></a>内部版本 17093
 有关内部版本 17093 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/)。
 
-#### <a name="important"></a>重要提示：
+#### <a name="important"></a>重要说明：
 升级到此内部版本后，首次启动 WSL 时，需要执行一些操作来升级 Linux 文件系统目录。 这可能需要几分钟时间，因此 WSL 的启动速度看上去可能很慢。 对于从 Store 安装的每个分发版，只需执行此操作一次。
 * 改善了 DrvFs 中的区分大小写支持。
     * DrvFs 现在支持按目录区分大小写。 这是一个可对目录设置的新标志，用于指示应将这些目录中的所有操作视为区分大小写，使得 Windows 应用程序能够正确打开按大小写区分的文件。
