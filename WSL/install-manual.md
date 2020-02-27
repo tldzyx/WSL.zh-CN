@@ -6,65 +6,67 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
-ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
+ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778815"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624921"
 ---
-# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a><span data-ttu-id="3d5ec-104">手动下载适用于 Linux 的 Windows 子系统发行版包</span><span class="sxs-lookup"><span data-stu-id="3d5ec-104">Manually download Windows Subsystem for Linux distro packages</span></span>
+# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a><span data-ttu-id="5083f-104">手动下载适用于 Linux 的 Windows 子系统发行版包</span><span class="sxs-lookup"><span data-stu-id="5083f-104">Manually download Windows Subsystem for Linux distro packages</span></span>
 
-<span data-ttu-id="3d5ec-105">在多种情况下，你可能无法（或不想）通过 Microsoft Store 安装 WSL Linux 发行版。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-105">There are several scenarios in which you may not be able (or want) to, install WSL Linux distros via the Microsoft Store.</span></span> <span data-ttu-id="3d5ec-106">具体而言，你可能运行的是不支持 Microsoft Store 或公司网络策略和/或管理员在你的环境中不允许 Microsoft Store 使用的 Windows Server 或长期服务（LTSC）桌面操作系统 SKU。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-106">Specifically, you may be running a Windows Server or Long-Term Servicing (LTSC) desktop OS SKU that doesn't support Microsoft Store, or your corporate network policies and/or admins to not permit Microsoft Store usage in your environment.</span></span>
+<span data-ttu-id="5083f-105">在多种情况下，你可能无法（或不想）通过 Microsoft Store 安装 WSL Linux 发行版。</span><span class="sxs-lookup"><span data-stu-id="5083f-105">There are several scenarios in which you may not be able (or want) to, install WSL Linux distros via the Microsoft Store.</span></span> <span data-ttu-id="5083f-106">具体而言，你可能运行的是不支持 Microsoft Store 或公司网络策略和/或管理员在你的环境中不允许 Microsoft Store 使用的 Windows Server 或长期服务（LTSC）桌面操作系统 SKU。</span><span class="sxs-lookup"><span data-stu-id="5083f-106">Specifically, you may be running a Windows Server or Long-Term Servicing (LTSC) desktop OS SKU that doesn't support Microsoft Store, or your corporate network policies and/or admins to not permit Microsoft Store usage in your environment.</span></span>
 
-<span data-ttu-id="3d5ec-107">在这些情况下，虽然 WSL 本身可用，但如果你无法访问应用商店，如何下载并在 WSL 中安装 Linux 发行版？</span><span class="sxs-lookup"><span data-stu-id="3d5ec-107">In these cases, while WSL itself is available, how do you download and install Linux distros in WSL if you can't access the store?</span></span>
+<span data-ttu-id="5083f-107">在这些情况下，虽然 WSL 本身可用，但如果你无法访问应用商店，如何下载并在 WSL 中安装 Linux 发行版？</span><span class="sxs-lookup"><span data-stu-id="5083f-107">In these cases, while WSL itself is available, how do you download and install Linux distros in WSL if you can't access the store?</span></span>
 
-> <span data-ttu-id="3d5ec-108">注意：**不允许在 Windows 10 S 模式上运行命令行 shell 环境，包括 Cmd、PowerShell 和 Linux/WSL 发行版**。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-108">Note: **Command-line shell environments including Cmd, PowerShell, and Linux/WSL distros are not permitted to run on Windows 10 S Mode**.</span></span> <span data-ttu-id="3d5ec-109">存在此限制是为了确保模式提供的完整性和安全性目标：阅读[此文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)了解详细信息。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-109">This restriction exists in order to ensure the integrity and safety goals that S Mode delivers: Read [this post](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) for more information.</span></span>
+> <span data-ttu-id="5083f-108">注意：**不允许在 Windows 10 S 模式上运行命令行 shell 环境，包括 Cmd、PowerShell 和 Linux/WSL 发行版**。</span><span class="sxs-lookup"><span data-stu-id="5083f-108">Note: **Command-line shell environments including Cmd, PowerShell, and Linux/WSL distros are not permitted to run on Windows 10 S Mode**.</span></span> <span data-ttu-id="5083f-109">存在此限制是为了确保模式提供的完整性和安全性目标：阅读[此文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)了解详细信息。</span><span class="sxs-lookup"><span data-stu-id="5083f-109">This restriction exists in order to ensure the integrity and safety goals that S Mode delivers: Read [this post](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) for more information.</span></span>
 
-## <a name="downloading-distros"></a><span data-ttu-id="3d5ec-110">下载发行版</span><span class="sxs-lookup"><span data-stu-id="3d5ec-110">Downloading distros</span></span>
+## <a name="downloading-distros"></a><span data-ttu-id="5083f-110">下载发行版</span><span class="sxs-lookup"><span data-stu-id="5083f-110">Downloading distros</span></span>
 
-<span data-ttu-id="3d5ec-111">如果 Microsoft Store 应用不可用，则可以通过单击以下链接下载并手动安装 Linux 发行版：</span><span class="sxs-lookup"><span data-stu-id="3d5ec-111">If the Microsoft Store app is not available, you can download and manually install Linux distros by clicking these links:</span></span>
-* [<span data-ttu-id="3d5ec-112">Ubuntu 18.04</span><span class="sxs-lookup"><span data-stu-id="3d5ec-112">Ubuntu 18.04</span></span>](https://aka.ms/wsl-ubuntu-1804)
-* [<span data-ttu-id="3d5ec-113">Ubuntu 18.04 ARM</span><span class="sxs-lookup"><span data-stu-id="3d5ec-113">Ubuntu 18.04 ARM</span></span>](https://aka.ms/wsl-ubuntu-1804-arm)
-* [<span data-ttu-id="3d5ec-114">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="3d5ec-114">Ubuntu 16.04</span></span>](https://aka.ms/wsl-ubuntu-1604)
-* [<span data-ttu-id="3d5ec-115">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="3d5ec-115">Debian GNU/Linux</span></span>](https://aka.ms/wsl-debian-gnulinux)
-* [<span data-ttu-id="3d5ec-116">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="3d5ec-116">Kali Linux</span></span>](https://aka.ms/wsl-kali-linux-new)
-* [<span data-ttu-id="3d5ec-117">OpenSUSE Leap 42</span><span class="sxs-lookup"><span data-stu-id="3d5ec-117">OpenSUSE Leap 42</span></span>](https://aka.ms/wsl-opensuse-42)
-* [<span data-ttu-id="3d5ec-118">SUSE Linux Enterprise Server 12</span><span class="sxs-lookup"><span data-stu-id="3d5ec-118">SUSE Linux Enterprise Server 12</span></span>](https://aka.ms/wsl-sles-12)
-* [<span data-ttu-id="3d5ec-119">Fedora Remix for WSL</span><span class="sxs-lookup"><span data-stu-id="3d5ec-119">Fedora Remix for WSL</span></span>](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+<span data-ttu-id="5083f-111">如果 Microsoft Store 应用不可用，则可以通过单击以下链接下载并手动安装 Linux 发行版：</span><span class="sxs-lookup"><span data-stu-id="5083f-111">If the Microsoft Store app is not available, you can download and manually install Linux distros by clicking these links:</span></span>
+<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
+* <span data-ttu-id="5083f-112">Ubuntu 18.04</span><span class="sxs-lookup"><span data-stu-id="5083f-112">Ubuntu 18.04</span></span>
+* <span data-ttu-id="5083f-113">Ubuntu 18.04 ARM</span><span class="sxs-lookup"><span data-stu-id="5083f-113">Ubuntu 18.04 ARM</span></span>
+* [<span data-ttu-id="5083f-114">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="5083f-114">Ubuntu 16.04</span></span>](https://aka.ms/wsl-ubuntu-1604)
+* [<span data-ttu-id="5083f-115">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="5083f-115">Debian GNU/Linux</span></span>](https://aka.ms/wsl-debian-gnulinux)
+* [<span data-ttu-id="5083f-116">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="5083f-116">Kali Linux</span></span>](https://aka.ms/wsl-kali-linux-new)
+* [<span data-ttu-id="5083f-117">OpenSUSE Leap 42</span><span class="sxs-lookup"><span data-stu-id="5083f-117">OpenSUSE Leap 42</span></span>](https://aka.ms/wsl-opensuse-42)
+* [<span data-ttu-id="5083f-118">SUSE Linux Enterprise Server 12</span><span class="sxs-lookup"><span data-stu-id="5083f-118">SUSE Linux Enterprise Server 12</span></span>](https://aka.ms/wsl-sles-12)
+* [<span data-ttu-id="5083f-119">Fedora Remix for WSL</span><span class="sxs-lookup"><span data-stu-id="5083f-119">Fedora Remix for WSL</span></span>](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-<span data-ttu-id="3d5ec-120">这将导致 `<distro>.appx` 包下载到你选择的文件夹。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-120">This will cause the `<distro>.appx` packages to download to a folder of your choosing.</span></span> <span data-ttu-id="3d5ec-121">按照[安装说明](#installing-your-distro)安装下载的发行版。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-121">Follow the [installation instructions](#installing-your-distro) to install your downloaded distro(s).</span></span>
+<span data-ttu-id="5083f-120">这将导致 `<distro>.appx` 包下载到你选择的文件夹。</span><span class="sxs-lookup"><span data-stu-id="5083f-120">This will cause the `<distro>.appx` packages to download to a folder of your choosing.</span></span> <span data-ttu-id="5083f-121">按照[安装说明](#installing-your-distro)安装下载的发行版。</span><span class="sxs-lookup"><span data-stu-id="5083f-121">Follow the [installation instructions](#installing-your-distro) to install your downloaded distro(s).</span></span>
 
-## <a name="downloading-distros-via-the-command-line"></a><span data-ttu-id="3d5ec-122">通过命令行下载发行版</span><span class="sxs-lookup"><span data-stu-id="3d5ec-122">Downloading distros via the command line</span></span>
-<span data-ttu-id="3d5ec-123">如果愿意，也可以通过命令行下载首选的发行版：</span><span class="sxs-lookup"><span data-stu-id="3d5ec-123">If you prefer, you can also download your preferred distro(s) via the command line:</span></span>
+## <a name="downloading-distros-via-the-command-line"></a><span data-ttu-id="5083f-122">通过命令行下载发行版</span><span class="sxs-lookup"><span data-stu-id="5083f-122">Downloading distros via the command line</span></span>
+<span data-ttu-id="5083f-123">如果愿意，也可以通过命令行下载首选的发行版：</span><span class="sxs-lookup"><span data-stu-id="5083f-123">If you prefer, you can also download your preferred distro(s) via the command line:</span></span>
 
- ### <a name="download-using-powershell"></a><span data-ttu-id="3d5ec-124">使用 PowerShell 下载</span><span class="sxs-lookup"><span data-stu-id="3d5ec-124">Download using PowerShell</span></span>
- <span data-ttu-id="3d5ec-125">若要使用 PowerShell 下载发行版，请使用[WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-125">To download distros using PowerShell, use the [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet.</span></span> <span data-ttu-id="3d5ec-126">下面是下载 Ubuntu 16.04 的示例说明。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-126">Here's a sample instruction to download Ubuntu 16.04.</span></span>
+ ### <a name="download-using-powershell"></a><span data-ttu-id="5083f-124">使用 PowerShell 下载</span><span class="sxs-lookup"><span data-stu-id="5083f-124">Download using PowerShell</span></span>
+ <span data-ttu-id="5083f-125">若要使用 PowerShell 下载发行版，请使用[WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet。</span><span class="sxs-lookup"><span data-stu-id="5083f-125">To download distros using PowerShell, use the [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet.</span></span> <span data-ttu-id="5083f-126">下面是下载 Ubuntu 16.04 的示例说明。</span><span class="sxs-lookup"><span data-stu-id="5083f-126">Here's a sample instruction to download Ubuntu 16.04.</span></span>
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
 ```
 
 > [!TIP]
-> <span data-ttu-id="3d5ec-127">如果下载需要很长时间，请通过设置 `$ProgressPreference = 'SilentlyContinue'` 来关闭进度栏。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-127">If the download is taking a long time, turn off the progress bar by setting `$ProgressPreference = 'SilentlyContinue'`</span></span>
+> <span data-ttu-id="5083f-127">如果下载需要很长时间，请通过设置 `$ProgressPreference = 'SilentlyContinue'` 来关闭进度栏。</span><span class="sxs-lookup"><span data-stu-id="5083f-127">If the download is taking a long time, turn off the progress bar by setting `$ProgressPreference = 'SilentlyContinue'`</span></span>
 
-### <a name="download-using-curl"></a><span data-ttu-id="3d5ec-128">使用卷下载</span><span class="sxs-lookup"><span data-stu-id="3d5ec-128">Download using curl</span></span>
-<span data-ttu-id="3d5ec-129">Windows 10 春季2018更新（或更高版本）包含可从命令行调用 web 请求（例如 HTTP GET、POST、PUT 等命令）的常用[卷命令行实用程序](https://curl.haxx.se/)。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-129">Windows 10 Spring 2018 Update (or later) includes the popular [curl command-line utility](https://curl.haxx.se/) with which you can invoke web requests (i.e. HTTP GET, POST, PUT, etc. commands) from the command line.</span></span> <span data-ttu-id="3d5ec-130">您可以使用 `curl.exe` 下载上述发行版：</span><span class="sxs-lookup"><span data-stu-id="3d5ec-130">You can use `curl.exe` to download the above distros:</span></span>
+### <a name="download-using-curl"></a><span data-ttu-id="5083f-128">使用卷下载</span><span class="sxs-lookup"><span data-stu-id="5083f-128">Download using curl</span></span>
+<span data-ttu-id="5083f-129">Windows 10 春季2018更新（或更高版本）包含可从命令行调用 web 请求（例如 HTTP GET、POST、PUT 等命令）的常用[卷命令行实用程序](https://curl.haxx.se/)。</span><span class="sxs-lookup"><span data-stu-id="5083f-129">Windows 10 Spring 2018 Update (or later) includes the popular [curl command-line utility](https://curl.haxx.se/) with which you can invoke web requests (i.e. HTTP GET, POST, PUT, etc. commands) from the command line.</span></span> <span data-ttu-id="5083f-130">您可以使用 `curl.exe` 下载上述发行版：</span><span class="sxs-lookup"><span data-stu-id="5083f-130">You can use `curl.exe` to download the above distros:</span></span>
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-<span data-ttu-id="3d5ec-131">在上面的示例中，将执行 `curl.exe` （而不只是 `curl`），以确保在 PowerShell 中调用实卷可执行文件，而不是调用[WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)的 powershell 卷别名。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-131">In the above example, `curl.exe` is executed (not just `curl`) to ensure that, in PowerShell, the real curl executable is invoked, not the PowerShell curl alias for [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)</span></span>
+<span data-ttu-id="5083f-131">在上面的示例中，将执行 `curl.exe` （而不只是 `curl`），以确保在 PowerShell 中调用实卷可执行文件，而不是调用[WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)的 powershell 卷别名。</span><span class="sxs-lookup"><span data-stu-id="5083f-131">In the above example, `curl.exe` is executed (not just `curl`) to ensure that, in PowerShell, the real curl executable is invoked, not the PowerShell curl alias for [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)</span></span>
 
-> <span data-ttu-id="3d5ec-132">注意：如果必须使用 Cmd shell 和/或 `.bat`  /  `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更可取。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-132">Note: Using `curl` might be preferable if you have to invoke/script download steps using Cmd shell and/or `.bat` / `.cmd` scripts.</span></span>
+> <span data-ttu-id="5083f-132">注意：如果必须使用 Cmd shell 和/或 `.bat` / `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更可取。</span><span class="sxs-lookup"><span data-stu-id="5083f-132">Note: Using `curl` might be preferable if you have to invoke/script download steps using Cmd shell and/or `.bat` / `.cmd` scripts.</span></span>
 
-## <a name="installing-your-distro"></a><span data-ttu-id="3d5ec-133">安装发行版</span><span class="sxs-lookup"><span data-stu-id="3d5ec-133">Installing your distro</span></span>
-<span data-ttu-id="3d5ec-134">如果使用的是 Windows 10，则可以使用 PowerShell 安装发行版。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-134">If you're using Windows 10 you can install your distro with PowerShell.</span></span> <span data-ttu-id="3d5ec-135">只需导航到包含上面下载的发行版的文件夹，并在该目录中运行以下命令，其中 `app_name` 是发行版文件的名称。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-135">Simply navigate to folder containing the distro downloaded from above, and in that directory run the following command where `app_name` is the name of your distro .appx file.</span></span>  
+## <a name="installing-your-distro"></a><span data-ttu-id="5083f-133">安装发行版</span><span class="sxs-lookup"><span data-stu-id="5083f-133">Installing your distro</span></span>
+<span data-ttu-id="5083f-134">如果使用的是 Windows 10，则可以使用 PowerShell 安装发行版。</span><span class="sxs-lookup"><span data-stu-id="5083f-134">If you're using Windows 10 you can install your distro with PowerShell.</span></span> <span data-ttu-id="5083f-135">只需导航到包含上面下载的发行版的文件夹，并在该目录中运行以下命令，其中 `app_name` 是发行版文件的名称。</span><span class="sxs-lookup"><span data-stu-id="5083f-135">Simply navigate to folder containing the distro downloaded from above, and in that directory run the following command where `app_name` is the name of your distro .appx file.</span></span>  
 ```Powershell
 Add-AppxPackage .\app_name.appx
 ```
 
-<span data-ttu-id="3d5ec-136">如果使用的是 Windows server，可以在[Windows server](install-on-server.md)文档页上找到安装说明。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-136">If you are using Windows server you can find the install instructions on the [Windows Server](install-on-server.md) documentation page.</span></span>
+<span data-ttu-id="5083f-136">如果使用的是 Windows server，可以在[Windows server](install-on-server.md)文档页上找到安装说明。</span><span class="sxs-lookup"><span data-stu-id="5083f-136">If you are using Windows server you can find the install instructions on the [Windows Server](install-on-server.md) documentation page.</span></span>
 
-<span data-ttu-id="3d5ec-137">安装发行版后，请参阅[初始化步骤](initialize-distro.md)页，初始化新的发行版。</span><span class="sxs-lookup"><span data-stu-id="3d5ec-137">Once your distro is installed please refer to the [Initialization Steps](initialize-distro.md) page to initialize your new distro.</span></span>
+<span data-ttu-id="5083f-137">安装发行版后，请参阅[初始化步骤](initialize-distro.md)页，初始化新的发行版。</span><span class="sxs-lookup"><span data-stu-id="5083f-137">Once your distro is installed please refer to the [Initialization Steps](initialize-distro.md) page to initialize your new distro.</span></span>
