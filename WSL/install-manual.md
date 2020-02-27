@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
-ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
+ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778815"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624921"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
@@ -24,8 +24,10 @@ ms.locfileid: "72778815"
 ## <a name="downloading-distros"></a>下载发行版
 
 如果 Microsoft Store 应用不可用，则可以通过单击以下链接下载并手动安装 Linux 发行版：
-* [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
-* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
+<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
+* Ubuntu 18.04
+* Ubuntu 18.04 ARM
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
@@ -57,7 +59,7 @@ curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 
 在上面的示例中，将执行 `curl.exe` （而不只是 `curl`），以确保在 PowerShell 中调用实卷可执行文件，而不是调用[WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)的 powershell 卷别名。
 
-> 注意：如果必须使用 Cmd shell 和/或 `.bat`  /  `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更可取。
+> 注意：如果必须使用 Cmd shell 和/或 `.bat` / `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更可取。
 
 ## <a name="installing-your-distro"></a>安装发行版
 如果使用的是 Windows 10，则可以使用 PowerShell 安装发行版。 只需导航到包含上面下载的发行版的文件夹，并在该目录中运行以下命令，其中 `app_name` 是发行版文件的名称。  
