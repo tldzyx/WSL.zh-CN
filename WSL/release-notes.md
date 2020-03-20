@@ -968,7 +968,7 @@ wslconfig.exe /terminate <DistributionName>
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>已知问题
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 问题 2392：WSL 无法识别 Windows 文件夹 ...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>[GitHub 问题 2392：WSL 无法识别 Windows 文件夹 ...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 在内部版本 16257 中，WSL 在通过 `/mnt/c/...` 枚举 Windows 文件/文件夹时会出现问题。
 此问题已修复，修复程序将在 2017 年 8 月 14 日开始的周内，在预览体验成员内部版本中发布。
 

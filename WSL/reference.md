@@ -152,7 +152,7 @@ ms.locfileid: "71269845"
 
 可以使用命令 `lxrun.exe` 来直接与[适用于 Linux 的 Windows 子系统 (WSL)](https://msdn.microsoft.com/en-us/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) 交互。  这些命令已安装到 `\Windows\System32` 目录中，可以在 Windows 命令提示符或 PowerShell 中运行。
 
-| 命令                     | 描述                     |
+| 命令                     | 说明                     |
 |:----------------------------|:---------------------------|
 | `lxrun`                     | lxrun 命令用于管理 WSL 实例。 |
 | `lxrun /install`            | 启动下载和安装过程。 <br/> 可以添加 **/y** 来绕过所有提示。  系统会自动接受确认提示，默认用户将设置为 root。          |

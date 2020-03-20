@@ -18,7 +18,7 @@ ms.locfileid: "74200191"
 
 适用于 Linux 的 Windows 子系统可让开发人员按原样运行 GNU/Linux 环境 - 包括大多数命令行工具、实用工具和应用程序 - 且不会产生虚拟机开销。  
 
-你可以：
+您可以：
 
 1. [在 Microsoft Store](https://aka.ms/wslstore) 中选择你偏好的 GNU/Linux 分发版。
 1. 运行常用的无命令行软件（例如 `grep`、`sed`、`awk`）或其他 ELF-64 二进制文件。 
