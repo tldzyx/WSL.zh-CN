@@ -27,14 +27,14 @@ ms.locfileid: "71269773"
 
 1. 开启开发人员模式若要在 Windows 10 周年更新或创意者更新上运行 WSL，必须启用开发人员模式：
 
-    **为开发人员**打开**设置** -> **更新和安全性** -> 
+    **为开发人员**打开 -> **更新和安全** -> 的**设置**
 
     选择 "开发人员模式" 单选按钮  
     ![启用开发人员模式](media/updateAndSecurity.png)
 
     > [Windows 10 秋季创意者更新中已删除](https://blogs.msdn.microsoft.com/commandline/2017/06/08/developer-mode-no-longer-required-for-windows-subsystem-for-linux/)启用开发人员模式的要求
 
-1. 打开命令提示符。  键入`bash`并按 enter
+1. 打开命令提示符。  键入 `bash` 并按 enter
 
     首次在 Windows 上的 Ubuntu 上运行 Bash 时，系统将提示你接受规范的许可证。 接受后，WSL 会将 Ubuntu 实例下载并安装到计算机上，并将在 "开始" 菜单中添加 "Bash on Ubuntu on Windows" 快捷方式。
 
@@ -43,7 +43,7 @@ ms.locfileid: "71269773"
     首次在 Windows 上的 Ubuntu 上运行 Bash 时，系统将提示你创建 UNIX 用户名和密码。 按照[新的发行版实例说明](initialize-distro.md)完成安装
 
 1. 通过以下方法之一启动新的 Ubuntu shell：
-    * 在`bash`命令提示符下运行
+    * 从命令提示符运行 `bash`
     * 单击 "开始" 菜单 "在 Windows 上打开 Ubuntu on Ubuntu" 快捷方式
 
     
@@ -56,12 +56,12 @@ ms.locfileid: "71269773"
 wsl --unregister Legacy
 ```
 
-如果使用的不是 Windows 版本1903或更高版本，则可能需要`wslconfig /u Legacy`改`lxrun /uninstall /full`为运行或。 
+如果未使用 Windows 版本1903或更高版本，则可能需要改为运行 `wslconfig /u Legacy` 或 `lxrun /uninstall /full`。 
 
 ### <a name="manually-deleting-the-legacy-distro"></a>手动删除旧发行版
-如果需要，可以手动删除旧实例。 如果你在使用`lxrun.exe`卸载旧的发行版时遇到问题，或者运行不`lxrun.exe`附带的 Windows 10 春季2018更新（或更高版本），则可能需要执行此操作。
+如果需要，可以手动删除旧实例。 如果使用 `lxrun.exe`卸载旧的发行版或运行 Windows 10 春季2018更新（或更高版本），但未附带 `lxrun.exe`，则可能需要执行此操作。
 
-若要强制删除旧的 WSL 发行版，请`%localappdata%\lxss\`使用 Windows 文件资源管理器或命令行删除该文件夹及其所有子内容：
+若要强制删除旧的 WSL 发行版，请使用 Windows 文件资源管理器或命令行删除 `%localappdata%\lxss\` 文件夹（及其所有子内容）：
 
 使用 PowerShell
 ```powershell

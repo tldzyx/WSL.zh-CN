@@ -32,7 +32,7 @@ ms.locfileid: "71269863"
 
 你需要拥有 Azure AD 帐户，并是组织的全局管理员才能获取 Microsoft Store 应用程序的安装程序。 如果你已有帐户，则可以跳过此步骤。
 
-可在此处找到注册帐户的说明： https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
+可在此处找到有关注册帐户的说明： https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
 
 ### <a name="sign-into-the-store-for-business-and-go-to-the-homepage"></a>登录到企业的应用商店并访问主页
 在此处登录： www.microsoft.com/business-store

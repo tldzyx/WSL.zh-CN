@@ -21,7 +21,7 @@ ms.locfileid: "71269702"
 * Linux 分发维护人员，用于打包并提交 Linux 分发版，作为在 WSL 上运行的 appx
 * 开发人员创建可在其开发计算机上旁加载的自定义 Linux 分发版
 
-## <a name="background"></a>后台
+## <a name="background"></a>背景
 我们通过 Microsoft Store 将 Linux 发行版 for WSL 分发为 UWP 应用程序。 可以安装那些随后在 WSL 上运行的应用程序-位于 Windows 内核中的子系统。 此交付机制具有许多好处，如[更早的博客文章](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)中所述。
 
 ## <a name="sideloading-a-custom-linux-distro-package"></a>旁加载自定义 Linux 发行版包
@@ -29,7 +29,7 @@ ms.locfileid: "71269702"
 若要将计算机设置为旁加载应用，需要在 "For 开发人员" 下的 "系统设置" 中启用此项。  请确保已选择 "开发人员模式" 或 "旁加载应用"
 
 ## <a name="for-linux-distro-maintainers"></a>适用于 Linux 发行版维护人员
-若要提交到应用商店，你将需要与我们合作来接收发布批准。 如果你是有兴趣向 Microsoft Store 添加分发的 Linux 分发所有者，请联系wslpartners@microsoft.com。
+若要提交到应用商店，你将需要与我们合作来接收发布批准。 如果你是有兴趣向 Microsoft Store 添加分发的 Linux 分发所有者，请联系 wslpartners@microsoft.com。
 
 ## <a name="getting-started"></a>入门
 按照[发行版启动器 GitHub](https://github.com/Microsoft/WSL-DistroLauncher)存储库中的说明创建自定义 Linux 发行版包。
