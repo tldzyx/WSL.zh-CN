@@ -63,13 +63,13 @@ ms.locfileid: "74200236"
 ## <a name="complete-initialization-of-your-distro"></a>完成分发版的初始化
 安装 Linux 分发版后，必须先[初始化新的分发版实例](initialize-distro.md)一次才能使用该分发版。
 
-## <a name="troubleshooting"></a>疑难解答： 
+## <a name="troubleshooting"></a>故障排除： 
 
 下面是相关的错误和建议的修复措施。 有关其他常见错误及其解决方法，请参阅 [WSL 故障排除页](troubleshooting.md)。
 
 * **安装失败并出现错误 0x80070003**
     * 适用于 Linux 的 Windows 子系统只能在系统驱动器（通常是 `C:` 驱动器）中运行。 请确保将分发版存储在系统驱动器上：  
-    * 打开“设置”->“存储”->“更多存储设置:    更改新内容的保存位置”
+    * 打开“设置”->“存储”->“更多存储设置：    更改新内容的保存位置”
     ![用于在 C: 驱动器中安装应用的系统设置屏幕截图](media/AppStorage.png)
     
     

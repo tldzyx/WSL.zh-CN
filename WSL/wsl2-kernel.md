@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
 ms.custom: seodec18
-ms.openlocfilehash: f7fce13c2acc65e3afa2cc56873e40bc55a460bc
-ms.sourcegitcommit: 506272bd7fc1cbda7e32146d54a8bdd02af3e0c4
+ms.openlocfilehash: a1a2f23fb05c426f80878e12e82026a96c71354e
+ms.sourcegitcommit: 4b7b8bb0ac20c2336fcdbf44e6b3b2ed336bf4d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319707"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447740"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>更新 WSL 2 Linux 内核
 
@@ -20,7 +20,7 @@ ms.locfileid: "79319707"
 
 ## <a name="download-the-linux-kernel-update-package"></a>下载 Linux 内核更新包
 
-请单击[此链接](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)下载适用于 AMD64 计算机的最新 WSL2 Linux 内核更新包。
+请单击[此链接](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)下载适用于 x64 计算机的最新 WSL2 Linux 内核更新包。
 
 > [!NOTE] 
 > 如果使用的是 ARM64 计算机，请下载[此包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)。

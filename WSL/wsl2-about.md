@@ -1,6 +1,6 @@
 ---
 title: 关于 WSL 2
-description: 关于 WSL 2 适用于 Linux 的 Windows 子系统的新体系结构
+description: 关于 WSL 2 - 适用于 Linux 的 Windows 子系统的新体系结构
 keywords: BashOnWindows, bash, wsl, wsl2, Windows, 适用于 Linux 的 Windows 子系统, windowssubsystem, ubuntu, debian, suse, Windows 10, 安装
 ms.date: 05/30/2019
 ms.topic: article
@@ -8,29 +8,29 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 7122fcbd73e064871eba2ac80c727178aaf3ca7b
 ms.sourcegitcommit: 5c92b820f84de57a04ab11faf4dd0d24fff6b320
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/18/2019
 ms.locfileid: "74161481"
 ---
 # <a name="about-wsl-2"></a>关于 WSL 2
 
-WSL 2 是体系结构的一种新版本，它支持适用于 Linux 的 Windows 子系统在 Windows 上运行 ELF64 Linux 二进制文件。 它的主要目标是提高文件系统的性能，并增加系统调用的完全兼容性。 这一新的体系结构更改了这些 Linux 二进制文件如何与 Windows 和计算机的硬件交互，但仍提供与 WSL 1 （当前广泛可用的版本）相同的用户体验。 单个 Linux 发行版可以作为 WSL 1 发行版或 WSL 2 发行版运行，随时可以进行升级或降级，还可以同时运行 WSL 1 和 WSL 2 发行版。 WSL 2 使用全新的体系结构，该体系结构使用实际 Linux 内核。
+WSL 2 是体系结构的一个新版本，它支持适用于 Linux 的 Windows 子系统在 Windows 上运行 ELF64 Linux 二进制文件。 它的主要目标是提高文件系统性能，以及增加完全的系统调用兼容性。 这一新的体系结构改变了这些 Linux 二进制文件与Windows 和计算机硬件进行交互的方式，但仍然提供与 WSL 1（当前广泛可用的版本）中相同的用户体验。 各个 Linux 发行版可以作为 WSL 1 发行版运行，也可以作为 WSL 2 发行版运行，可以随时升级或降级，并且你可以并行运行 WSL 1 和 WSL 2 发行版。 WSL 2 使用全新的体系结构，该体系结构使用真实的 Linux 内核。
 
 ## <a name="linux-kernel-in-wsl-2"></a>WSL 2 中的 Linux 内核
 
-WSL 2 中的 Linux 内核内置于最新稳定分支中，基于 kernel.org 提供的源。此内核已专门针对 WSL 2 进行了优化。 它已针对大小和性能进行了优化，可在 Windows 上提供令人惊叹的 Linux 体验，并将通过 Windows 更新提供服务，这意味着你将获得最新的安全修补程序和内核改进，而无需你自行管理。
+WSL 2 中的 Linux 内核是根据最新的稳定版分支（基于 kernel.org 上提供的源代码）在内部构建的。此内核专门针对 WSL 2 进行了优化。 它针对大小和性能进行了优化，在 Windows 上可提供令人惊艳的 Linux 体验，并将通过 Windows 更新提供维护，这意味着你将获得最新的安全修复和内核改进，无需自己管理它。
 
-此外，此内核将为开源。 可在[此处](https://github.com/microsoft/WSL2-Linux-Kernel)找到 Linux 内核的完整源代码。 如果你想要了解有关此内核的详细信息，可以查看[此博客文章](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)，其中由生成它的团队撰写。
+此外，此内核将是开源的。 可以在[此处](https://github.com/microsoft/WSL2-Linux-Kernel)找到此 Linux 内核的完整源代码。 如果想了解关于此内核的更多信息，可以查看由构建它的团队撰写的[此博客文章](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)。
 
 ## <a name="brief-overview-of-the-wsl-2-architecture"></a>WSL 2 体系结构的简要概述
 
-WSL 2 使用最新和最高的虚拟化技术在轻型实用程序虚拟机（VM）内部运行 Linux 内核。 但是，WSL 2 不会成为传统的 VM 体验。 传统的 VM 体验启动速度慢，隔离，消耗大量资源，需要你的时间进行管理。 WSL 2 没有这些属性。 它仍将为 WSL 1：在 Windows 和 Linux 之间实现高水平的集成、极快的启动时间、小资源占用量，并且最大的好处是不需要 VM 配置或管理。 尽管 WSL 2 使用 VM，但会管理并在后台运行，从而使你拥有与 WSL 1 相同的用户体验。
+WSL 2 使用最新、最强大的虚拟化技术在轻量级实用程序虚拟机 (VM) 中运行其 Linux 内核。 但是，WSL 2 不会是传统的 VM 体验。 传统的 VM 体验可能启动速度慢，是独立的，消耗大量资源，需要你花费时间进行管理。 WSL 2 没有这些属性。 它仍然能提供 WSL 1 的卓越优势：Windows 和 Linux 之间高度集成，启动极快，资源占用较少，最重要的是，不需要你配置或管理虚拟机。 虽然 WSL 2 确实使用 VM，但它将在幕后进行管理和运行，因此你将具有与 WSL 1 相同的用户体验。
 
-## <a name="increased-file-io-performance"></a>文件 IO 性能提高
+## <a name="increased-file-io-performance"></a>提升了文件 IO 性能
 
-文件密集型操作（如 `git clone`、`npm install`、`apt update`、`apt upgrade`等）的速度都明显提高。 实际的速度提高将取决于正在运行的应用以及与文件系统交互的方式。 WSL 2 的初始版本在解压缩压缩的 tarball 时，与 WSL 1 相比，运行速度最多可20倍，而在不同项目上使用 `git clone`、`npm install` 和 `cmake` 时速度大约快2到5。
+文件密集型操作（例如 `git clone`、`npm install`、`apt update`、`apt upgrade`）和其他操作的速度都明显提升。 实际的速度提升将取决于你运行的应用程序以及它与文件系统的交互方式。 在解压压缩的 tarball 时，WSL 2 的初始版本的运行速度比 WSL 1 快达 20 倍，在各种项目上使用 `git clone`、`npm install` 和 `cmake` 时，大约快 2-5 倍。
 
-## <a name="full-system-call-compatibility"></a>完全系统调用兼容性
+## <a name="full-system-call-compatibility"></a>完全的系统调用兼容性
 
-Linux 二进制文件使用系统调用来执行许多功能，例如访问文件、请求内存、创建进程等。 尽管 WSL 1 使用 WSL 团队生成的翻译层，WSL 2 还包括其自己的 Linux 内核，并且具有完全系统调用兼容性。 这会引入一个全新的应用程序集，这些应用程序可在 WSL 内运行，例如 Docker 等。 此外，对 Linux 内核的任何更新都可以立即准备好添加到计算机，而不是等待 WSL 团队实施更改，然后再添加它们。
+Linux 二进制文件使用系统调用来执行许多功能，例如访问文件、请求内存、创建进程，等等。 虽然 WSL 1 使用的是由 WSL 团队构建的转换层，但 WSL 2 包括了自己的 Linux 内核，具有完全的系统调用兼容性。 这将引入一组全新的应用，你可以在 WSL 内部运行它们，例如 Docker 和其他应用。 此外，对 Linux 内核的任何更新都可以立即准备好，以便添加到你的计算机中，而不是等待 WSL 团队来实现更改并添加它们。

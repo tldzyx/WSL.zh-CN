@@ -1,29 +1,29 @@
 ---
-title: 手动下载适用于 Linux 的 Windows 子系统（WSL）发行版
-description: 有关如何手动下载适用于 Linux 的 Windows 子系统分发的说明。
-keywords: BashOnWindows，bash，wsl，windows，适用于 linux 的 windows 子系统，WSL，windows 子系统，发行版，ubuntu，openSUSE，SLES，debian，kali
+title: 手动下载适用于 Linux 的 Windows 子系统 (WSL) 发行版
+description: 有关如何手动下载适用于 Linux 的 Windows 子系统发行版的说明。
+keywords: BashOnWindows, bash, wsl, Windows, 适用于 Linux 的 Windows 子系统, WSL, windows 子系统, 发行版, ubuntu, openSUSE, SLES, debian, kali
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
 ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/26/2020
 ms.locfileid: "77624921"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
-在多种情况下，你可能无法（或不想）通过 Microsoft Store 安装 WSL Linux 发行版。 具体而言，你可能运行的是不支持 Microsoft Store 或公司网络策略和/或管理员在你的环境中不允许 Microsoft Store 使用的 Windows Server 或长期服务（LTSC）桌面操作系统 SKU。
+在许多情况下，你可能无法（或不想）通过 Microsoft Store 安装 WSL Linux 发行版。 具体而言，你可能正在运行不支持 Microsoft Store 的 Windows Server 或长期服务 (LTSC) 桌面操作系统 SKU，或者你的公司网络策略和/或管理员不允许在你的环境中使用 Microsoft Store。
 
 在这些情况下，虽然 WSL 本身可用，但如果你无法访问应用商店，如何下载并在 WSL 中安装 Linux 发行版？
 
-> 注意：**不允许在 Windows 10 S 模式上运行命令行 shell 环境，包括 Cmd、PowerShell 和 Linux/WSL 发行版**。 存在此限制是为了确保模式提供的完整性和安全性目标：阅读[此文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)了解详细信息。
+> 注意：**命令行 shell 环境（包括 Cmd、PowerShell 和 Linux/WSL 发行版）不允许在 Windows 10 S 模式下运行**。 存在此限制是为了确保 S 模式提供的完整性和安全目标：有关详细信息，请参阅[此文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)。
 
 ## <a name="downloading-distros"></a>下载发行版
 
-如果 Microsoft Store 应用不可用，则可以通过单击以下链接下载并手动安装 Linux 发行版：
+如果 Microsoft Store 应用不可用，则可以通过单击以下链接来下载并手动安装 Linux 发行版：
 <!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
 * Ubuntu 18.04
@@ -35,38 +35,38 @@ ms.locfileid: "77624921"
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
 * [Fedora Remix for WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-这将导致 `<distro>.appx` 包下载到你选择的文件夹。 按照[安装说明](#installing-your-distro)安装下载的发行版。
+这将导致 `<distro>.appx` 包下载到你选择的文件夹。 按照[安装说明](#installing-your-distro)来安装你下载的发行版。
 
 ## <a name="downloading-distros-via-the-command-line"></a>通过命令行下载发行版
-如果愿意，也可以通过命令行下载首选的发行版：
+如果愿意，也可以通过命令行下载你首选的发行版：
 
  ### <a name="download-using-powershell"></a>使用 PowerShell 下载
- 若要使用 PowerShell 下载发行版，请使用[WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet。 下面是下载 Ubuntu 16.04 的示例说明。
+ 若要使用 PowerShell 下载发行版，请使用 [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet。 下面是用于下载 Ubuntu 16.04 的示例说明。
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
 ```
 
 > [!TIP]
-> 如果下载需要很长时间，请通过设置 `$ProgressPreference = 'SilentlyContinue'` 来关闭进度栏。
+> 如果下载需要很长时间，请通过设置 `$ProgressPreference = 'SilentlyContinue'` 来关闭进度栏
 
-### <a name="download-using-curl"></a>使用卷下载
-Windows 10 春季2018更新（或更高版本）包含可从命令行调用 web 请求（例如 HTTP GET、POST、PUT 等命令）的常用[卷命令行实用程序](https://curl.haxx.se/)。 您可以使用 `curl.exe` 下载上述发行版：
+### <a name="download-using-curl"></a>使用 curl 下载
+Windows 10 Spring 2018 更新（或更高版本）包括了流行的 [curl 命令行实用程序](https://curl.haxx.se/)，你可以使用它从命令行调用 web 请求（即 HTTP GET、POST、PUT 等命令）。 可以使用 `curl.exe` 下载上述发行版：
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-在上面的示例中，将执行 `curl.exe` （而不只是 `curl`），以确保在 PowerShell 中调用实卷可执行文件，而不是调用[WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)的 powershell 卷别名。
+在上面的示例中，将执行 `curl.exe`（而不仅仅是 `curl`），以确保在 PowerShell 中调用真正的 curl 可执行文件，而不是调用 [Invoke WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 的 PowerShell curl 别名
 
-> 注意：如果必须使用 Cmd shell 和/或 `.bat` / `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更可取。
+> 注意：如果必须使用 Cmd shell 和/或 `.bat` / `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更好。
 
 ## <a name="installing-your-distro"></a>安装发行版
-如果使用的是 Windows 10，则可以使用 PowerShell 安装发行版。 只需导航到包含上面下载的发行版的文件夹，并在该目录中运行以下命令，其中 `app_name` 是发行版文件的名称。  
+如果使用的是 Windows 10，则可以使用 PowerShell 安装发行版。 只需导航到包含从上面下载的发行版的文件夹，然后在该目录中运行以下命令，其中，`app_name` 是 distro.appx 文件的名称。  
 ```Powershell
 Add-AppxPackage .\app_name.appx
 ```
 
-如果使用的是 Windows server，可以在[Windows server](install-on-server.md)文档页上找到安装说明。
+如果使用的是 Windows server，可以在 [Windows Server](install-on-server.md) 文档页上找到安装说明。
 
-安装发行版后，请参阅[初始化步骤](initialize-distro.md)页，初始化新的发行版。
+在安装发行版后，请参阅[初始化步骤](initialize-distro.md)页来初始化新的发行版。
