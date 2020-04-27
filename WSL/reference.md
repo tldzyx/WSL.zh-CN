@@ -8,10 +8,10 @@ ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: d74a6926fd797f2e1ede0fd5d8d080d0f1ce3f6b
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269845"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统的命令参考
@@ -152,7 +152,7 @@ ms.locfileid: "71269845"
 
 可以使用命令 `lxrun.exe` 来直接与[适用于 Linux 的 Windows 子系统 (WSL)](https://msdn.microsoft.com/en-us/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) 交互。  这些命令已安装到 `\Windows\System32` 目录中，可以在 Windows 命令提示符或 PowerShell 中运行。
 
-| 命令                     | 说明                     |
+| 命令                     | 描述                     |
 |:----------------------------|:---------------------------|
 | `lxrun`                     | lxrun 命令用于管理 WSL 实例。 |
 | `lxrun /install`            | 启动下载和安装过程。 <br/> 可以添加 **/y** 来绕过所有提示。  系统会自动接受确认提示，默认用户将设置为 root。          |

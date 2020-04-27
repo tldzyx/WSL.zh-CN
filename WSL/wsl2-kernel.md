@@ -8,10 +8,10 @@ ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
 ms.custom: seodec18
 ms.openlocfilehash: a1a2f23fb05c426f80878e12e82026a96c71354e
-ms.sourcegitcommit: 4b7b8bb0ac20c2336fcdbf44e6b3b2ed336bf4d6
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "79447740"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>更新 WSL 2 Linux 内核
@@ -35,4 +35,4 @@ ms.locfileid: "79447740"
 
 ## <a name="future-plans-for-updating-the-wsl2-linux-kernel"></a>有关更新 WSL2 Linux 内核的未来计划
 
-有关这些更改的详细信息，请阅读 [Windows 命令行博客](https://aka.ms/cliblog)上的[这篇博客文章](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)。
+有关这些更改的详细信息，请阅读 [Windows 命令行博客](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)上的[这篇博客文章](https://aka.ms/cliblog)。

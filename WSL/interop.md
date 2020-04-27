@@ -7,10 +7,10 @@ ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269797"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>适用于 Linux 的 Windows 子系统与 Windows 的互操作性
@@ -18,7 +18,7 @@ ms.locfileid: "71269797"
 > **已针对 Fall Creators Update 更新。**  
 如果你运行的是创意者更新或周年更新，请跳转到[创意者/周年更新部分](interop.md#creators-update-and-anniversary-update)。
 
-适用于 Linux 的 Windows 子系统 (WSL) 正在持续改进 Windows 与 Linux 之间的集成。  您可以：
+适用于 Linux 的 Windows 子系统 (WSL) 正在持续改进 Windows 与 Linux 之间的集成。  你可以：
 
 1. 从 Linux 控制台调用 Windows 二进制文件。
 1. 从 Windows 控制台调用 Linux 二进制文件。
@@ -80,7 +80,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>从 WSL 运行 Windows 工具
 
-WSL 可以使用 `[binary name].exe` 直接从 WSL 命令行调用 Windows 二进制文件。  例如，`notepad.exe`。  为使 Windows 可执行文件更易于运行，Windows 路径将包含在 Fall Creators Update 中的 Linux `$PATH` 内。
+WSL 可以使用 `[binary name].exe` 直接从 WSL 命令行调用 Windows 二进制文件。  例如， `notepad.exe`。  为使 Windows 可执行文件更易于运行，Windows 路径将包含在 Fall Creators Update 中的 Linux `$PATH` 内。
 
 以这种方式运行的应用程序具有以下属性：
 
@@ -89,7 +89,7 @@ WSL 可以使用 `[binary name].exe` 直接从 WSL 命令行调用 Windows 二�
 1. 以活动 Windows 用户的身份运行。
 1. 显示在 Windows 任务管理器中，就如同直接从 CMD 提示符执行的一样。
 
-例如：
+示例：
 
 ``` BASH
 $ notepad.exe
@@ -202,7 +202,7 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 总结：
 
 * `bash.exe` 已弃用，现已由 `wsl.exe` 取代。
-* 在 `wsl.exe` 中不需要指定用于运行单个命令的 `-c` 选项。
+* 在 `-c` 中不需要指定用于运行单个命令的 `wsl.exe` 选项。
 * Windows 路径包含在 WSL `$PATH` 中
 
 禁用互操作的过程未有变化。
@@ -215,7 +215,7 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 1. 以 WSL 默认用户的身份运行。
 1. 拥有与调用方进程和终端相同的 Windows 管理权限。
 
-例如：
+示例：
 
 ```console
 C:\temp> bash -c "ls -la"
@@ -238,7 +238,7 @@ C:\temp> dir | bash -c "grep foo"
 C:\temp> bash -c "ls -la" > out.txt
 ```
 
-传入 `bash -c` 的 WSL 命令将按原样转发到 WSL 进程。  必须以 WSL 格式指定文件路径，并且必须谨慎转义相关字符。 例如：
+传入 `bash -c` 的 WSL 命令将按原样转发到 WSL 进程。  必须以 WSL 格式指定文件路径，并且必须谨慎转义相关字符。 示例：
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
@@ -257,7 +257,7 @@ C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
 1. 以活动 Windows 用户的身份运行。
 1. 显示在 Windows 任务管理器中，就如同直接从 CMD 提示符执行的一样。
 
-例如：
+示例：
 
 ``` BASH
 $ /mnt/c/Windows/System32/notepad.exe
