@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: ffe95ae31c3442a380d267133bf903d5531bcd4d
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: e69810625d08baf734683ff06231f79132ce1519
+ms.sourcegitcommit: e1cc2fe4de0fa03d5aea14f6b328f1bb9d0c59be
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "81479327"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999400"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和配置适用于 Linux 的 Windows 子系统
 
@@ -91,12 +91,12 @@ Sunday, March 11, 2018 7:54:05 PM
 
 PS C:\Users\sarah> wsl
 scooley@scooley-elmer:/mnt/c/Users/sarah$ date
-Sun Mar 11 19:55:47 DST 2018
+Sun Mar 11 19:56:57 DST 2018
 scooley@scooley-elmer:/mnt/c/Users/sarah$ exit
 logout
 
 PS C:\Users\sarah> wsl date
-Sun Mar 11 19:56:57 DST 2018
+Sun Mar 11 19:55:47 DST 2018
 ```
 
 **示例：**
@@ -269,10 +269,10 @@ WSL 支持两个节：`automount` 和 `network`。
 
 | 键        | value                          | 默认      | 备注                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 已启用    | 布尔值                        | true         | `true` 导致固定驱动器（即 `C:/` 或 `D:/`）自动装载到 DrvFs 中的 `/mnt` 下。  `false` 表示驱动器不会自动装载，但你仍可以手动或通过 `fstab` 装载驱动器。                                                                                                             |
+| enabled    | 布尔值                        | true         | `true` 导致固定驱动器（即 `C:/` 或 `D:/`）自动装载到 DrvFs 中的 `/mnt` 下。  `false` 表示驱动器不会自动装载，但你仍可以手动或通过 `fstab` 装载驱动器。                                                                                                             |
 | mountFsTab | 布尔值                        | true         | `true` 设置启动 WSL 时要处理的 `/etc/fstab`。 /etc/fstab 是可在其中声明其他文件系统的文件，类似于 SMB 共享。 因此，在启动时，可以在 WSL 中自动装载这些文件系统。                                                                                                                |
 | root       | 字符串                         | `/mnt/`      | 设置固定驱动器要自动装载到的目录。 例如，如果 WSL 中的某个目录位于 `/windir/`，而你将该目录指定为根目录，则固定驱动器预期会装载到 `/windir/c`                                                                                              |
-| 选项    | 逗号分隔值列表 | 空字符串 | 此值将追加到默认的 DrvFs 装载选项字符串。 **只能指定特定于 DrvFs 的选项。** 通常由装载二进制文件分析成标志的选项不受支持。 若要显式指定这些选项，必须在 /etc/fstab 中包含要对其执行此操作的每个驱动器。 |
+| options    | 逗号分隔值列表 | 空字符串 | 此值将追加到默认的 DrvFs 装载选项字符串。 **只能指定特定于 DrvFs 的选项。** 通常由装载二进制文件分析成标志的选项不受支持。 若要显式指定这些选项，必须在 /etc/fstab 中包含要对其执行此操作的每个驱动器。 |
 
 默认情况下，WSL 会将 uid 和 gid 设置为默认用户的值（在 Ubuntu 分发版中，默认用户是使用 uid=1000,gid=1000 创建的）。 如果用户通过此键显式指定了 gid 或 uid 选项，将覆盖关联的值。 否则，将始终追加默认值。
 
@@ -309,5 +309,5 @@ WSL 支持两个节：`automount` 和 `network`。
 
 | 键 | value | 默认 | 备注|
 |:----|:----|:----|:----|
-| 已启用 | 布尔值 | `true` | 设置此键可确定 WSL 是否支持启动 Windows 进程。 |
+| enabled | 布尔值 | `true` | 设置此键可确定 WSL 是否支持启动 Windows 进程。 |
 | appendWindowsPath | 布尔值 | `true` | 设置此键可确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 | 
