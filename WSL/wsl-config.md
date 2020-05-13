@@ -4,12 +4,12 @@ description: 有关列出和配置在适用于 Linux 的 Windows 子系统上运
 keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系统, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 59419919be138a20ab57e1a6d26a411e1531bf9f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235905"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343889"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 命令和启动配置
 
@@ -161,6 +161,17 @@ PS C:\Users\sarah>
 
 以指定用户的身份运行 WSL。 请注意，该用户必须存在于 WSL 分发版中。
 
+## <a name="change-the-default-user-for-a-distribution"></a>更改分发的默认用户
+
+`<DistributionName> config --default-user <Username>`
+
+更改分发登录的默认用户。 为了成为默认用户，用户必须已在分发内存在。 
+
+例如： `ubuntu config --default-user johndoe` 会将 Ubuntu 分发的默认用户更改为 "johndoe" 用户。
+
+> [!NOTE]
+> 如果在找出分发的名称时遇到问题，请参阅命令的[列表分发](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions)以列出已安装的分发的正式名称。 
+
 ## <a name="run-a-specific-distribution"></a>运行特定的分发版
 
 `wsl -d <DistributionName>`, `wsl --distribution <DistributionName>`
@@ -247,22 +258,22 @@ WSL 支持两个节：`automount` 和 `network`。
 
 节：`[automount]`
 
-| 键        | 值                          | default      | 说明                                                                                                                                                                                                                                                                                                                          |
+| 键        | value                          | 默认      | 备注                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 已启用    | boolean                        | 是         | `true` 导致固定驱动器（即 `C:/` 或 `D:/`）自动装载到 DrvFs 中的 `/mnt` 下。  `false`表示不会自动装入驱动器，但你仍然可以手动或通过手动装载它们 `fstab` 。                                                                                                             |
-| mountFsTab | boolean                        | 是         | `true` 设置启动 WSL 时要处理的 `/etc/fstab`。 /etc/fstab 是可在其中声明其他文件系统的文件，类似于 SMB 共享。 因此，在启动时，可以在 WSL 中自动装载这些文件系统。                                                                                                                |
-| root       | String                         | `/mnt/`      | 设置固定驱动器要自动装载到的目录。 例如，如果 WSL 中的某个目录位于 `/windir/`，而你将该目录指定为根目录，则固定驱动器预期会装载到 `/windir/c`                                                                                              |
+| 已启用    | 布尔值                        | true         | `true` 导致固定驱动器（即 `C:/` 或 `D:/`）自动装载到 DrvFs 中的 `/mnt` 下。  `false`表示不会自动装入驱动器，但你仍然可以手动或通过手动装载它们 `fstab` 。                                                                                                             |
+| mountFsTab | 布尔值                        | true         | `true` 设置启动 WSL 时要处理的 `/etc/fstab`。 /etc/fstab 是可在其中声明其他文件系统的文件，类似于 SMB 共享。 因此，在启动时，可以在 WSL 中自动装载这些文件系统。                                                                                                                |
+| root       | 字符串                         | `/mnt/`      | 设置固定驱动器要自动装载到的目录。 例如，如果 WSL 中的某个目录位于 `/windir/`，而你将该目录指定为根目录，则固定驱动器预期会装载到 `/windir/c`                                                                                              |
 | 选项    | 逗号分隔值列表 | 空字符串 | 此值将追加到默认的 DrvFs 装载选项字符串。 **只能指定特定于 DrvFs 的选项。** 通常由装载二进制文件分析成标志的选项不受支持。 若要显式指定这些选项，必须在 /etc/fstab 中包含要对其执行此操作的每个驱动器。 |
 
 默认情况下，WSL 会将 uid 和 gid 设置为默认用户的值（在 Ubuntu 分发版中，默认用户是使用 uid=1000,gid=1000 创建的）。 如果用户通过此键显式指定了 gid 或 uid 选项，将覆盖关联的值。 否则，将始终追加默认值。
 
-**注意：** 这些选项应用为所有自动装入驱动器的装载选项。 如果只想更改特定驱动器的选项，请改用 /etc/fstab。
+**注意：** 对于所有自动装载的驱动器，这些选项将应用为装载选项。 如果只想更改特定驱动器的选项，请改用 /etc/fstab。
 
 #### <a name="mount-options"></a>装载选项
 
-为 Windows 驱动器 (DrvFs) 设置不同的装载选项可以控制为 Windows 文件计算文件权限的方式。 提供了以下选项：
+为 Windows 驱动器 (DrvFs) 设置不同的装载选项可以控制为 Windows 文件计算文件权限的方式。 你可使用以下选项：
 
-| 键 | 说明 | 默认 |
+| 键 | 说明 | 默认值 |
 |:----|:----|:----|
 |uid| 用于所有文件的所有者的用户 ID | WSL 发行版的默认用户 ID（第一次安装时，此项默认为 1000）
 |gid| 用于所有文件的所有者的组 ID | WSL 发行版的默认组 ID（第一次安装时，此项默认为 1000）
@@ -270,16 +281,16 @@ WSL 支持两个节：`automount` 和 `network`。
 |fmask | 要对所有文件排除的权限的八进制掩码 | 000
 |dmask | 要对所有目录排除的权限的八进制掩码 | 000
 
-**注意：** 在应用到文件或目录之前，会通过逻辑或操作来完成权限掩码。 
+**注意：** 权限掩码在应用到文件或目录之前通过一个逻辑或操作进行设置。 
 
 #### <a name="network"></a>网络
 
 节标签：`[network]`
 
-| 键 | 值 | default | 说明|
+| 键 | value | 默认 | 备注|
 |:----|:----|:----|:----|
-| generateHosts | boolean | `true` | `true` 将 WSL 设置为生成 `/etc/hosts`。 `hosts` 文件包含主机名对应的 IP 地址的静态映射。 |
-| generateResolvConf | boolean | `true` | `true` 将 WSL 设置为生成 `/etc/resolv.conf`。 `resolv.conf` 包含能够将给定主机名解析为其 IP 地址的 DNS 列表。 | 
+| generateHosts | 布尔值 | `true` | `true` 将 WSL 设置为生成 `/etc/hosts`。 `hosts` 文件包含主机名对应的 IP 地址的静态映射。 |
+| generateResolvConf | 布尔值 | `true` | `true` 将 WSL 设置为生成 `/etc/resolv.conf`。 `resolv.conf` 包含能够将给定主机名解析为其 IP 地址的 DNS 列表。 | 
 
 #### <a name="interop"></a>interop
 
@@ -287,10 +298,10 @@ WSL 支持两个节：`automount` 和 `network`。
 
 这些选项在预览体验成员内部版本 17713 和更高版本中可用。
 
-| 键 | 值 | default | 说明|
+| 键 | value | 默认 | 备注|
 |:----|:----|:----|:----|
-| 已启用 | boolean | `true` | 设置此键可确定 WSL 是否支持启动 Windows 进程。 |
-| appendWindowsPath | boolean | `true` | 设置此键可确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 |
+| 已启用 | 布尔值 | `true` | 设置此键可确定 WSL 是否支持启动 Windows 进程。 |
+| appendWindowsPath | 布尔值 | `true` | 设置此键可确定 WSL 是否会将 Windows 路径元素添加到 $PATH 环境变量。 |
 
 #### <a name="user"></a>user
 
