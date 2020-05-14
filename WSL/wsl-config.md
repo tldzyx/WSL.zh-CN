@@ -4,12 +4,12 @@ description: 有关列出和配置在适用于 Linux 的 Windows 子系统上运
 keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系统, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 914bce22b789d379420823d44d063bc84ec39ac1
+ms.sourcegitcommit: 509691ed3d42c9e0171e6a44e09003d4eb24f9ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343889"
+ms.locfileid: "83380424"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL 命令和启动配置
 
@@ -317,11 +317,24 @@ WSL 支持两个节：`automount` 和 `network`。
 
 > **在 Windows 版本19041及更高版本中可用**
 
-可以通过将文件放入用户文件夹的根目录来配置全局 WSL 选项 `.wslconfig` ： `C:\Users\<yourUserName>\.wslconfig` 。 此文件可以包含以下选项：
+可以通过将文件放入用户文件夹的根目录来配置全局 WSL 选项 `.wslconfig` ： `C:\Users\<yourUserName>\.wslconfig` 。 
+
+下面是 wslconfig 文件的示例：
+
+```console
+[wsl2]
+kernel=C:\\temp\\myCustomKernel
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+processors=2 # Makes the WSL 2 VM use two virtual processors
+```
+
+此文件可以包含以下选项：
 
 ### <a name="wsl-2-settings"></a>WSL 2 设置
 
-这些设置会影响支持任何 WSL 2 分发的虚拟机。 
+节标签：`[wsl2]`
+
+这些设置会影响支持任何 WSL 2 分发的虚拟机。
 
 | 键 | 值 | default | 说明|
 |:----|:----|:----|:----|
