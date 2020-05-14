@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 37d8ad589d0108534c27137614a005c0c0ac55bc
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256370"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235823"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
@@ -56,7 +56,7 @@ Windows 10 Spring 2018 更新（或更高版本）包括了流行的 [curl 命�
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-在上面的示例中，将执行 `curl.exe`（而不仅仅是 `curl`），以确保在 PowerShell 中调用真正的 curl 可执行文件，而不是调用 [Invoke WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 的 PowerShell curl 别名
+在上面的示例中，将执行 `curl.exe`（而不仅仅是 `curl`），以确保在 PowerShell 中调用真正的 curl 可执行文件，而不是调用 [Invoke WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) 的 PowerShell curl 别名
 
 > 注意：如果必须使用 Cmd shell 和/或 `.bat` / `.cmd` 脚本来调用/编写下载步骤，则使用 `curl` 可能更好。
 
