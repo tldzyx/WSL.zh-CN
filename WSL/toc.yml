@@ -1,0 +1,40 @@
+- name: WSL 文档
+  href: index.md
+- name: 概述
+  items:
+    - name: 什么是 WSL？
+      href: about.md
+    - name: WSL 2 中的新增功能
+      href: wsl2-index.md
+    - name: 比较 WSL 2 和 WSL 1
+      href: compare-versions.md
+- name: 快速入门
+  items:
+    - name: 安装 WSL 1 与更新到 WSL 2
+      href: install-win10.md
+    - name: 在 Windows Server 上安装
+      href: install-on-server.md
+    - name: 创建用户帐户和密码
+      href: user-support.md
+- name: 操作方法
+  items:
+    - name: 互操作性命令
+      href: interop.md
+    - name: 启动命令和配置
+      href: wsl-config.md
+    - name: 文件权限
+      href: file-permissions.md
+    - name: 为公司设置 WSL
+      href: enterprise.md
+    - name: 生成自定义分发版
+      href: build-custom-distro.md
+    - name: 命令行参考
+      href: reference.md
+- name: 常见问题
+  href: faq.md
+- name: WSL 2 常见问题解答
+  href: wsl2-faq.md
+- name: 疑难解答
+  href: troubleshooting.md
+- name: 发行说明
+  href: release-notes.md
