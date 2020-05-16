@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: f11aed3a5583d1a68f4a0e095103eb0315ca2c45
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 70044105820dd485246ae3fc731cbd6f06183f8a
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256380"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343879"
 ---
 # <a name="about-wsl-2"></a>关于 WSL 2
 
@@ -34,4 +34,4 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用程序虚拟�
 
 ## <a name="full-system-call-compatibility"></a>完全的系统调用兼容性
 
-Linux 二进制文件使用系统调用来执行许多功能，例如访问文件、请求内存、创建进程，等等。 虽然 WSL 1 使用的是由 WSL 团队构建的转换层，但 WSL 2 包括了自己的 Linux 内核，具有完全的系统调用兼容性。 这将引入一组全新的应用，你可以在 WSL 内部运行它们，例如 Docker 和其他应用。 此外，对 Linux 内核的任何更新都可以立即准备好，以便添加到你的计算机中，而不是等待 WSL 团队来实现更改并添加它们。
+Linux 二进制文件使用系统调用来执行许多功能，例如访问文件、请求内存、创建进程，等等。 虽然 WSL 1 使用的是由 WSL 团队构建的转换层，但 WSL 2 包括了自己的 Linux 内核，具有完全的系统调用兼容性。 这将引入一组全新的应用，你可以在 WSL 内部运行它们，例如 Docker 和其他应用。 此外，对 Linux 内核的任何更新都可以立即添加到你的计算机，而无需等待 WSL 团队实现更改并使其添加到你的计算机。

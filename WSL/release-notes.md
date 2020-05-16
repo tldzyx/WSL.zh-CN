@@ -1,19 +1,17 @@
 ---
 title: 适用于 Linux 的 Windows 子系统发行说明
 description: 适用于 Linux 的 Windows 子系统的发行说明。  每周更新。
-keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系统, windowssubsystem, ubuntu
+keywords: 发行说明, wsl, windows, 适用于 linux 的 windows 子系统, windows 子系统, ubuntu
 author: benhillis
-ms.date: 07/31/2017
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76911701"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235947"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>适用于 Linux 的 Windows 子系统发行说明
 
@@ -67,7 +65,7 @@ idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disa
 ## <a name="build-19002"></a>版本 19002
 有关版本 19002 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)。
 
-* [WSL] 解决了有关处理某些 Unicode 字符的问题： https://github.com/microsoft/terminal/issues/2770
+* [WSL] 解决了有关处理某些 Unicode 字符的问题：https://github.com/microsoft/terminal/issues/2770
 * [WSL] 解决了在版本到版本升级后立即启动时可能会注销发行版的罕见情况。
 * [WSL] 解决了 wsl.exe --shutdown 的以下小问题：无法取消实例空闲计时器。
 
@@ -188,7 +186,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 * 更新 resolv.conf 标头以引用 wsl.conf [在 GH 3928 中介绍]
 * epoll delete 代码中的死锁 [GH 3922]
 * 处理 --import 和 –export 的参数中的空格 [GH 3932]
-* 无法正常扩展 mmap 的文件 [GH 3939]
+* 无法正常扩展 mmap'd 文件 [GH 3939]
 * 修复了 ARM64 \\\\wsl$ 访问不正常的问题
 * 为 wsl.exe 添加更好的默认图标
 
@@ -219,7 +217,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 
 ### <a name="wsl"></a>WSL
 * 当主线程退出时，pthreads 失去对文件的访问权限 [GH 3589]
-* 除非有必要，否则 TIOCSCTTY 应忽略“force”参数 [GH 3652]
+* TIOCSCTTY 应忽略“force”参数，除非该参数是必需的 [GH 3652]
 * 改善 wsl.exe 命令行，并添加导入/导出功能。
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
@@ -291,7 +289,7 @@ Arguments to manage Windows Subsystem for Linux:
 有关内部版本 18272 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)。
 
 ### <a name="wsl"></a>WSL
-* **警告：** 此版本中存在一个导致 WSL 不可操作的问题。 尝试启动分发版时，会看到“不支持此类接口”错误。 该问题已修复，下周发布的 Insider Fast 内部版本将会应用修复程序。 如果已安装此内部版本，可以使用“设置”->“更新和安全”>“恢复”中的“回退到 Windows 10 的上一个版本”回滚到上一 Windows 内部版本。
+* **警告：** 此版本中存在一个导致 WSL 不可操作的问题。 尝试启动分发版时，会看到“不支持此类接口”错误。 该问题已修复，下周发布的 Insider Fast 内部版本将会应用修复程序。 如果已安装此内部版本，可以使用“设置”->“更新和安全”>“恢复”中的“回退到 Windows 10 的上一个版本”回退到上一 Windows 内部版本。
 
 ## <a name="build-18267"></a>内部版本 18267
 有关内部版本 18267 的一般 Windows 信息，请访问 [Windows 博客](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)。
@@ -526,7 +524,7 @@ wslconfig.exe /terminate <DistributionName>
     * 请注意，WSL 功能目前不支持优先级，因此存在一些限制，但标准用法应该不会受到阻止。
 * 对 WSL 进程的 Windows 防火墙支持。 [GH 1852]
     * 例如，若要允许 WSL python 进程侦听任何端口，请使用提升的 Windows cmd：```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
-    * 有关如何添加防火墙规则的更多详细信息，请参阅[链接](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
+    * 有关如何添加防火墙规则的更多详细信息，请参阅[链接](https://support.microsoft.com/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * 使用 wsl.exe 时遵循用户的默认 shell。 [GH 2372]
 * 将所有网络接口报告为以太网。 [GH 2996]
 * 更好地处理损坏的 /etc/passwd 文件。 [GH 3001]
@@ -556,7 +554,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="wsl"></a>WSL
 * 允许从 Windows 终止 /init [GH 2928]。
 * 现在，DrvFs 默认使用按目录区分大小写（相当于使用“case=dir”装载选项）。
-    * 使用“case=dir”（旧行为）需要设置注册表项。 如果需要使用“case=dir”，请运行以下命令来启用它：reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1
+    * 使用“case=dir”（旧行为）需要设置注册表项。 如果需要使用“case=dir”，请运行以下命令来启用它：reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
     * 如果在旧版 Windows 中使用 WSL 创建的现有目录需要区分大小写，请使用 fsutil.exe 将其标记为区分大小写：fsutil.exe file setcasesensitiveinfo <path> enable
 * NULL 终止从 uname syscall 返回的字符串。
 
@@ -622,10 +620,10 @@ wslconfig.exe /terminate <DistributionName>
 * 在启用元数据的情况下使用 DrvFs 创建的特殊文件（例如 WSL 符号链接，或 fifos 和 sockets）现在可以从 Windows 复制和移动。
 
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>可以使用 wsl.conf 更方便地配置 WSL
-我们添加了一个方法，用于自动配置 WSL 中每次启动子系统时要应用的某些功能。 这包括自动装载选项和网络配置。 有关详细信息，请参阅博客文章： https://aka.ms/wslconf
+我们添加了一个方法，用于自动配置 WSL 中每次启动子系统时要应用的某些功能。 这包括自动装载选项和网络配置。 有关详细信息，请参阅博客文章：https://aka.ms/wslconf
 
 #### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允许在 WSL 上的 Linux 进程与 Windows 本机进程之间建立套接字连接
-现在，WSL 和 Windows 应用程序可以通过 Unix 套接字相互通信。 假设你要在 Windows 中运行某个服务，并使其可在 Windows 和 WSL 应用中使用。 现在可以通过 Unix 套接字实现此目的。 有关详细信息，请参阅博客文章： https://aka.ms/afunixinterop
+现在，WSL 和 Windows 应用程序可以通过 Unix 套接字相互通信。 假设你要在 Windows 中运行某个服务，并使其可在 Windows 和 WSL 应用中使用。 现在可以通过 Unix 套接字实现此目的。 有关详细信息，请参阅博客文章：https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
 * 支持使用 MAP_NORESERVE 的 mmap() [GH 121、2784]
@@ -766,9 +764,9 @@ wslconfig.exe /terminate <DistributionName>
       -a    force result to absolute path format
       -u    translate from a Windows path to a WSL path (default)
       -w    translate from a WSL path to a Windows path
-      -m    translate from a WSL path to a Windows path, with ‘/’ instead of ‘\\’
+      -m    translate from a WSL path to a Windows path, with '/' instead of '\\'
 
-      EX: wslpath ‘c:\users’
+      EX: wslpath 'c:\users'
   ```
   #### <a name="console"></a>控制台
 - 无修复措施。
@@ -957,7 +955,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="console"></a>控制台
 - 修复横线/下划线四处可见的问题 [GH 2168]
 - 修复进程顺序更改，使 NPM 更难以关闭的问题 [GH 2170]
-- 添加了新的色彩方案： https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
+- 添加了新的色彩方案：https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
 
 ### <a name="ltp-results"></a>LTP 结果：
 自 16251 以来无更改
@@ -1371,7 +1369,7 @@ Syscall 总数：384 </br>
 - 修复了不正确本地化快捷方式名称的错误 (GH #696)
 - 修复了错误地验证程序标头必须小于（或等于）PATH_MAX 的 elf 分析逻辑。 (GH #1048)
 - 为 procfs、sysfs、cgroupfs 和 binfmtfs 实现了 statfs 回调 (GH #1378)
-- 修复了 AptPackageIndexUpdate 窗口不会关闭的问题（GH #1184，GH #1193 中也有描述）
+- 修复了 AptPackageIndexUpdate 窗口不会关闭的问题（GH #1184，GH #1193 中也进行了讨论）
 - 添加了 ASLR 个性化 ADDR_NO_RANDOMIZE 支持。 （GH #1148、1128）
 - 改善了 PTRACE_GETSIGINFO、SIGSEGV，在 AV 期间会提供正确的 gdb 堆栈跟踪 (GH #875)
 - 针对 patchelf 二进制文件的 Elf 分析不再失败。 (GH #471)
@@ -1416,7 +1414,7 @@ Syscall 总数：384 </br>
 - 修复了 ping 返回时间 0.000ms 的问题 (GH #1296)
 - 打开过多的文件时返回正确的错误代码。
 - 修复了 WSL 中的问题：如果网络接口的硬件地址为 32 字节（例如 Teredo 接口），则针对该网络接口数据的 Netlink 请求将会失败并返回 EINVAL。
-   - 请注意，Linux“ip”实用工具包含一个 bug：如果 WSL 报告 32 字节硬件地址，该实用工具将会崩溃。 这是“ip”（而不是 WSL）中的一个 bug。 “ip”实用工具会将用于输出硬件地址的字符串缓冲区的长度硬编码，而该缓冲区太小，无法输出 32 字节硬件地址。
+   - 请注意，Linux“ip”实用工具包含一个 bug：如果 WSL 报告 32 字节硬件地址，该实用工具将会崩溃。 这是“ip”（而不是 WSL）中的一个 bug。 “ip”实用工具会将用于输出硬件地址的字符串缓冲区的长度进行硬编码，而该缓冲区太小，无法输出 32 字节硬件地址。
 - 其他修复和改进
 
 ### <a name="ltp-results"></a>LTP 结果：
@@ -1544,7 +1542,7 @@ Syscall 总数：384 </br>
 可在以下资源中找到详细信息：
 
 - [WSL 团队的互操作博客](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN 互操作文档](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [MSDN 互操作文档](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
 
 ### <a name="fixed"></a>固定
 
@@ -1594,7 +1592,7 @@ Syscall 总数：384 </br>
 
 ### <a name="fixed"></a>固定
 
-- 解决了一些 bug 检查，包括阻止 SSH 的“ATTEMPTED EXECUTE OF NOEXECUTE MEMORY”网络崩溃
+- 解决了一些 bug 检查问题，包括阻止 SSH 的“尝试执行不可执行的内存”网络崩溃
 - inotifiy 现在支持从 DrvFs 上的 Windows 应用程序生成通知
 - 实现 mongod 的 TCP_KEEPIDLE 和 TCP_KEEPINTVL。 (GH #695)
 - 实现 pivot_root 系统调用
@@ -1621,7 +1619,7 @@ Syscall 总数：384 </br>
 注意：在即将发布的版本中，WSL 将会安装 Ubuntu 版本16.04 (Xenial) 而不是 Ubuntu 14.04 (Trusty)。  此更改将应用到安装新实例的预览体验版（lxrun /install 或首次运行 bash.exe）。  包含 Trusty 的现有实例不会自动升级。 用户可以使用 do-release-upgrade 命令将其 Trusty 映像升级到 Xenial。
 
 ### <a name="known-issue"></a>已知问题
-WSL 遇到了某些套接字实现的问题。  bug 检查将自身显示为崩溃，并出现错误“ATTEMPTED EXECUTE OF NOEXECUTE MEMORY”。  此问题的最常见表现形式是使用 ssh 时发生崩溃。  根本原因已在内部版本中修复，将会尽快推送到预览体验版。
+WSL 遇到了某些套接字实现的问题。  bug 检查将自身显示为崩溃，出现错误“尝试执行不可执行的内存”。  此问题的最常见表现形式是使用 ssh 时发生崩溃。  根本原因已在内部版本中修复，将会尽快推送到预览体验版。
 
 ### <a name="fixed"></a>固定
 
@@ -1816,7 +1814,7 @@ Windows 10 周年更新版的第一个预览体验内部版本。
   - 用户可在其 /mnt/c 驱动器中保存 case.txt 和 CASE.TXT
   - 只有 Windows 上的 Ubuntu Bash 支持区分大小写。 在 Bash 外部，NTFS 会正确报告文件，但在与 Windows 中的文件交互时，可能会出现意外的行为。
   - 每个卷的根目录（即 /mnt/c）不区分大小写
-  - 可在[此处](https://support.microsoft.com/en-us/kb/100625)找到有关处理 Windows 中的这些文件的详细信息。
+  - 可在[此处](https://support.microsoft.com/kb/100625)找到有关处理 Windows 中的这些文件的详细信息。
 - 大幅增强了 pty/tty 支持。  现在支持 TMUX 等应用程序 (GH #40)
 - 修复了不总会创建用户帐户的安装问题
 - 优化了命令行参数结构，允许极长的参数列表。 (GH #153)
@@ -1864,8 +1862,8 @@ Windows 10 周年更新版的第一个预览体验内部版本。
 - 修复了 WSL 中的问题，允许超过 255 个字符的文件名
 - 改善了对非英语字符的支持
 - 添加当前 Windows 时区数据并将其设为默认值
-- 每个装入点的唯一设备 ID （JRE 修复 – GH #49）
-- 更正路径中包含“.” 和“..”的问题
+- 每个装入点的唯一设备 ID（JRE 修复 – GH #49）
+- 更正了路径包含“.”和“..”的问题
 - 添加了 Fifo 支持 (GH #71)
 - 更新了 resolv.conf 的格式，以匹配本机 Ubuntu 格式
 - 一些 procfs 清理
@@ -1955,7 +1953,7 @@ Windows 10 周年更新版的第一个预览体验内部版本。
 ### <a name="new-features"></a>新功能
 * 现在支持 Linux 用户。  安装 Windows 上的 Ubuntu Bash 时会提示创建 Linux 用户。  有关详细信息，请访问 https://aka.ms/wslusers
 * 现在，主机名将设置为 Windows 计算机名，而不再是 @localhost
-* 有关内部版本 14328 的详细信息，请访问： https://aka.ms/wip14328
+* 有关内部版本 14328 的详细信息，请访问：https://aka.ms/wip14328
 
 ### <a name="fixed"></a>固定
 * 非 /mnt/<drive> 文件的符号链接改进

@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77624931"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343894"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>有关适用于 Linux 的 Windows 子系统的常见问题解答
 
@@ -200,11 +200,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情况下，关闭防火墙即可进行访问。 在某些情况下，只需让安装的防火墙在表面上阻止访问。
 
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>如何从 Windows 中的 WSL 访问某个端口？
-WSL 共享 Windows 的 IP 地址，因为它在 Windows 上运行。 因此，你可以访问 localhost 上的任何端口。例如，如果你在端口 1234 上提供 Web 内容，可以在 Windows 浏览器中输入 https://localhost:1234 。
+WSL 共享 Windows 的 IP 地址，因为它在 Windows 上运行。 因此，你可以访问 localhost 上的任何端口。例如，如果你在端口 1234 上提供 Web 内容，可以在 Windows 浏览器中输入 https://localhost:1234。
 
-## <a name="how-can-i-back-up-my-wsl-distros"></a>如何备份 WSL 分发版？
+## <a name="how-can-i-back-up-my-wsl-distros-or-move-them-from-one-drive-to-another"></a>如何备份我的 WSL 分发版，或者如何将它们从一个驱动器移到另一个驱动器？
 
-Windows 版本 1809 和更高版本中提供了备份分发版的最佳方式。 可以使用 `wsl --export` 命令将整个分发版导出到 tarball。 然后，可以使用 `wsl --import` 命令将此分发版导入回到 WSL，从而可以备份和保存 WSL 分发版的状态。 
+Windows 版本 1809 和更高版本中提供了备份或移动分发版的最佳方式：执行 export/import 命令。 可以使用 `wsl --export` 命令将整个分发版导出到 tarball。 然后，可以使用 `wsl --import` 命令（该命令可以指定一个新的驱动器位置，以用于导入）将此分发版导入回 WSL，从而可以备份和保存 WSL 分发版的状态或者移动 WSL 分发版。 
 
 请注意，用于备份 Appdata 文件夹中的文件的传统备份服务（例如 Windows 备份）不会损坏 Linux 文件。
 
