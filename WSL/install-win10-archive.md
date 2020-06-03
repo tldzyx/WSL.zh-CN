@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd38fbe3781fd0cd45bcd52c278de548d3da38f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 6ed12ba9d63d3f4038b67489035e13113a372928
+ms.sourcegitcommit: 9f12e168b80775cd967f22f97376e51043c3667e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83270545"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301198"
 ---
 # <a name="install-windows-subsystem-for-linux"></a>安装适用于 Linux 的 Windows 子系统
 
@@ -89,7 +89,7 @@ ms.locfileid: "83270545"
 
 ## <a name="update--upgrade-packages"></a>更新和升级包
 
-大多数分发版随附了一个空的包目录或最精简的包目录。 我们强烈建议定期更新包目录，并使用分发版的首选包管理器升级已安装的包。 对于 Debian/Ubuntu，请使用 apt：
+大多数分发版随附了一个空的的包目录或最简单的包目录。 我们强烈建议定期更新包目录，并使用分发版的首选包管理器升级已安装的包。 对于 Debian/Ubuntu，请使用 apt：
 
 ```bash
 sudo apt update && sudo apt upgrade
@@ -114,7 +114,7 @@ Windows 不会自动更新或升级 Linux 分发版。 大多数 Linux 用户往
 
 适用于 Linux 的 Windows 子系统只能在系统驱动器（通常是 `C:` 驱动器）中运行。 请确保将分发版存储在系统驱动器上：
 
-- 打开“设置” -> “存储” -> “更多存储设置:    更改新内容的保存位置”
+- 打开“设置” -> “存储” -> “更多存储设置:  更改新内容的保存位置”
   
     ![用于在 C: 驱动器上安装应用的系统设置屏幕截图](media/AppStorage.png)
 
@@ -122,4 +122,4 @@ Windows 不会自动更新或升级 Linux 分发版。 大多数 Linux 用户往
 
 未启用“适用于 Linux 的 Windows 子系统”可选组件：
 
-- 打开“控制面板” -> “程序和功能” -> “打开或关闭 Windows 功能”-> 选中“适用于 Linux 的 Windows 子系统”，或使用本文开头所述的 PowerShell cmdlet。    
+- 打开“控制面板” -> “程序和功能” -> “打开或关闭 Windows 功能”-> 选中“适用于 Linux 的 Windows 子系统”，或使用本文开头所述的 PowerShell cmdlet。   
