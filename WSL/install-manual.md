@@ -1,18 +1,16 @@
 ---
 title: 手动下载适用于 Linux 的 Windows 子系统 (WSL) 发行版
 description: 有关如何手动下载适用于 Linux 的 Windows 子系统发行版的说明。
-keywords: BashOnWindows, bash, wsl, Windows, 适用于 Linux 的 Windows 子系统, WSL, windows 子系统, 发行版, ubuntu, openSUSE, SLES, debian, kali
-ms.date: 07/24/2018
+keywords: wsl, 适用于 linux 的 windows 子系统, 手动安装, 手动安装, microsoft store, windows 10, curl, Add-appxpackage, 长期服务, LTSC
+ms.date: 05/28/2020
 ms.topic: article
-ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
-ms.custom: seodec18
-ms.localizationpriority: high
-ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.localizationpriority: medium
+ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
+ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235823"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211713"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手动下载适用于 Linux 的 Windows 子系统发行版包
 
@@ -40,7 +38,7 @@ ms.locfileid: "83235823"
 如果愿意，也可以通过命令行下载你首选的发行版：
 
  ### <a name="download-using-powershell"></a>使用 PowerShell 下载
- 若要使用 PowerShell 下载发行版，请使用 [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet。 下面是用于下载 Ubuntu 16.04 的示例说明。
+ 若要使用 PowerShell 下载发行版，请使用 [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1) cmdlet。 下面是用于下载 Ubuntu 16.04 的示例说明。
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -68,4 +66,4 @@ Add-AppxPackage .\app_name.appx
 
 如果使用的是 Windows server，可以在 [Windows Server](install-on-server.md) 文档页上找到安装说明。
 
-在安装发行版后，请参阅[初始化步骤](initialize-distro.md)页来初始化新的发行版。
+安装分发版后，请按照常规说明[更新到 WSL 2](./install-win10.md#update-to-wsl-2) 或[创建新的用户帐户和密码](./user-support.md)。
