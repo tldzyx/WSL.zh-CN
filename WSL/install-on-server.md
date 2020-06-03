@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, 适用于 linux 的 windows 子系�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 86fd7de0ef45af760f46bb2a18932f513b813609
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270881"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153080"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 安装指南
 
@@ -29,7 +29,7 @@ ms.locfileid: "83270881"
 
 **如果你正在寻求 100% 的系统调用兼容性和更快的 IO 性能，请阅读下文以安装 WSL 2！**
 
-只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 需要[更新 Windows 版本](ms-settings:windowsupdate)并在“Release Preview”圈中[加入 Windows 预览体验计划](https://insider.windows.com/insidersigninboth/)，直到公开发行版在五月下旬推出。
+只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 你可能需要[更新 Windows 版本](ms-settings:windowsupdate)。
 
 **如果要继续安装 WSL 1，请在系统提示时重新启动计算机，并访问[此处](./install-on-server.md#download-a-linux-distribution)继续安装**
 

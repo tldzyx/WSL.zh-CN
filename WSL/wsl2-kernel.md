@@ -5,12 +5,12 @@ keywords: wsl, windows, linux 内核, 适用于 Linux 的 Windows 子系统, 内
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 89e5755699938b7797aa65a5f3131f93e3e31796
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 1628bea2f1bae590928b055425413e5b085dffef
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343829"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153043"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>更新 WSL 2 Linux 内核
 

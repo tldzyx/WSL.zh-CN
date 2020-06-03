@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows 子系统, gnu, linux, ubun
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 299caaaeb1bac60d2af780dfdd10a64b218ab1f1
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
+ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270851"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256682"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>比较 WSL 2 和 WSL 1
 
@@ -28,12 +28,15 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
  托管 VM| ❌ | ✅
  完整的 Linux 内核| ❌ |✅
  完全的系统调用兼容性| ❌ | ✅
- 与 VM Ware 和 VirtualBox 一起运行| ✅ |❌
+ 可以与当前版本的 VM Ware 和 VirtualBox 一起运行| ✅ | ❌
  跨 OS 文件系统的性能| ✅ | ❌
 
 已在使用 WSL 1 并且想要升级到 WSL 2？ 请按照说明[更新到 WSL 2](./install-win10.md#update-to-wsl-2)！
 
-只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 需要[更新 Windows 版本](ms-settings:windowsupdate)并在“Release Preview”圈中[加入 Windows 预览体验计划](https://insider.windows.com/insidersigninboth/)，直到公开发行版在五月下旬推出。
+只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 通过按 Windows 徽标键 + R，检查你的 Windows 版本，然后键入 **winver**，选择“确定”。 （或者在 Windows 命令提示符下输入 `ver` 命令）。 你可能需要[更新到最新的 Windows 版本](ms-settings:windowsupdate)。 对于低于 19041 的版本，WSL 根本不受支持。
+
+> [!NOTE]
+> WSL 2 可与[以前版本的 VM Ware](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>使用 Linux 文件系统以提高性能
 
@@ -46,7 +49,7 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 
 通过 WSL 发行版（如 Ubuntu）使用的项目文件必须位于 Linux 根文件系统中，才能利用更快的文件系统访问速度。
 
-可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。 尝试打开 Linux 发行版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。 然后通过输入 `explorer.exe .`（不要忘记尾部的句点）  ，在文件资源管理器中打开 Linux 文件系统。
+可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。 尝试打开 Linux 发行版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。 然后通过输入 `explorer.exe .`（不要忘记尾部的句点），在文件资源管理器中打开 Linux 文件系统。
 
 ## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>例外情况（使用 WSL 1 而不是 WSL 2）
 
