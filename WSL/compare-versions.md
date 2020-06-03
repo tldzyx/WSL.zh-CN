@@ -36,7 +36,7 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 只有 Windows 10 版本 2004 的内部版本 19041 或更高版本中才提供 WSL 2。 通过按 Windows 徽标键 + R，检查你的 Windows 版本，然后键入 **winver**，选择“确定”。 （或者在 Windows 命令提示符下输入 `ver` 命令）。 你可能需要[更新到最新的 Windows 版本](ms-settings:windowsupdate)。 对于低于 19041 的版本，WSL 根本不受支持。
 
 > [!NOTE]
-> WSL 2 可与[以前版本的 VM Ware](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
+> WSL 2 可与[VM Ware预览版](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) 和 [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) 配合使用。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>使用 Linux 文件系统以提高性能
 
