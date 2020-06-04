@@ -49,14 +49,14 @@ WSL 2 使用最新、最强大的虚拟化技术在轻量级实用工具虚拟�
 
 通过 WSL 发行版（如 Ubuntu）使用的项目文件必须位于 Linux 根文件系统中，才能利用更快的文件系统访问速度。
 
-可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。 尝试打开 Linux 发行版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。 然后通过输入 `explorer.exe .`（不要忘记尾部的句点），在文件资源管理器中打开 Linux 文件系统。
+可以使用 Windows 应用和工具（如文件资源管理器）访问 Linux 根文件系统。尝试打开 Linux 发行版（如 Ubuntu），通过输入以下命令确保你位于 Linux 主目录中：`cd ~`。然后通过输入 `explorer.exe .`（不要忘记尾部的句点），在文件资源管理器中打开 Linux 文件系统
 
 ## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>例外情况（使用 WSL 1 而不是 WSL 2）
 
 我们建议使用 WSL 2，因为它提供更快的性能和100% 的系统调用兼容性。 但是，在某些特定情况下，你可能会更倾向于使用 WSL 1。 在以下情况下，请考虑使用 WSL 1：
 
 * 你的项目文件必须存储在 Windows 文件系统中。
-  * 如果你将使用 WSL Linux 发行版来访问 Windows 文件系统上的项目文件，并且这些文件无法存储在 Linux 文件系统上，那么，通过使用 WSL 1，你将跨 OS 文件系统实现更快的性能。
+  * 如果你要使用 WSL Linux 发行版来访问 Windows 文件系统上的项目文件，并且这些文件无法存储在 Linux 文件系统上，则通过使用 WSL 1，你可跨 OS 文件系统实现更快的性能。
 * 一个项目要求对相同的文件使用 Windows 和 Linux 工具进行交叉编译。
   * 在 WSL 1 中，跨 Windows 和 Linux 操作系统的文件性能比 WSL 2 中更快，因此如果要使用 Windows 应用程序来访问 Linux 文件，则目前通过 WSL 1 可实现更快的性能。
 
@@ -97,13 +97,13 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 ### <a name="accessing-linux-networking-apps-from-windows-localhost"></a>从 Windows (localhost) 访问 Linux 网络应用
 
-如果要在 Linux 发行版中构建网络应用（例如，在 NodeJS 或 SQL server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
+如果要在 Linux 发行版中构建网络应用（例如，在 NodeJS 或 SQL Server 上运行的应用），可以使用 `localhost` 从 Windows 应用（如 Edge 或 Chrome Internet 浏览器）访问它（就像往常一样）。
 
 但是，如果运行的是较旧版本的 Windows（版本 18945 或更低版本），则需要获取 Linux 主机 VM 的 IP 地址（或[更新到最新的 Windows 版本](ms-settings:windowsupdate)）。
 
 若要查找为 Linux 发行版提供支持的虚拟机的 IP 地址，请执行以下操作：
 
-* 在 WSL 发行版（即 Ubuntu）中运行以下命令：`ip addr`
+* 在 WSL 发行版（例如 Ubuntu）中运行以下命令：`ip addr`
 * 查找并复制 `eth0` 接口的 `inet` 值下的地址。
 * 如果已安装 grep 工具，请通过使用以下命令筛选输出来更轻松地查找此地址：`ip addr | grep eth0`
 * 使用此 IP 地址连接到 Linux 服务器。
@@ -114,7 +114,7 @@ WSL 2 在实际 Linux 内核上使用轻量级实用工具 VM，内存占用量�
 
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>从 Linux（主机 IP）访问 Windows 网络应用
 
-如果要从 Linux 发行版（即 Ubuntu）访问 Windows 上运行的网络应用（例如，在 NodeJS 或 SQL 服务器上运行的应用），则需要使用主机的 IP 地址。 虽然这不是一种常见方案，但你可以执行以下步骤来使其可行。
+如果要从 Linux 发行版（例如 Ubuntu）访问 Windows 上运行的网络应用（例如，在 NodeJS 或 SQL Server 上运行的应用），则需要使用主机的 IP 地址。虽然这不是一种常见方案，但你可以执行以下步骤来使其可行。
     - 通过在 Linux 发行版中运行以下命令来获取主机的 IP 地址：`cat /etc/resolv.conf`
     - 复制以下词语后面的 IP 地址：`nameserver`。
     - 使用复制的 IP 地址连接到任何 Windows 服务器。
@@ -145,7 +145,7 @@ WSL2 发行版目前无法访问纯 IPv6 地址。 我们正在致力于添加�
 
 WSL 2 使用虚拟硬件磁盘 (VHD) 来存储 Linux 文件。 如果达到其最大大小，则可能需要对其进行扩展。
 
-WSL 2 VHD 使用 ext4 文件系统。 此 VHD 会自动调整大小以满足你的存储需求，并且其最大大小为 256GB。 如果你的发行版大小增长到大于 256GB，则会显示错误，指出磁盘空间不足。 可以通过扩展 VHD 大小来纠正此错误。
+WSL 2 VHD 使用 ext4 文件系统。此 VHD 会自动调整大小以满足你的存储需求，并且其最大初始大小为 256GB。如果你的发行版大小增长到大于 256GB，则会显示错误，指出磁盘空间不足。可以通过扩展 VHD 大小来修复此错误。
 
 若要将最大 VHD 大小扩展到超过 256GB，请执行以下操作：
 
